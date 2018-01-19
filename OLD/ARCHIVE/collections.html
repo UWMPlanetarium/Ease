@@ -1,0 +1,116 @@
+<script type='text/javascript'>
+
+// Collections
+
+// Group list collection
+app.GroupList = Backbone.Firebase.Collection.extend({
+  
+  model: app.Group,
+  url: 'https://ease-f60ed.firebaseio.com/groups/',
+  autoSync: true,
+  initialize: function() {
+    this.sort();
+  },
+  comparator: function(group) {
+    return group.attributes.groupName;
+  },
+  getNextID: function() {
+
+    var id = 0;
+    for (var i = 0; i < this.models.length; i++) {
+
+      if (parseInt(this.models[i].attributes.id) > id) {
+        id = this.models[i].attributes.id;
+      }
+
+    }
+    ++id;
+    return id;
+
+  }
+  
+});
+
+// Event list collection
+app.EventList = Backbone.Firebase.Collection.extend({
+  
+  model: app.Event,
+  url: 'https://ease-f60ed.firebaseio.com/events/',
+  autoSync: true,
+  initialize: function() {
+    this.sort();
+  },
+  comparator: function(event) {
+    return new Date(event.attributes.calEvent.calStart).getTime() * -1;
+  },
+  getID: function(id) {
+    var output = [];
+    for (var i = 0; i < this.models.length; i++) {
+      if (this.models[i].attributes.groupID === id) {
+        output.push(this.models[i]);
+      }
+    }
+    return output;
+  },
+  getNextID: function() {
+
+  	var id = 0;
+  	for (var i = 0; i < this.models.length; i++) {
+
+  		if (parseInt(this.models[i].attributes.id) > id) {
+  			id = this.models[i].attributes.id;
+  		}
+
+  	}
+  	++id;
+  	return id;
+
+  }
+  
+});
+
+// Transaction Collection
+app.TransactionList = Backbone.Firebase.Collection.extend({
+  
+  model: app.TransactionModel,
+  url: 'https://ease-f60ed.firebaseio.com/transactions/',
+  autoSync: true,
+  initialize: function() {
+    this.sort();
+  },
+  comparator: function(transaction) { // sort ascending by date posted
+    return new Date(transaction.attributes.datePosted) * -1;
+  },
+  getNextID: function() {
+
+    var id = 0;
+    for (var i = 0; i < this.models.length; i++) {
+
+      if (parseInt(this.models[i].attributes.id) > id) {
+        id = this.models[i].attributes.id;
+      }
+
+    }
+    ++id;
+    return id;
+
+  }
+  
+});
+
+// Payment Collection
+app.PaymentList = Backbone.Firebase.Collection.extend({
+  
+  model: app.PaymentModel,
+  url: 'https://ease-f60ed.firebaseio.com/payments/',
+  autoSync: true,
+  initialize: function() {
+    this.sort();
+  },
+  comparator: function(payment) { // sort ascending by date posted
+    return new Date(payment.attributes.datePosted) * -1;
+  }
+  
+});
+
+</script>

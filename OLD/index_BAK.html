@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>UWM Planetarium</title>
+		
+		<!-- Bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.css" />
+    <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css' />
+		
+		<!-- Custom CSS -->
+		<?!= include('styles'); ?>
+		<?!= include('admin_styles'); ?>
+		
+	</head>
+	<body>
+		
+		<div id='modals'>
+		</div>
+		<div id='sidebar_landing'>
+		</div>
+		<div id='body'>
+		</div>
+
+		<!-- Templates -->
+
+
+		<!-- Accounting -->
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+	
+		
+		
+
+		
+		<!-- Custom Scripts -->
+		
+		<!-- App Namespace -->
+		<script type='text/javascript'>
+			
+			var app = {};
+			var User;
+			
+		</script>
+
+		<?!= include('encryption'); ?>
+		
+		<?!= include('models'); ?>
+		<?!= include('collections'); ?>
+		<?!= include('views'); ?>
+		<?!= include('scripts'); ?>
+		
+	</body>
+</html>

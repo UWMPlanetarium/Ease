@@ -1,0 +1,23 @@
+{
+  "name": "ease",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSamaz/Ease_2.0.git"
+  },
+  "author": "Sam Gallagher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SSamaz/Ease_2.0/issues"
+  },
+  "homepage": "https://github.com/SSamaz/Ease_2.0#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "firebase-functions": "^0.8.0"
+  }
+}

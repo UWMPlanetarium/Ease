@@ -1,0 +1,43 @@
+{
+  "backbone": {
+    "collections": [
+      "collections.js"
+    ],
+    "models": [
+      "models.js"
+    ],
+    "views": [
+      "accountingDashboard.js",
+      "appView.js",
+      "dashboardView.js",
+      "eventAuxView.js",
+      "eventDetailView.js",
+      "eventListView.js",
+      "eventView.js",
+      "groupListView.js",
+      "groupView.js",
+      "loginView.js",
+      "newEventView.js",
+      "schedulingDashboardView.js",
+      "settingsView.js",
+      "sidebarView.js",
+      "userView.js"
+    ]
+  },
+  "views": [
+    "accounting_dashboard.html",
+    "dashboard.html",
+    "event_aux_view.html",
+    "event_detail_view.html",
+    "event_list_item.html",
+    "group_list_item.html",
+    "group_view.html",
+    "login_form.html",
+    "new_event.html",
+    "projects_dashboard.html",
+    "scheduling_dashboard.html",
+    "settings.html",
+    "sidebar.html",
+    "user_settings.html"
+  ]
+}

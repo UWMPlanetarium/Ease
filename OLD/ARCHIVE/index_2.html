@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>UWM Planetarium</title>
+		
+		<!-- Bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+		<link rel='stylesheet' href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css' />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.css" />
+		
+		<!-- Custom CSS -->
+		<?!= include('styles'); ?>
+		<?!= include('admin_styles'); ?>
+		
+	</head>
+	<body>
+		
+		<div id='body'>
+		</div>
+
+		<!-- Templates -->
+
+		<script type='text/template' id='authorized_sidebar-template'>
+
+			<div id='sidebar' class='col-sm-3 col-lg-2 sidebar collapse in'>
+				<div class='profile'>
+					<span class='name'>Loading...</span><br />
+					<span class='email'>Loading...</span>
+				</div>
+				<div class='clear'></div>
+				<ul class='nav menu'>
+					<li class='active dashboard_view'>
+						<a href='#'><em class="fa fa-dashboard" aria-hidden="true">&nbsp;</em> Dashboard</a>
+					</li>
+					<li class='project_view'>
+						<a href='#'><em class='fa fa-book' aria-hidden='true'>&nbsp;</em> Projects</a>
+					</li>
+					<li class='task_view not-active'>
+						<a href='#'><em class='fa fa-tasks' aria-hidden='true'>&nbsp;</em> Tasks</a>
+					</li>
+					<li class='groups_view not-active'>
+						<a href='#'><em class='fa fa-users' aria-hidden='true'>&nbsp;</em> Groups</a>
+					</li>
+					<li class='analytics_view'>
+						<a href='#'><em class='fa fa-bar-chart' aria-hidden='true'>&nbsp;</em> Website Analytics</a>
+					</li>
+					<li class='not-active'>
+						<a href='#'>
+							<em class='fa fa-user' aria-hidden='true'>&nbsp;</em> User Management
+						</a>
+					</li>
+					<li class='not-active'>
+						<a href='#'><em class='fa fa-cogs' aria-hidden='true'>&nbsp;</em> Settings</a>
+					</li>
+				</ul>
+			</div>
+
+		</script>
+
+		<script type='text/template' id='dashboard-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Buckhall VFD Dashboard</h1>
+					</div>
+				</div>
+				<div class='panel panel-container'>
+					<div class='row no-padding'>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-users color-blue'>&nbsp;</em>
+									<div class='large num_users'>...</div>
+									<div class='text-muted'>Users</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-book color-orange'>&nbsp;</em>
+									<div class='large num_projects'>...</div>
+									<div class='text-muted'>Projects</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-tasks color-teal'>&nbsp;</em>
+									<div class='large num_tasks'>...</div>
+									<div class='text-muted'>Tasks</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-calendar color-red'>&nbsp;</em>
+									<div class='large num_events'>...</div>
+									<div class='text-muted'>Upcoming Events</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Users
+							</div>
+							<div class='panel-body'>
+								<p>
+									<table id='users_land'>
+										<thead>
+											<tr>
+												<th>User</th>
+												<th>Email</th>
+												<th>Role</th>
+											</tr>
+										</thead>
+									</table>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Projects
+							</div>
+							<div class='panel-body timeline-container'>
+								<ul class='timeline' id='dashboard-view-land'>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Calendar
+								<span class='pull-right clickable'>
+									<a href='http://calendar.google.com' target='_blank' style='color:white'>To calendar</a>
+								</span>
+							</div>
+							<div class='panel-body'>
+								<iframe src="https://calendar.google.com/calendar/embed?src=buckhallvfd.org_9revhb9t3873o8hjmtk85uhmk8%40group.calendar.google.com&ctz=America/New_York" style="border: 0;width: 100%;height: 600px;" frameborder="0" scrolling="no"></iframe>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Tasks assigned to me
+							</div>
+							<div class='panel-body task-pane'>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>      
+
+		</script>
+
+		<script type='text/template' id='dashboard-project-view-template'>
+
+
+			<div class='timeline-badge'>
+				<i class='glyphicon glyphicon-pushpin'></i>
+			</div>
+			<div class='timeline-panel'>
+				<div class='timeline-heading'>
+					<h4 class='timeline-title'><%- title %></h4>
+				</div>
+				<div class='timeline-body'>
+					<p><%- description %></p>
+				</div>
+			</div>
+
+		</script>
+
+		<script type='text/template' id='projects-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Buckhall VFD Projects</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class=' panel panel-info'>
+							<div class='panel-heading'>
+								Project Management
+							</div>
+							<div class='panel-body'>
+								<div class='projects-sidebar col-md-2'>
+									<ul class='projects-nav'>
+									</ul>
+								</div>
+								<div class='project-dashboard col-md-10'>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>      
+
+		</script>
+
+		<script type='text/template' id='task-view-template'>
+
+			<input type='checkbox' /> <%- title %>
+			<div class='information'><b>Due:</b> <%- moment(dueDate).format("dddd, MMM Do YYYY") %> | <b>Assigned by:</b> <%- assign_name %></div>
+
+		</script>
+
+		<script type='text/template' id='project-dashboard-view-template'>
+
+			<h1><%- title %></h1><br />
+			<h4>Owned by <b><%- owner %></b></h4>
+			<h5><%- description %></h5><br />
+			<button class='btn btn-primary' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-danger' role='button'><em class='fa fa-trash'>&nbsp;</em> Delete</button>
+			<br /><hr />
+			<div class='row'>
+				<div class='col-md-6'>
+					<div class='panel panel-info'>
+						<div class='panel-heading'>
+							Calendar
+						</div>
+						<div class='panel-body'>
+							<div id='project-calendar'></div>
+						</div>
+					</div>
+				</div>
+				<div class='col-md-6'>
+					<div class='panel panel-info'>
+						<div class='panel-heading'>
+							Progress
+						</div>
+						<div class='panel-body'>
+							<div id='chart'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+					<div class='panel panel-info'>
+						<div class='panel-heading'>
+							Tasks
+						</div>
+						<div class='panel-body task-pane'>
+						</div>
+					</div>
+				</div>
+			</div>			
+
+		</script>
+
+		<script type='text/template' id='analytics-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Buckhall VFD Analytics</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Website Analytics
+							</div>
+							<div class='panel-body'>
+								<iframe height="1200" src="https://datastudio.google.com/embed/reporting/0B583xC7hNRpdUzE4ZHo4UHZkRGc/page/ZICI" frameborder="0" style="border:0;width: 100%" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>      
+
+		</script>
+
+		<script type='text/template' id='groups-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Buckhall VFD Groups</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Groups
+							</div>
+							<div class='panel-body'>
+							<iframe id="forum_embed"
+							  src="javascript:void(0)"
+							  scrolling="no"
+							  frameborder="0"
+							  height="700"
+							  style='width:100%;'>
+							</iframe>
+							<script type="text/javascript">
+								console.log(window.location.href);
+							  document.getElementById('forum_embed').src =
+							     'https://groups.google.com/forum/embed/?place=forum/buckhallvfd'
+							     + '&showsearch=true&showpopout=true&showtabs=false'
+							     + '&parenturl=' + encodeURIComponent(window.location.href);
+							</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>      
+
+		</script>		
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src='https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+		<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'></script>
+		<script src="https://cdn.firebase.com/js/client/2.0.3/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		
+		<!-- Custom Scripts -->
+		
+		<!-- App Namespace -->
+		<script type='text/javascript'>
+			
+			var app = {};
+			var User;
+			
+		</script>
+		
+		<?!= include('models'); ?>
+		<?!= include('collections'); ?>
+		<?!= include('views'); ?>
+		<?!= include('scripts'); ?>
+		
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<script type='text/template' id='event-aux-view'>
+
+	<hr />
+    	<div class='row event static'>
+    		<div class='col-md-4'>
+    			<p>Date: <b><%- calEvent.date.string %></b></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Start Time: <b><%- calEvent.startTime.string %></b></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>End Time: <b><%- calEvent.endTime.string %></b></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Show: <b><%- show %></b></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Activity: <b><%- activity %></b></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Presenter: <b><%- presenter %></b></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Price: <b>$<%- price %></b></p>
+    		</div>
+            <div class='col-md-4'>
+              <p>Number of People: <b><%- numOfPeople %></b></p>
+            </div>
+    	</div>
+    	<div class='row event edit'>
+    		<div class='col-md-4'>
+    			<p>Date: <input type='date' class='date' value='<%- calEvent.date.iso %>'></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Start Time: <input type='time' class='startTime' value='<%- calEvent.startTime.raw %>'></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>End Time: <input type='time' class='endTime' value='<%- calEvent.endTime.raw %>'></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Show: <input type='text' class='show' value='<%- show %>'></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Activity: <input type='text' class='activity' value='<%- activity %>'></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Presenter: <input type='text' class='presenter' value='<%- presenter %>'></p>
+    		</div>
+    		<div class='col-md-4'>
+    			<p>Price: <input type='number' class='price' value='<%- price %>'></p>
+    		</div>
+      	  	<div class='col-md-4'>
+        		<p>Number of People: <input type='number' class='numOfPeople' value='<%- numOfPeople %>'></p>
+      	  	</div>
+    	</div>
+    	<p><button class='btn btn-info edit-event<%- _id %>' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-danger delete-event<%- _id %>' role='button'><em class='fa fa-trash'>&nbsp;</em> Delete</button> <button class='btn btn-primary event-invoice' role='button'>Create Invoice</button> <button class='btn btn-warning event-payment' disabled="disabled">Add Payment</button> <button class='btn btn-success event-presented' disabled="disabled">Show Presented</button></p>
+
+</script>

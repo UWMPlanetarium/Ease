@@ -1,0 +1,9 @@
+<script type='text/template' id='group-list-item-view'>
+
+	<div class='event-item'>
+		<h4><%- groupName %> <%if (groupGroup !== '' && groupGroup !== undefined) { %>- <%- groupGroup %><% } %> - <i><%- groupType %></i></h4>
+		<p>Email: <b><%- email %></b> | Cell Phone <b><%- cellPhone %></b> | Work Phone: <b><%- workPhone %></b></p>
+		<p><button class='btn btn-info event-view' role='button'>View</button></p>
+	</div>
+
+</script>

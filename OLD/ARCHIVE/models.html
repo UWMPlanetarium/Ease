@@ -1,0 +1,154 @@
+<script type='text/javascript'>
+
+// Models
+
+// Group model
+app.Group = Backbone.Model.extend({
+  
+  defaults: {
+    id: null,
+    groupName: null,
+    groupGroup: null,
+    groupType: null,
+    cellPhone: null,
+    workPhone: null,
+    email: null,
+    grade: null
+  }
+  
+});
+
+// Event model
+app.Event = Backbone.Model.extend({
+  
+  defaults: {
+    id: null,
+    groupID: null,
+    show: null,
+    activity: null,
+    calEvent: {
+      date: {
+        raw: new Date(),
+        string: null,
+        iso: null
+      },
+      startTime: {
+        raw: null,
+        string: null
+      },
+      endTime: {
+        raw: null,
+        string: null
+      },
+      calStart: null,
+      calEnd: null,
+      string: 'No Date Found',
+      calID: null,
+      eventID: null
+    },
+    price: null,
+    tour: false,
+    invoiceSent: false,
+    printed: false,
+    checkReceived: false,
+    paidStatus: false,
+    finished: false,
+    notes: null,
+    presenter: null
+  },
+  createCalendarEvent: function(date, startTime, endTime, opts) {
+
+    var parseTime = function(input) { // time comes in XX:XX military, need to switch it to a string
+
+      var time = input.split(':');
+      var hours = parseInt(time[0]);
+      if (hours < 12) { // is am
+        return hours + ":" + time[1] + " am";
+      } else if (hours === 12) { // is noon
+        return hours + ":" + time[1] + " pm";
+      } else if (hours > 12) { // is pm
+        hours = hours - 12;
+        return hours + ":" + time[1] + " pm";
+      }
+
+    };
+
+    var object = {
+
+      calID: 'nbqhislsj9vvnp8h6tb52dsq6c@group.calendar.google.com',
+      date: {
+        raw: moment(date),
+        iso: moment(date).format("YYYY-MM-DD"),
+        string: moment(date).format("ddd, MMM Do YYYY")
+      },
+      startTime: {
+        raw: startTime,
+        string: parseTime(startTime)
+      },
+      endTime: {
+        raw: endTime,
+        string: parseTime(endTime)
+      },
+      calStart: moment(date + ' ' + startTime),
+      calEnd: moment(date + ' ' + endTime),
+      string: moment(date).format("ddd, MMM Do") + ' @ ' + parseTime(startTime) + ' - ' + parseTime(endTime)
+    };
+
+    if (!opts) {
+      object.eventID = null;
+    } else if (opts.keepEventId === true) {
+      object.eventID = this.attributes.calEvent.eventID;
+    }
+
+    return object;
+
+  }
+  
+});
+
+// General Money Model
+app.MoneyModel = Backbone.Model.extend({
+
+  setDates: function() {
+    if (this.attributes.datePosted !== null && this.attributes.datePosted !== null) {
+      this.set({datePosted: moment(this.attributes.datePosted)});
+    }
+    if (this.attributes.datePaid !== null && this.attributes.datePaid !== null) {
+      this.set({datePaid: moment(this.attributes.datePaid)});
+    }
+  }
+
+});
+
+// Transaction Model
+app.TransactionModel = app.MoneyModel.extend({
+  
+  defaults: {
+    id: null, // int
+    amount: null, // int
+    datePosted: null, // moment raw
+    notes: null, // string
+    paid: null, // bool
+    datePaid: null, //moment raw
+    eventID: null, // int if from event, null if not
+    groupID: null // int if from group, null if not
+  }
+  
+});
+
+// Payment Model
+app.PaymentModel = app.MoneyModel.extend({
+  
+  defaults: {
+    id: null, // int
+    transactionID: null, // int
+    amount: null, // int
+    paymentType: null, // string [from options] | need config model?
+    datePaid: null, // moment raw
+    datePosted: null //moment raw
+  }
+  
+});
+
+
+</script>

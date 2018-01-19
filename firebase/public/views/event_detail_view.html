@@ -1,0 +1,129 @@
+<script type='text/template' id='event-detail-view'>
+
+    <div class="modal fade" tabindex="-1" role="dialog" data-backdrop='false'>
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Event</h4>
+          </div>
+          <div class="modal-body">
+          	<h3>Group</h3>
+          	<div class='row group static'>
+          		<div class='col-md-4'>
+          			<p>Contact Name: <b><%- group.groupName %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Group Name: <b><%- group.groupGroup %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Group Type: <b><%- group.groupType %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Grade: <b><%- group.grade %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Email: <b><%- group.email %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Cell Phone: <b><%- group.cellPhone %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Work Phone: <b><%- group.workPhone %></b></p>
+          		</div>
+          	</div>
+          	<div class='row group edit'>
+          		<div class='col-md-4'>
+          			<p>Contact Name: <input type='text' class='groupName' value='<%- group.groupName %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Group Name: <input type='text' class='groupGroup' value='<%- group.groupGroup %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Group Type: <input type='text' class='groupType' value='<%- group.groupType %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Grade: <input type='text' class='grade' value='<%- group.grade %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Email: <input type='text' class='email' value='<%- group.email %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Cell Phone: <input type='text' class='cellPhone' value='<%- group.cellPhone %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Work Phone: <input type='text' class='workPhone' value='<%- group.workPhone %>'></p>
+          		</div>
+          	</div>
+          	<p><button class='btn btn-info edit-group' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-info view-all-events' role='button'><em class='fa fa-calendar'>&nbsp;</em> View all events</button></p>
+          	<hr />
+          	<h3>Event</h3>
+          	<div class='row event static'>
+          		<div class='col-md-4'>
+          			<p>Date: <b><%- event.calEvent.date.string %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Start Time: <b><%- event.calEvent.startTime.string %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>End Time: <b><%- event.calEvent.endTime.string %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Show: <b><%- event.show %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Activity: <b><%- event.activity %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Presenter: <b><%- event.presenter %></b></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Price: <b>$<%- event.price %></b></p>
+          		</div>
+                  <div class='col-md-4'>
+                    <p>Number of People: <b><%- event.numOfPeople %></b></p>
+                  </div>
+          	</div>
+          	<div class='row event edit'>
+          		<div class='col-md-4'>
+          			<p>Date: <input type='date' class='date' value='<%- event.calEvent.date.iso %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Start Time: <input type='time' class='startTime' value='<%- event.calEvent.startTime.raw %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>End Time: <input type='time' class='endTime' value='<%- event.calEvent.endTime.raw %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Show: <input type='text' class='show' value='<%- event.show %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Activity: <input type='text' class='activity' value='<%- event.activity %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Presenter: <input type='text' class='presenter' value='<%- event.presenter %>'></p>
+          		</div>
+          		<div class='col-md-4'>
+          			<p>Price: <input type='number' class='price' value='<%- event.price %>'></p>
+          		</div>
+              	  	<div class='col-md-4'>
+                		<p>Number of People: <input type='number' class='numOfPeople' value='<%- event.numOfPeople %>'></p>
+              	  	</div>
+          	</div>
+          	<div class='row'>
+          		<div class='col-md-12'>
+          			<p class='invoice_status'></p>
+          		</div>
+          	</div>
+          	<p><button class='btn btn-info edit-event' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-danger delete-event' role='button'><em class='fa fa-trash'>&nbsp;</em> Delete</button> <button class='btn btn-primary event-invoice' role='button'>Create Invoice</button> <button class='btn btn-warning event-payment' disabled="disabled">Add Payment</button> <%if (event.finished === false) { %><button class='btn btn-success event-presented'>Show Presented</button><% } %></p>
+          	<div class='aux-events-land'>
+          	</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>  			
+
+</script>

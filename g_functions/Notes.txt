@@ -1,0 +1,35 @@
+Google Functions
+
+Using Google Functions to perform POST calls to a Google App Script API service.
+
+To Do:
+	- Go through view logic and find all 'google.script.run' calls. |^|
+	- Write google functions in psuedo code |^|
+	- Write google functions
+	- Write google api functions
+	- Get google api url
+
+google.script.run calls
+	- appView
+		- getProfile
+			- No longer relevant, profile information is now stored in the Firebase
+	- eventAuxView
+		- editEvent
+			- Updates an existing google calendar event
+	- eventDetailView
+		- createInvoice
+			- Creates an invoice from a properly formatted JSON request
+		- editEvent
+	- eventListView
+		-createInvoice
+	- newEventView
+		- getSchedulingEvents
+			- Gets calendar events from staff google calendar, splits into 'calendars' by parsing the name
+		- createEvent
+			- Creates a google calendar event
+		
+Functions
+	- editEvent -> updateEvent
+	- createInvoice
+	- getSchedulingEvents -> getStaffSchedule
+	- createEvent

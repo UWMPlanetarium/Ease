@@ -1,0 +1,50 @@
+<script type='text/template' id='authorized_sidebar-template'>
+
+	<div id='sidebar' class='col-sm-3 col-lg-2 sidebar collapse in'>
+		<div class='profile'>
+			<span class='name'></span><br />
+			<span class='email'></span>
+		</div>
+		<div class='clear'></div>
+		<ul class='nav menu'>
+			<li class='active dashboard_view'>
+				<a href='#'><em class="fa fa-space-shuttle" aria-hidden="true">&nbsp;</em> Home</a>
+			</li>
+			<li class='parent'>
+				<a data-toggle='collapse' href='#scheduling' class='collapsed'><em class='fa fa-bars' aria-hidden='true'>&nbsp;</em> Scheduling <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right collapsed" aria-expanded="false"><i class="fa fa-plus"></i></span></a>
+				<ul class='children collapse' id='scheduling' style='height: 0px'>
+					<li id='scheduling_dashboard_click'>
+						<a href='#'><em class='fa fa-leaf'>&nbsp;</em> Dashboard</a>
+					</li>
+					<li id='scheduling_events_click'>
+						<a href='#'><em class='fa fa-calendar'>&nbsp;</em> Events</a>
+					</li>
+					<li id='scheduling_group_click'>
+						<a href='#'><em class='fa fa-users'>&nbsp;</em> Groups</a>
+					</li>
+				</ul>
+			</li>
+			<li class='parent'>
+				<a data-toggle='collapse' href='#accounting' class='collapsed'><em class='fa fa-bars' aria-hidden='true'>&nbsp;</em> Accounting <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right collapsed" aria-expanded="false"><i class="fa fa-plus"></i></span></a>
+				<ul class='children collapse' id='accounting' style='height: 0px'>
+					<li id='accounting_dashboard_click'>
+						<a href='#'><em class='fa fa-leaf'>&nbsp;</em> Dashboard</a>
+					</li>
+					<li id='accounting_transactions_click'>
+						<a href='#'><em class='fa fa-cubes'>&nbsp;</em> Transactions</a>
+					</li>
+					<li id='accounting_payments_click'>
+						<a href='#'><em class='fa fa-money'>&nbsp;</em> Payments</a>
+					</li>
+				</ul>
+			</li>
+			<li class='project_view'>
+				<a href='#'><em class="fa fa-book" aria-hidden="true">&nbsp;</em> Projects</a>
+			</li>
+			<li id='settings_view'>
+				<a href='#'><em class="fa fa-cogs" aria-hidden="true">&nbsp;</em> Settings</a>
+			</li>
+		</ul>
+	</div>
+
+</script>

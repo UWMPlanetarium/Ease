@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>UWM Planetarium</title>
+		
+		<!-- Bootstrap -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.css" />
+    <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css' />
+		
+		<!-- Custom CSS -->
+		<?!= include('styles'); ?>
+		<?!= include('admin_styles'); ?>
+		
+	</head>
+	<body>
+		
+		<div id='modals'>
+		</div>
+		<div id='sidebar_landing'>
+		</div>
+		<div id='body'>
+		</div>
+
+		<!-- Templates -->
+
+
+
+		<script type='text/template' id='dashboard-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Home</h1>
+					</div>
+				</div>
+				<div class='panel panel-container'>
+					<div class='row no-padding'>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-users color-blue'>&nbsp;</em>
+									<div class='large num_groups'>...</div>
+									<div class='text-muted'>Groups</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-calendar color-orange'>&nbsp;</em>
+									<div class='large num_upcoming_events'>...</div>
+									<div class='text-muted'>Upcoming Shows</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-book color-teal'>&nbsp;</em>
+									<div class='large num_projects'>...</div>
+									<div class='text-muted'>Projects</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-tasks color-red'>&nbsp;</em>
+									<div class='large num_incomplete_tasks'>...</div>
+									<div class='text-muted'>Incomplete Tasks</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Upcoming Shows
+							</div>
+							<div class='panel-body'>
+								<div id='dashboard-calendar'></div>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Projects
+							</div>
+							<div class='panel-body timeline-container'>
+								In progress
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>      
+
+		</script>
+
+		<script type='text/template' id='dashboard-project-view-template'>
+
+
+			<div class='timeline-badge'>
+				<i class='glyphicon glyphicon-pushpin'></i>
+			</div>
+			<div class='timeline-panel'>
+				<div class='timeline-heading'>
+					<h4 class='timeline-title'><%- title %></h4>
+				</div>
+				<div class='timeline-body'>
+					<p><%- description %></p>
+				</div>
+			</div>
+
+		</script>
+
+		<script type='text/template' id='scheduling-dashboard-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Scheduling Dashboard</h1>
+					</div>
+				</div>
+				<div class='panel panel-container'>
+					<div class='row no-padding'>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-users color-blue'>&nbsp;</em>
+									<div class='large num_groups'>...</div>
+									<div class='text-muted'>Groups</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-calendar color-orange'>&nbsp;</em>
+									<div class='large num_upcoming_events'>...</div>
+									<div class='text-muted'>Upcoming Events</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-calendar-minus-o color-teal'>&nbsp;</em>
+									<div class='large num_unpaid_events'>...</div>
+									<div class='text-muted'>Previous Unpaid Events</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-line-chart color-red'>&nbsp;</em>
+									<div class='large num_current_attendance'>...</div>
+									<div class='text-muted'>Current Total Attendance</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<button class='btn btn-primary create-event' role='button'>Create event</button><br /><br />
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Calendar
+							</div>
+							<div class='panel-body'>
+								<div id='scheduling-dashboard-calendar'></div>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Attendance over time
+							</div>
+							<div class='panel-body'>
+								<canvas id='attendance-graph' style='width:100%'></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Upcoming Shows
+							</div>
+							<div class='panel-body'>
+								<div class='upcoming_shows_land'></div>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+						  <div class='panel-heading'>
+						    Previous Shows
+						  </div>
+						  <div class='panel-body'>
+								<div class='previous_shows_land'></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>      
+
+		</script>
+
+		<script type='text/tepmlate' id='event-list-item-view'>
+
+			<div class='event-item'>
+				<h4><%- group.groupName %> - <%- event.calEvent.string %></h4>
+				<p>Show: <b><%- event.show %></b> <%if (event.presenter !== '') { %>| Presenter: <b><%- event.presenter %></b> <% } %> <%if (event.activity !== '' && event.activity !== null) { %>| Activity: <b><%- event.activity %></b> <% } %></p>
+				<p class='invoice_status'></p>
+				<p><button class='btn btn-info event-view' role='button'>View</button> <button class='btn btn-primary event-invoice' role='button'>Create Invoice</button> <button class='btn btn-warning event-payment' disabled="disabled">Add Payment</button> <%if (event.finished === false) { %><button class='btn btn-success event-presented'>Show Presented</button><% } %></p>
+			</div>
+
+		</script>
+
+		<script type='text/template' id='event-detail-view'>
+
+	      <div class="modal fade" tabindex="-1" role="dialog" data-backdrop='false'>
+	        <div class="modal-dialog modal-lg" role="document">
+	          <div class="modal-content">
+	            <div class="modal-header">
+	              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	              <h4 class="modal-title">Event</h4>
+	            </div>
+	            <div class="modal-body">
+	            	<h3>Group</h3>
+	            	<div class='row group static'>
+	            		<div class='col-md-4'>
+	            			<p>Contact Name: <b><%- group.groupName %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Group Name: <b><%- group.groupGroup %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Group Type: <b><%- group.groupType %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Grade: <b><%- group.grade %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Email: <b><%- group.email %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Cell Phone: <b><%- group.cellPhone %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Work Phone: <b><%- group.workPhone %></b></p>
+	            		</div>
+	            	</div>
+	            	<div class='row group edit'>
+	            		<div class='col-md-4'>
+	            			<p>Contact Name: <input type='text' class='groupName' value='<%- group.groupName %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Group Name: <input type='text' class='groupGroup' value='<%- group.groupGroup %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Group Type: <input type='text' class='groupType' value='<%- group.groupType %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Grade: <input type='text' class='grade' value='<%- group.grade %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Email: <input type='text' class='email' value='<%- group.email %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Cell Phone: <input type='text' class='cellPhone' value='<%- group.cellPhone %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Work Phone: <input type='text' class='workPhone' value='<%- group.workPhone %>'></p>
+	            		</div>
+	            	</div>
+	            	<p><button class='btn btn-info edit-group' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-info view-all-events' role='button'><em class='fa fa-calendar'>&nbsp;</em> View all events</button></p>
+	            	<hr />
+	            	<h3>Event</h3>
+	            	<div class='row event static'>
+	            		<div class='col-md-4'>
+	            			<p>Date: <b><%- event.calEvent.date.string %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Start Time: <b><%- event.calEvent.startTime.string %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>End Time: <b><%- event.calEvent.endTime.string %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Show: <b><%- event.show %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Activity: <b><%- event.activity %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Presenter: <b><%- event.presenter %></b></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Price: <b>$<%- event.price %></b></p>
+	            		</div>
+	                    <div class='col-md-4'>
+	                      <p>Number of People: <b><%- event.numOfPeople %></b></p>
+	                    </div>
+	            	</div>
+	            	<div class='row event edit'>
+	            		<div class='col-md-4'>
+	            			<p>Date: <input type='date' class='date' value='<%- event.calEvent.date.iso %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Start Time: <input type='time' class='startTime' value='<%- event.calEvent.startTime.raw %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>End Time: <input type='time' class='endTime' value='<%- event.calEvent.endTime.raw %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Show: <input type='text' class='show' value='<%- event.show %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Activity: <input type='text' class='activity' value='<%- event.activity %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Presenter: <input type='text' class='presenter' value='<%- event.presenter %>'></p>
+	            		</div>
+	            		<div class='col-md-4'>
+	            			<p>Price: <input type='number' class='price' value='<%- event.price %>'></p>
+	            		</div>
+                  	  	<div class='col-md-4'>
+                    		<p>Number of People: <input type='number' class='numOfPeople' value='<%- event.numOfPeople %>'></p>
+                  	  	</div>
+	            	</div>
+	            	<div class='row'>
+	            		<div class='col-md-12'>
+	            			<p class='invoice_status'></p>
+	            		</div>
+	            	</div>
+	            	<p><button class='btn btn-info edit-event' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-danger delete-event' role='button'><em class='fa fa-trash'>&nbsp;</em> Delete</button> <button class='btn btn-primary event-invoice' role='button'>Create Invoice</button> <button class='btn btn-warning event-payment' disabled="disabled">Add Payment</button> <%if (event.finished === false) { %><button class='btn btn-success event-presented'>Show Presented</button><% } %></p>
+	            	<div class='aux-events-land'>
+	            	</div>
+	            </div>
+	            <div class="modal-footer">
+	              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	            </div>
+	          </div>
+	        </div>
+	      </div>  			
+
+		</script>
+
+		<script type='text/template' id='event-aux-view'>
+
+			<hr />
+        	<div class='row event static'>
+        		<div class='col-md-4'>
+        			<p>Date: <b><%- calEvent.date.string %></b></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Start Time: <b><%- calEvent.startTime.string %></b></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>End Time: <b><%- calEvent.endTime.string %></b></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Show: <b><%- show %></b></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Activity: <b><%- activity %></b></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Presenter: <b><%- presenter %></b></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Price: <b>$<%- price %></b></p>
+        		</div>
+                <div class='col-md-4'>
+                  <p>Number of People: <b><%- numOfPeople %></b></p>
+                </div>
+        	</div>
+        	<div class='row event edit'>
+        		<div class='col-md-4'>
+        			<p>Date: <input type='date' class='date' value='<%- calEvent.date.iso %>'></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Start Time: <input type='time' class='startTime' value='<%- calEvent.startTime.raw %>'></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>End Time: <input type='time' class='endTime' value='<%- calEvent.endTime.raw %>'></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Show: <input type='text' class='show' value='<%- show %>'></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Activity: <input type='text' class='activity' value='<%- activity %>'></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Presenter: <input type='text' class='presenter' value='<%- presenter %>'></p>
+        		</div>
+        		<div class='col-md-4'>
+        			<p>Price: <input type='number' class='price' value='<%- price %>'></p>
+        		</div>
+          	  	<div class='col-md-4'>
+            		<p>Number of People: <input type='number' class='numOfPeople' value='<%- numOfPeople %>'></p>
+          	  	</div>
+        	</div>
+        	<p><button class='btn btn-info edit-event<%- _id %>' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-danger delete-event<%- _id %>' role='button'><em class='fa fa-trash'>&nbsp;</em> Delete</button> <button class='btn btn-primary event-invoice' role='button'>Create Invoice</button> <button class='btn btn-warning event-payment' disabled="disabled">Add Payment</button> <button class='btn btn-success event-presented' disabled="disabled">Show Presented</button></p>
+
+		</script>
+
+    <script type='text/template' id='new-event-view-template'>
+
+        <div class="modal fade" tabindex="-1" role="dialog" data-backdrop='false'>
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">New Event</h4>
+              </div>
+              <div class="modal-body">
+                <div class='select-group create-event-option'>
+                  <h3>Select a Group</h3>
+                  <hr />
+                  <button class='btn btn-primary new-group-click' role='button'>Create new group</button><br /><br />
+                  <table class='select-group-table' style='width:100%'>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Group</th>
+                        <th>Email</th>
+                        <th>Buttons</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class='new-group create-event-option'>
+                  <h3>New Group</h3>
+                  <hr />
+                  <div class='row'>
+                    <div class='col-md-4'>
+                      <p>Contact Name: <input type='text' class='groupName'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Group Name: <input type='text' class='groupGroup'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Group Type: <input type='text' class='groupType'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Grade: <input type='text' class='grade'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Email: <input type='text' class='email'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Cell Phone: <input type='text' class='cellPhone'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Work Phone: <input type='text' class='workPhone'></p>
+                    </div>
+                  </div>
+                  <br />
+                  <button class='btn btn-primary save-group' role='button'>Create Group</button>
+                </div>
+                <div class='select-date create-event-option'>
+                  <h3>Select a Date</h3>
+                  <hr />
+                  <h4>Contact Name: <span class='groupName'></span></h4>
+                  <hr />
+                  <div class='row'>
+                    <div class='col-md-4'>
+                      Event Date: <input type='date' class='date' />
+                    </div>
+                    <div class='col-md-4'>
+                      Start Time: <input type='time' class='startTime' />
+                    </div>
+                    <div class='col-md-4'>
+                      End Time: <input type='time' class='endTime' />
+                    </div>
+                  </div>
+                  <br />
+                  <button class='btn btn-primary select-date-click'>Next</button>
+                  <hr />
+                  <div class='calendar-status'></div>
+                  <hr />
+                  <div id='scheduling-new-event-calendar'></div>
+                </div>
+                <div class='show-details create-event-option'>
+                  <h3>Show Details</h3>
+                  <div class='row'>
+                    <div class='col-md-4'>
+                      <p>Show: <input type='text' class='show_data' value='<%- event.show %>'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Activity: <input type='text' class='activity' value='<%- event.activity %>'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Presenter: <input type='text' class='presenter' value='<%- event.presenter %>'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Price: <input type='number' class='price' value='<%- event.price %>'></p>
+                    </div>
+                    <div class='col-md-4'>
+                      <p>Number of People: <input type='number' class='numOfPeople' value='<%- event.numOfPeople %>'></p>
+                    </div>
+                  </div>
+                  <br />
+                  <button class='btn btn-success confirm-event'><em class='fa fa-floppy-o'>&nbsp;</em> Save Event</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+    </script>
+
+    <script type='text/template' id='event-view-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Events</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Events
+							</div>
+							<div class='panel-body'>
+								<button class='btn btn-success event-search-click' role='button'><em class='fa fa-search'>&nbsp;</em> Search for events</button> <button class='btn btn-primary create-event-click' role='button'><em class='fa fa-plus'>&nbsp;</em> Create Event</button><br /><hr />
+								<div class='events-landing'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>    	
+
+    </script>
+
+    <script type='text/template' id='group-view-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Groups</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Groups
+							</div>
+							<div class='panel-body'>
+								<b>Search:</b> <input type='text' class='search-val' /> <button role='button' class='btn btn-primary'>Show All Groups</button><br /><hr />
+								<div class='group-landing'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>    	
+
+    </script>  
+
+		<script type='text/template' id='group-list-item-view'>
+
+			<div class='event-item'>
+				<h4><%- groupName %> <%if (groupGroup !== '' && groupGroup !== undefined) { %>- <%- groupGroup %><% } %> - <i><%- groupType %></i></h4>
+				<p>Email: <b><%- email %></b> | Cell Phone <b><%- cellPhone %></b> | Work Phone: <b><%- workPhone %></b></p>
+				<p><button class='btn btn-info event-view' role='button'>View</button></p>
+			</div>
+
+		</script>      
+
+		<script type='text/template' id='settings-view-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Settings</h1>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Settings
+							</div>
+							<div class='panel-body'>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>  			
+
+		</script>
+
+		<script type='text/template' id='user-view-template'>
+
+			<div class='row'>
+				<div class='col-md-4'>
+					User: <b><%- username %></b>
+				</div>
+				<div class='col-md-4'>
+					Email: <b><%- email %></b>
+				</div>
+			</div>
+			<hr />
+			<button class='btn btn-primary change-password'>Change Password</button>
+
+		</script>
+
+		<!-- Accounting -->
+		<script type='text/template' id='accounting-dashboard-template'>
+
+			<div id='main' class='col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2'>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<h1 class='page-header'>Accounting Dashboard</h1>
+					</div>
+				</div>
+				<div class='panel panel-container'>
+					<div class='row no-padding'>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-calendar color-blue'>&nbsp;</em>
+									<div class='large num_groups'>10/10/2017</div>
+									<div class='text-muted'>Deposit Period</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-hand-spock-o color-orange'>&nbsp;</em>
+									<div class='large num_upcoming_events'>$0</div>
+									<div class='text-muted'>Cash on Hand</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-calendar-minus-o color-teal'>&nbsp;</em>
+									<div class='large num_projects'>11</div>
+									<div class='text-muted'>Previous unpaid events</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-xs-6 col-md-3 col-lg-3 no-padding'>
+							<div class='panel panel-teal panel-widget border-right'>
+								<div class='row no-padding'>
+									<em class='fa fa-xl fa-money color-red'>&nbsp;</em>
+									<div class='large num_incomplete_tasks'>$28,000</div>
+									<div class='text-muted'>Total income (year)</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<button class='btn btn-primary reload_graphs' role='button'>Reload graphs</button> <button class='btn btn-success' role='button'>Create deposit</button><br /><br />
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Income by month
+							</div>
+							<div class='panel-body'>
+								<canvas id='chart_month' style='width:100%'></canvas>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Total income
+							</div>
+							<div class='panel-body'>
+								<canvas id='chart_total' style='width:100%'></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Income by transaction type
+							</div>
+							<div class='panel-body'>
+								<canvas id='chart_transaction_type' style='width:100%'></canvas>
+							</div>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								Income by group type
+							</div>
+							<div class='panel-body'>
+								<canvas id='chart_group_type' style='width:100%'></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>   			
+
+		</script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+	
+		
+		
+
+		
+		<!-- Custom Scripts -->
+		
+		<!-- App Namespace -->
+		<script type='text/javascript'>
+			
+			var app = {};
+			var User;
+			
+		</script>
+
+		<?!= include('encryption'); ?>
+		
+		<?!= include('models'); ?>
+		<?!= include('collections'); ?>
+		<?!= include('views'); ?>
+		<?!= include('scripts'); ?>
+		
+	</body>
+</html>

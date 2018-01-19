@@ -1,0 +1,62 @@
+2018 Production Release
+
+	accountingDashboard.js
+		1. Fix monthly income graph to pull from correct data, by year
+		2. Fix total income graph to pull from correct data, by year
+		3. Fix pie chart of income by transaction type to pull from correct data, by year
+		4. Fix bar chart by group type to pull from correct data, by year
+		
+	appView.js
+		3. Consolidate all *_view functions into one
+		
+	collections.js
+		1. rewrite EventList getAttendanceByMonth function entirely
+		2. rewrite EventList getAttendance function entirely
+		
+	eventAuxView.js
+		1. rewrite save_event to use google functions api instead of google apps script
+		
+	eventDetailView.js
+		1. rewrite create_invoice to use google functions api instead of google apps script
+		2. rewrite save_event to use google functions api instead of google apps script
+		3. rewrite delete_event to use google functions to remove events from the google calendar... oops
+		
+	eventListView.js
+		1. Write general eventViewModel for all three event views, they share at min 3 functions
+	
+	loginView.js
+		1. Remove authorization nonsense, no such thing in application
+		
+Future Release
+
+	collections.js
+		1. Consolidate getUpcomingEvents and getPreviousEvents into one function
+		2. Check why getNextEvents in needed, if the array is sorted properly can't I simply array.reverse() for future events?
+		3. Most collections have this 'getNextID' method, can it be generalized?
+		
+	eventAuxView.js
+		1. Rethink events attribute. Do I need hard coded id's for click events? The extra object is confusing.
+		2. Instead of changing the edit button to a save button, simply hide the edit button and show the save button | for all
+		
+	eventDetailView.js
+		1. Rething opening logic for load function, it's inherently confusing
+		2. Instead of generating generate invoice button, simply show / hide it
+		3. Do we want to rename invoiceSent / invoiceFiled into something more useful for scheudling staff?
+		4. Instead of creating a save button, simply show / hide it with the edit button
+		5. Should this.remove() instead of hiding the modal
+		6. Instead of changing the view all events button to hide all events button, simply show / hide them
+		7. Generally should be refactored. Overly complex and long. It shares a function with eventAuxView
+		
+	eventListView.js
+		1. Refacotor openign logic for load function, is confusing af
+		2. This model shares functions with both eventAuxView and eventDetailView, these should be generalized
+	
+	groupListView.js
+		1. Rethink view_events function, what is the ordering of events? What is that first event it picks up?
+		
+	groupView.js
+		1. Do I want a config file that determines things like the values in the group search field? What if they were paramaters for the user so they could pick what they wanted to search for / set defaults for their account?
+		
+		
+		
+		
