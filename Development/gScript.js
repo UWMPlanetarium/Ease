@@ -26,6 +26,10 @@ function apiController(params) {
 			removeEvent(params.data);
 			break;
 
+		case "createInvoice":
+			createInvoice(params.data);
+			break;
+
 		default:
 			database.updateData("/functions/", {
 				response: "No such function."
@@ -130,7 +134,7 @@ function findEvent(calendar, object) {
 
 // DOCUMENT TEMPLATES
 // Invoices
-function createInvoice(json) { // Required {calEvent, }
+function createInvoice(json) { // Required {calEvent, groupName, groupGroup, numOfPeople, workPhone, cellPhone, activity, program, email, grade, price}
 
 	var object = JSON.parse(json);
 	var folder = DriveApp.getFolderById('0B-u8AnaoQYgrQ1dPNnFoTEZYOEE'); // get archives folder

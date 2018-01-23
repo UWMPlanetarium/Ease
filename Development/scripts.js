@@ -28,7 +28,14 @@ function main() {
 		start: "Tue Jan 23 2018 12:30:00 GMT-0600 (CST)",
 		end: "Tue Jan 23 2018 14:30:00 GMT-0600 (CST)",
 		eventID: "fcf2bgurk41vdeqsddgqvtesj8@google.com"
-	}
+	};
+
+	// {calEvent, groupName, groupGroup, numOfPeople, workPhone, cellPhone, activity, program, email, grade, price}
+	var data_CreateInvoice = {
+		calEvent: {
+
+		}
+	};
 
 	var json = JSON.stringify(data_RemoveEvent);
 
