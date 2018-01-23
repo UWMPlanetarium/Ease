@@ -21,13 +21,13 @@ function main() {
 		end: "Tue Jan 23 2018 19:30:00 GMT-0600 (CST)",
 		new_start: "Tue Jan 23 2018 12:30:00 GMT-0600 (CST)",
 		new_end: "Tue Jan 23 2018 14:30:00 GMT-0600 (CST)",
-		eventID: "fcf2bgurk41vdeqsddgqvtesj8@google.com" // ANNOYING BUT WORKS
+		eventID: "fbj60kg7dvndt2ra89o80optoo@google.com" // ANNOYING BUT WORKS
 	};
 
 	var data_RemoveEvent = {
 		start: "Tue Jan 23 2018 12:30:00 GMT-0600 (CST)",
 		end: "Tue Jan 23 2018 14:30:00 GMT-0600 (CST)",
-		eventID: "fcf2bgurk41vdeqsddgqvtesj8@google.com"
+		eventID: "fbj60kg7dvndt2ra89o80optoo@google.com" // ANNOYING BUT WORKS
 	};
 
 	// {calEvent, groupName, groupGroup, numOfPeople, workPhone, cellPhone, activity, program, email, grade, price}
