@@ -18,6 +18,14 @@ function apiController(params) {
 			createEvent(params.data);
 			break;
 
+		case "editEvent":
+			editEvent(params.data);
+			break;
+
+		case "removeEvent":
+			removeEvent(params.data);
+			break;
+
 		default:
 			database.updateData("/functions/", {
 				response: "No such function."
@@ -51,5 +59,107 @@ function createEvent(json) { // Required cal_id, {group {groupName, groupType}, 
  	database.updateData("/functions/", {
  		response: json
  	});
+
+}
+
+// Edit Event
+function editEvent(json) { // Required cal_id, {start, end, new_start, new_end, eventID}
+
+	var object = JSON.parse(json);
+	var calendar = CalendarApp.getCalendarById(cal_id);
+	var event = findEvent(calendar, object);
+	if (event !== false) { // event was found!
+		event.setTime(new Date(object.new_start), new Date(object.new_end));
+		var object = {
+			response: true
+		};
+		var json = JSON.stringify(object);
+		database.updateData("/functions/", {
+			response: json
+		});
+	} else { // event wasn't found
+		var object = {
+			response: false
+		};
+		var json = JSON.stringify(object);
+		database.updateData("/functions/", {
+			response: json
+		});
+	}
+
+}
+
+// Remove Event
+function removeEvent(json) { // Required cal_id, {start, end, eventID}
+
+	var object = JSON.parse(json);
+	var calendar = CalendarApp.getCalendarById(cal_id);
+	var event = findEvent(calendar, object);
+	if (event !== false) { // event was found!
+		event.deleteEvent();
+		var object = {
+			response: true
+		}
+		var json = JSON.stringify(object);
+		database.updateData("/functions/", {
+			response: json
+		});
+	} else { // event wasn't found
+		var object = {
+			response: false
+		}
+		var json = JSON.stringify(object);
+		database.updateData("/functions/", {
+			response: json
+		});
+	}
+
+}
+
+// HELPER findEvent
+function findEvent(calendar, object) {
+	var events = calendar.getEvents(new Date(object.start), new Date(object.end));
+	for (var i = 0; i < events.length; i++) {
+		var id = events[i].getId();
+		if (events[i].getId() === object.eventID) {
+			return events[i];
+		}
+	}
+	return false;
+}
+
+// DOCUMENT TEMPLATES
+// Invoices
+function createInvoice(json) { // Required {calEvent, }
+
+	var object = JSON.parse(json);
+	var folder = DriveApp.getFolderById('0B-u8AnaoQYgrQ1dPNnFoTEZYOEE'); // get archives folder
+	var template = DriveApp.getFileById('1kZICuh44fu3F5yLCFBZHyIE2O058LPjcRNE7hV1cbyg'); // get template document
+	var newID = template.makeCopy(object.name + "_" + object.calEvent + "_invoice", folder).getId(); // make new copy
+	var file = DocumentApp.openById(newID);	 // open file
+	var body = file.getBody(); // get body of document
+	var replace = function(field, value) {
+      	if (value === null) {
+      		value = ' ';
+      	}
+		body.replaceText("{" + field + "}", value);
+	}
+	for (var field in object) {
+		replace(field, object[field]);
+	}
+	var current_date = new Date().toDateString();
+	replace('current_date', current_date);
+	var url = file.getUrl();
+	// Create response object
+	var object = {
+		url: url,
+		id: object.id,
+		response: true
+	}
+	// stringify to json
+	var json = JSON.stringify(object);
+	database.updateData("/functions/", {
+		response: json
+	});
 
 }

@@ -2,7 +2,7 @@ function main() {
 
 	app.iframe = new app.Iframe();
 
-	var data = {
+	var data_CreateEvent = {
 		group: {
 			groupName: "Sam",
 			groupType: "School"
@@ -15,9 +15,24 @@ function main() {
 			}
 		}
 	};
-	var json = JSON.stringify(data);
 
-	app.iframe.request("createEvent", json).then(function(response) {
+	var data_EditEvent = {
+		start: "Tue Jan 23 2018 18:30:00 GMT-0600 (CST)",
+		end: "Tue Jan 23 2018 19:30:00 GMT-0600 (CST)",
+		new_start: "Tue Jan 23 2018 12:30:00 GMT-0600 (CST)",
+		new_end: "Tue Jan 23 2018 14:30:00 GMT-0600 (CST)",
+		eventID: "fcf2bgurk41vdeqsddgqvtesj8@google.com" // ANNOYING BUT WORKS
+	};
+
+	var data_RemoveEvent = {
+		start: "Tue Jan 23 2018 12:30:00 GMT-0600 (CST)",
+		end: "Tue Jan 23 2018 14:30:00 GMT-0600 (CST)",
+		eventID: "fcf2bgurk41vdeqsddgqvtesj8@google.com"
+	}
+
+	var json = JSON.stringify(data_RemoveEvent);
+
+	app.iframe.request("removeEvent", json).then(function(response) {
 
 		console.log("It worked! The response is:");
 		console.log(response);
@@ -66,5 +81,3 @@ app.Iframe = Backbone.Firebase.Model.extend({
 
 	}
 });
-
-$(document).ready(main);
