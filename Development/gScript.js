@@ -3,7 +3,6 @@ var sheet = spreadSheet.getSheetByName("Test");
 var database = FirebaseApp.getDatabaseByUrl("https://development-c2673.firebaseio.com/");
 
 function doGet(e) {
-	sheet.getRange(1, 1).setValue("Yes");
 	getData();
 }
 
@@ -13,7 +12,6 @@ function getData() {
 }
 
 function apiController(params) {
-	// Alert user
 	sheet.getRange(1, 1).setValue(params.fnct);
 	database.updateData("/functions/", {
 		response: "Yes"

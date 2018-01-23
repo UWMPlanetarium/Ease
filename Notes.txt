@@ -1,5 +1,8 @@
 2018 Production Release
 
+	googleFunctions
+		1. Test a GET command to the server
+
 	accountingDashboard.js
 		1. Fix monthly income graph to pull from correct data, by year
 		2. Fix total income graph to pull from correct data, by year

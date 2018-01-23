@@ -1,13 +1,7 @@
 function main() {
-	$.ajax({
-		url: "https://script.google.com/macros/s/AKfycbxQavSesJpTI1mNOjzud8dUpHxvarjuL5DKGC53O_m758PZoUcP/exec",
-		method: "POST",
-		dataType: "jsonp",
-		data: JSON.stringify({fnct: "Test"}),
-		success: function(res) {
-			console.log(res);
-		}
-	})
+$.getJSON('http://anyorigin.com/go?url=https%3A//script.google.com/macros/s/AKfycbykE61pc7soyWhtW76U9HmvTJ218LPW_flmxCGM7mJi5LYXhr01/exec&callback=?', function(data){
+	$('#output').html(data.contents);
+});
 }
 main();
 
