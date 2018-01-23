@@ -59,7 +59,3 @@ Future Release
 		
 	groupView.js
 		1. Do I want a config file that determines things like the values in the group search field? What if they were paramaters for the user so they could pick what they wanted to search for / set defaults for their account?
-		
-		
-		
-		

@@ -1,10 +1,26 @@
 {
+  "views": [
+    "accounting_dashboard.html",
+    "dashboard.html",
+    "event_aux_view.html",
+    "event_detail_view.html",
+    "event_list_item.html",
+    "group_list_item.html",
+    "group_view.html",
+    "login_form.html",
+    "new_event.html",
+    "projects_dashboard.html",
+    "scheduling_dashboard.html",
+    "settings.html",
+    "sidebar.html",
+    "user_settings.html"
+  ],
   "backbone": {
-    "collections": [
-      "collections.js"
-    ],
     "models": [
       "models.js"
+    ],
+    "collections": [
+      "collections.js"
     ],
     "views": [
       "accountingDashboard.js",
@@ -23,21 +39,5 @@
       "sidebarView.js",
       "userView.js"
     ]
-  },
-  "views": [
-    "accounting_dashboard.html",
-    "dashboard.html",
-    "event_aux_view.html",
-    "event_detail_view.html",
-    "event_list_item.html",
-    "group_list_item.html",
-    "group_view.html",
-    "login_form.html",
-    "new_event.html",
-    "projects_dashboard.html",
-    "scheduling_dashboard.html",
-    "settings.html",
-    "sidebar.html",
-    "user_settings.html"
-  ]
+  }
 }

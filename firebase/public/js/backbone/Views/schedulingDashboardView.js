@@ -1,3 +1,5 @@
+// DOCUMENT
+
 app.SchedulingDashboardView = Backbone.View.extend({
 
 	template: _.template($('#scheduling-dashboard-template').html()),
@@ -24,7 +26,7 @@ app.SchedulingDashboardView = Backbone.View.extend({
 		var unpaid_events = Helper.arrayWhere(previous_events, 'paidStatus', false);
 		this.$el.find('.num_unpaid_events').html(unpaid_events.length);
 
-		// Num of current attendence
+		// Num of yearly attendence
 		var attendence = app.eventList.getAttendance();
 		this.$el.find('.num_current_attendance').html(attendence);
 

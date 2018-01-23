@@ -96,4 +96,3 @@ function loadPage() {
 	app.appView = new app.AppView();
 
 }
-

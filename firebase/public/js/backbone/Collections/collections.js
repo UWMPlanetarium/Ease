@@ -179,26 +179,35 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	  return output;
 
 	},
-	getAttendance: function() { // STARTING IN OCTOBER!
+	getAttendance: function() {
 
-	  var output = 13079;
-	  for (var i = 0; i < this.models.length; i++) {
+		// Get current year
+		var year = new Date().getFullYear();
+		var attendance = 0;
 
-	    if (this.models[i].attributes.finished === true) { // Show is finished
+		// Loop through events
+		for (var i = 0; i < this.models.length; i++) {
 
-	      var month = parseInt(moment(this.models[i].attributes.calEvent.calStart).format("M")); // 1 starting list ... weird
+			// Is it the right year?
+			if (new Date(this.models[i].attributes.calEvent.date.iso).getFullYear() === year) {
 
-	      if (month >= 10) { // October or better, NEEDS TO CHANGE EVENTUALLY!!!!
+				// Is the show complete?
+				if (this.models[i].attributes.finished === true) {
 
-	        output += parseInt(this.models[i].attributes.numOfPeople);
+					if (typeof(this.models[i].attributes.numOfPeople) === "number") {
+						attendance += this.models[i].attributes.numOfPeople;
+						console.log(attendance);
+					} else {
+						// OOPS
+					}
 
-	      }
+				}
 
-	    }
+			}
 
-	  }
+		}
 
-	  return output.toLocaleString();
+		return attendance;
 
 	}
 	
