@@ -75,14 +75,15 @@ app.EventAuxView = Backbone.View.extend({
 			new_end: moment(date + ' ' + endTime).format(),
 			start: this.model.attributes.calEvent.calStart,
 			end: this.model.attributes.calEvent.calEnd,
-			event_id: this.model.attributes.calEvent.eventID
+			eventID: this.model.attributes.calEvent.eventID
 		};
 		var json = JSON.stringify(object);
 		
-		/* Needs to change to google functions
-		google.script.run.withSuccessHandler(Helper.updateEvent)
-			.editEvent(json);
-		*/
+		app.iframe.request("updateEvent", json).then(function(response) {
+			toastr.success("Event updated");
+		}, function(error) {
+			toastr.error("Event wasn't updated successfully on google calendar.");
+		});
 
 		// Set to model
 		this.model.set({
@@ -108,6 +109,18 @@ app.EventAuxView = Backbone.View.extend({
 
 		if (confirm === true) {
 
+			var obj = {
+				start: this.model.attributes.calEvent.calStart,
+				end: this.model.attributes.caEvent.calEnd,
+				eventID: this.model.attributes.calEvent.eventID
+			}
+			var json = JSON.stringify(obj);
+
+			app.iframe.request("removeEvent", json).then(function(response) {
+				// Do nothing
+			}, function(error) {
+				toastr.error("Not successfully deleted from google calendar. Please delete it manually.")
+			});
 			app.eventList.remove(this.model);
 			toastr.success("Event deleted");
 			$('#modals .modal').modal('hide');

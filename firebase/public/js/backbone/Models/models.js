@@ -1,5 +1,41 @@
 // Models
 
+// Iframe model
+app.Iframe = Backbone.Firebase.Model.extend({
+	urlRoot: "https://development-c2673.firebaseio.com/functions/",
+	autoSync: true,
+	request: function(fnct, data) { // String, Json
+
+		var proxy = this;
+
+		return new Promise(function(resolve, reject) {
+
+			// Set data and push iframe url
+			proxy.set({
+				fnct: fnct,
+				data: data,
+				response: false
+			});
+			$("#iframe").attr("src", "https://script.google.com/macros/s/AKfycbykE61pc7soyWhtW76U9HmvTJ218LPW_flmxCGM7mJi5LYXhr01/exec");
+
+			// Set a stopwatch for 8 seconds, if the response attribute doesn't change, reject the promise
+			proxy.listenToOnce(proxy, "change", function() {
+				$("#iframe").attr("src", "#");
+				resolve(proxy.attributes.response);
+			});
+
+			setTimeout(function() {
+				if (proxy.attributes.response === false) {
+					$("#iframe").attr("src", "#");
+					reject(Error("No response from server."));
+				}
+			}, 8000);
+
+		});
+
+	}
+});
+
 // Group model
 app.Group = Backbone.Model.extend({
 	
