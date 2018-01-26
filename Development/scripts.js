@@ -33,13 +33,23 @@ function main() {
 	// {calEvent, groupName, groupGroup, numOfPeople, workPhone, cellPhone, activity, program, email, grade, price}
 	var data_CreateInvoice = {
 		calEvent: {
-
-		}
+			date: "Today"
+		},
+		groupName: "Sam",
+		groupGroup: "Private",
+		numOfPeople: 12,
+		workPhone: "999-999-9999",
+		cellPhone: "999-999-9999",
+		activity: "none",
+		program: "none",
+		email: "none",
+		grade: "none",
+		price: 1000 
 	};
 
-	var json = JSON.stringify(data_RemoveEvent);
+	var json = JSON.stringify(data_CreateInvoice);
 
-	app.iframe.request("removeEvent", json).then(function(response) {
+	app.iframe.request("createInvoice", json).then(function(response) {
 
 		console.log("It worked! The response is:");
 		console.log(response);

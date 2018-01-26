@@ -1,6 +1,6 @@
 // Globals
 var database = FirebaseApp.getDatabaseByUrl("https://development-c2673.firebaseio.com/");
-var cal_id = "q3qhk29ni908mhhrrvrha1lfq0@group.calendar.google.com";
+var cal_id = "nbqhislsj9vvnp8h6tb52dsq6c@group.calendar.google.com";
 
 function doGet(e) {
 	getData();

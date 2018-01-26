@@ -5,6 +5,10 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#iframe {
+  display: none;
+}
+
 #sidebar {
   background: #fff;
   position: fixed;

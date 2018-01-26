@@ -30,6 +30,9 @@ app.AppView = Backbone.View.extend({
 		app.taskList = new app.TaskList();
 		app.userList = new app.UserList();
 
+		// Create iframe model
+		app.iframe = new app.Iframe();
+
 		this.load();
 
 	},
