@@ -154,9 +154,13 @@ app.EventDetailView = Backbone.View.extend({
 		// Create json to send to server
 		var json = JSON.stringify(invoice_object);
 
-		// Send data to server
-		google.script.run.withSuccessHandler(Helper.load_invoice)
-			.createInvoice(json);
+		// Make the request
+		app.iframe.request("createInvoice", json).then(function(response) {
+			toastr.success("Created!");
+			window.open(response.url, "_blank");
+		}, function(error) {
+			toastr.error(error);
+		});
 
 	},
 	view_invoice: function() {
@@ -238,9 +242,15 @@ app.EventDetailView = Backbone.View.extend({
 			event_id: this.model.event.attributes.calEvent.eventID,
 			last_edited_by: User.attributes._id
 		};
+		
 		var json = JSON.stringify(object);
-		google.script.run.withSuccessHandler(Helper.updateEvent)
-			.editEvent(json);
+		
+		// Make request
+		app.iframe.request("editEvent", json).then(function(response) {
+			toastr.success("Event updated!");
+		}, function(error) {
+			toastr.error(error);
+		});
 
 		// Set to model
 		this.model.event.set({
@@ -266,6 +276,21 @@ app.EventDetailView = Backbone.View.extend({
 
 		if (confirm === true) {
 
+			// Create object
+			var obj = {
+				start: this.model.event.calEvent.calStart,
+				end: this.model.event.calEvent.calEnd,
+				eventID: this.model.event.calEvent.eventID
+			};
+			var json = JSON.stringify(obj);
+			
+			// Make request
+			app.iframe.request("removeEvent", json).then(function(response) {
+				toastr.success("Event deleted from google calendar");
+			}, function(error) {
+				toastr.error(error);
+			});
+			
 			app.eventList.remove(this.model.event);
 			toastr.success("Event deleted");
 			$('#modals .modal').modal('hide');
