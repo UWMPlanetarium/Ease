@@ -104,9 +104,13 @@ app.EventListView = Backbone.View.extend({
 		// Create json to send to server
 		var json = JSON.stringify(invoice_object);
 
-		// Send data to server
-		google.script.run.withSuccessHandler(Helper.load_invoice)
-			.createInvoice(json);
+		// Send data
+		app.iframe.request("createInvoice", json).then(function(response) {
+			toastr.success("Invoice created!");
+			window.open(response.url, "_blank");
+		}, function(error) {
+			toastr.error(error);
+		});
 
 	},
 	view_invoice: function() {

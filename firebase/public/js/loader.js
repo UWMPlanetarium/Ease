@@ -17,26 +17,36 @@
 
 
 var config;
+var load_state = false;
 $(document).ready(loadConfig);
 
 function loadConfig() {
 
-	console.log('Loading...');
+	if (load_state === false) {
 
-	// Load config.json file via async ajax call
-	$.ajax({
-		url: '/js/config.json',
-		dataType: 'JSON',
-		error: function(xhr, textStatus, errorThrown) {
-			console.log(xhr);
-			console.log(textStatus);
-			console.log(errorThrown);
-		},
-		success: function(res) {
-			config = res;
-			load();
-		}
-	});
+		load_state = true;
+
+		console.log('Loading...');
+
+		// Load config.json file via async ajax call
+		$.ajax({
+			url: '/js/config.json',
+			dataType: 'JSON',
+			error: function(xhr, textStatus, errorThrown) {
+				console.log(xhr);
+				console.log(textStatus);
+				console.log(errorThrown);
+			},
+			success: function(res) {
+				config = res;
+				load();
+			}
+		});
+
+	} else {
+		// Do nothing
+	}
+
 
 }
 

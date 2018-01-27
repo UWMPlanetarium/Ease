@@ -98,11 +98,6 @@ app.NewEventView = Backbone.View.extend({
 		// Show group contact names
 		this.$el.find('.select-date .groupName').html(this.group.attributes.groupName);
 
-		// Create scheduling calendar
-		var proxy_select = this.select_date_calendar.bind(this);
-		google.script.run.withSuccessHandler(proxy_select)
-			.getSchedulingEvents();
-
 	},
 	select_date_click: function() {
 
@@ -150,13 +145,19 @@ app.NewEventView = Backbone.View.extend({
 		var json = JSON.stringify({event_DATA:event, group:this.group.attributes});
 
 		var proxy = this.create_event.bind(this);
-		google.script.run.withSuccessHandler(proxy)
-			.createEvent(json);
+
+		app.iframe.request("createEvent", json).then(function(response) {
+			toastr.success("Google calendar event created!");
+			proxy(response);
+		}, function(error) {
+			toastr.error(error);
+		});
 
 	},
 	create_event: function(json) {
 
 		var object = JSON.parse(json);
+		console.log(json);
 		if (object.response === true) {
 
 			toastr.success("Created event");
@@ -171,71 +172,6 @@ app.NewEventView = Backbone.View.extend({
 				$('#modals').html(view.render().el);
 			}, 200);
 
-		}
-
-	},
-	select_date_calendar: function(json) {
-
-		this.events = JSON.parse(json);
-
-		// Get EASE events
-		var object = {
-			events: Helper.getAllEvents(),
-			calendar_title: "Ease"
-		};
-
-		this.events.push(object);
-
-		this.all_events = jQuery.extend(true, [], this.events);
-
-		// Add checkboxes for calendar viewing
-		for (var i = 0; i < this.events.length; i++) {
-			this.$el.find('.calendar-status').append(this.events[i].calendar_title + " <input type='checkbox' class='calendar-status-change' checked calendar='" + this.events[i].calendar_title + "' />&nbsp;&nbsp;&nbsp;");
-		}
-
-		this.$el.find('#scheduling-new-event-calendar').fullCalendar({
-			eventSources: this.events,
-			header: {
-				left: 'prev,next,today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			defaultView: 'agendaWeek',
-			timezone: 'local'
-		});
-
-		setTimeout(function() {
-			$('#scheduling-new-event-calendar').fullCalendar('render');
-		}, 20);
-
-	},
-	change_scheduling_calendar: function(e) {
-
-		var calendar = $(e.currentTarget).attr('calendar');
-		var state = $(e.currentTarget).is(':checked');
-
-		if (state === false) { // Turn off a calendar
-
-			for (var i = 0; i < this.events.length; i++) {
-				if (this.events[i].calendar_title === calendar) {
-					this.events.splice(i, 1); // Remove the calendar
-				}
-			}
-
-		} else if (state === true) { // Turn on a calendar
-
-			for (var i = 0; i < this.all_events.length; i++) {
-				if (this.all_events[i].calendar_title === calendar) {
-					this.events.push(this.all_events[i]);
-				}
-			}
-
-		}
-
-		// Update calendar
-		this.$el.find('#scheduling-new-event-calendar').fullCalendar('removeEvents');
-		for (var j = 0; j < this.events.length; j++) {
-			this.$el.find('#scheduling-new-event-calendar').fullCalendar('addEventSource', this.events[j]);
 		}
 
 	}

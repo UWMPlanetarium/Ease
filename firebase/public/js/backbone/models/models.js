@@ -21,7 +21,7 @@ app.Iframe = Backbone.Firebase.Model.extend({
 			// Set a stopwatch for 8 seconds, if the response attribute doesn't change, reject the promise
 			proxy.listenToOnce(proxy, "change", function() {
 				$("#iframe").attr("src", "#");
-				resolve(proxy.attributes.response);
+				resolve(JSON.parse(proxy.attributes.response));
 			});
 
 			setTimeout(function() {

@@ -154,10 +154,15 @@ app.EventDetailView = Backbone.View.extend({
 		// Create json to send to server
 		var json = JSON.stringify(invoice_object);
 
+		var proxy = this;
+
 		// Make the request
 		app.iframe.request("createInvoice", json).then(function(response) {
 			toastr.success("Created!");
 			window.open(response.url, "_blank");
+			proxy.model.event.set({
+				invoice_url: response.url
+			});
 		}, function(error) {
 			toastr.error(error);
 		});
@@ -239,7 +244,7 @@ app.EventDetailView = Backbone.View.extend({
 			new_end: moment(date + ' ' + endTime).format(),
 			start: this.model.event.attributes.calEvent.calStart,
 			end: this.model.event.attributes.calEvent.calEnd,
-			event_id: this.model.event.attributes.calEvent.eventID,
+			eventID: this.model.event.attributes.calEvent.eventID,
 			last_edited_by: User.attributes._id
 		};
 		
@@ -247,6 +252,7 @@ app.EventDetailView = Backbone.View.extend({
 		
 		// Make request
 		app.iframe.request("editEvent", json).then(function(response) {
+			console.log(response);
 			toastr.success("Event updated!");
 		}, function(error) {
 			toastr.error(error);
@@ -278,9 +284,9 @@ app.EventDetailView = Backbone.View.extend({
 
 			// Create object
 			var obj = {
-				start: this.model.event.calEvent.calStart,
-				end: this.model.event.calEvent.calEnd,
-				eventID: this.model.event.calEvent.eventID
+				start: this.model.event.attributes.calEvent.calStart,
+				end: this.model.event.attributes.calEvent.calEnd,
+				eventID: this.model.event.attributes.calEvent.eventID
 			};
 			var json = JSON.stringify(obj);
 			
