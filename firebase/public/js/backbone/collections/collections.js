@@ -69,9 +69,9 @@ app.GroupList = Backbone.Firebase.Collection.extend({
 	  var id = 0;
 	  for (var i = 0; i < this.models.length; i++) {
 
-	    if (parseInt(this.models[i].attributes._id) > id) {
-	      id = this.models[i].attributes._id;
-	    }
+		if (parseInt(this.models[i].attributes._id) > id) {
+		  id = this.models[i].attributes._id;
+		}
 
 	  }
 	  ++id;
@@ -96,9 +96,9 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	getID: function(id) {
 	  var output = [];
 	  for (var i = 0; i < this.models.length; i++) {
-	    if (this.models[i].attributes.groupID === id) {
-	      output.push(this.models[i]);
-	    }
+		if (this.models[i].attributes.groupID === id) {
+		  output.push(this.models[i]);
+		}
 	  }
 	  return output;
 	},
@@ -122,10 +122,10 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	  var output = [];
 	  for (var i = 0; i < this.models.length; i++) {
 
-	    var event_date = moment(this.models[i].attributes.calEvent.calStart);
-	    if (event_date.isAfter(current_date)) { // The event is after the current date
-	      output.push(this.models[i]);
-	    }
+		var event_date = moment(this.models[i].attributes.calEvent.calStart);
+		if (event_date.isAfter(current_date)) { // The event is after the current date
+		  output.push(this.models[i]);
+		}
 
 	  }
 	  return output;
@@ -137,10 +137,10 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	  var output = [];
 	  for (var i = 0; i < this.models.length; i++) {
 
-	    var event_date = moment(this.models[i].attributes.calEvent.calStart);
-	    if (current_date.isAfter(event_date)) { // The event is after the current date
-	      output.push(this.models[i]);
-	    }
+		var event_date = moment(this.models[i].attributes.calEvent.calStart);
+		if (current_date.isAfter(event_date)) { // The event is after the current date
+		  output.push(this.models[i]);
+		}
 
 	  }
 	  return output;    
@@ -153,7 +153,7 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	  // Need to sort events by date
 	  events.sort(function(a, b) {
 
-	    return new Date(a.attributes.calEvent.calStart).getTime() - new Date(b.attributes.calEvent.calStart).getTime();
+		return new Date(a.attributes.calEvent.calStart).getTime() - new Date(b.attributes.calEvent.calStart).getTime();
 
 	  });
 
@@ -162,21 +162,34 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	},
 	getAttendanceByMonth: function() { // STARTING IN OCTOBER!
 
-	  var output = [683, 1585, 1475, 1540, 1180, 690, 762, 3659, 1505, 0, 0, 0];
-	  for (var i = 0; i < this.models.length; i++) {
+		// get current year
+		var year = new Date().getFullYear();		
+		var output = new Array(12).fill(0);
 
-	    if (this.models[i].attributes.finished === true) { // Show is finished
+		for (var i = 0; i < this.models.length; i++) {
 
-	      var month = parseInt(moment(this.models[i].attributes.calEvent.calStart).format("M")); // 1 starting list ... weird
+			// is it the right year?
+			if (new Date(this.models[i].attributes.calEvent.date.iso).getFullYear() === year) {
 
-	      if (month >= 10) { // October or better, NEEDS TO CHANGE EVENTUALLY!!!!
-	        output[month - 1] += parseInt(this.models[i].attributes.numOfPeople);
-	      }
+				// Is the show complete?	
+				if (this.models[i].attributes.finished === true) {
 
-	    }
+					var month = parseInt(moment(this.models[i].attributes.calEvent.calStart).format("M")); // 1 starting list ... weird
+					var num = parseInt(this.models[i].attributes.numOfPeople);
+					if (num > 0) {
+						console.log(num);
+						output[month - 1] += num;
+					}
 
-	  }
-	  return output;
+				}
+
+			}
+
+		}
+
+		console.log(output);
+
+		return output;
 
 	},
 	getAttendance: function() {
@@ -229,9 +242,9 @@ app.TransactionList = Backbone.Firebase.Collection.extend({
 	  var id = 0;
 	  for (var i = 0; i < this.models.length; i++) {
 
-	    if (parseInt(this.models[i].attributes.id) > id) {
-	      id = this.models[i].attributes.id;
-	    }
+		if (parseInt(this.models[i].attributes.id) > id) {
+		  id = this.models[i].attributes.id;
+		}
 
 	  }
 	  ++id;
