@@ -36,6 +36,7 @@ Future Release
 		1. Consolidate getUpcomingEvents and getPreviousEvents into one function
 		2. Check why getNextEvents in needed, if the array is sorted properly can't I simply array.reverse() for future events?
 		3. Most collections have this 'getNextID' method, can it be generalized?
+		4. Make EventList getAttendanceByMonth only show past and present months of current year
 		
 	eventAuxView.js
 		1. Rethink events attribute. Do I need hard coded id's for click events? The extra object is confusing.
