@@ -15,7 +15,6 @@
 
 */
 
-
 var config;
 var load_state = false;
 $(document).ready(loadConfig);
@@ -43,8 +42,6 @@ function loadConfig() {
 			}
 		});
 
-	} else {
-		// Do nothing
 	}
 
 
