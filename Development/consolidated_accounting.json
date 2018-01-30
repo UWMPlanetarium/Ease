@@ -1,0 +1,1355 @@
+[
+  {
+    "_id": 0,
+    "eventID": "3",
+    "groupID": "4",
+    "total": 300,
+    "date": "2017-07-18T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 300,
+        "date": "2017-07-18T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 1,
+    "eventID": "4",
+    "groupID": "4",
+    "total": 300,
+    "date": "2017-07-18T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 300,
+        "date": "2017-07-18T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 2,
+    "eventID": "6",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-07-26T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-07-26T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 3,
+    "eventID": "19",
+    "groupID": "11",
+    "total": 180,
+    "date": "2017-08-15T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 180,
+        "date": "2017-08-15T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 4,
+    "eventID": "22",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-08-30T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-08-30T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 5,
+    "eventID": "22",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-08-30T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-08-30T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 6,
+    "eventID": "7",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-08-23T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-08-23T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 7,
+    "eventID": "29",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-06T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-09-06T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 8,
+    "eventID": "17",
+    "groupID": "9",
+    "total": 190,
+    "date": "2017-09-09T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 190,
+        "date": "2017-09-09T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 9,
+    "eventID": "38",
+    "groupID": "22",
+    "total": 0,
+    "date": "2017-09-11T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 10,
+    "eventID": "39",
+    "groupID": "22",
+    "total": 0,
+    "date": "2017-09-13T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 11,
+    "eventID": "30",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-13T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 12,
+    "eventID": "39",
+    "groupID": "22",
+    "total": 0,
+    "date": "2017-09-13T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 13,
+    "eventID": "30",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-13T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 14,
+    "eventID": "40",
+    "groupID": "15",
+    "total": 350,
+    "date": "2017-09-14T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 350,
+        "date": "2017-09-14T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 15,
+    "eventID": 51,
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-20T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 16,
+    "eventID": "41",
+    "groupID": "24",
+    "total": 0,
+    "date": "2017-09-20T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 17,
+    "eventID": 51,
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-20T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 18,
+    "eventID": "41",
+    "groupID": "24",
+    "total": 0,
+    "date": "2017-09-20T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 19,
+    "eventID": 61,
+    "groupID": 35,
+    "total": 100,
+    "date": "2017-09-21T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 100,
+        "date": "2017-09-21T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 20,
+    "eventID": "42",
+    "groupID": "24",
+    "total": 0,
+    "date": "2017-09-22T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 21,
+    "eventID": "43",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-23T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 22,
+    "eventID": "43",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-23T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 23,
+    "eventID": "43",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-23T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 24,
+    "eventID": "43",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-23T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 25,
+    "eventID": "43",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-23T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 26,
+    "eventID": "43",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-23T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 27,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 28,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 29,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 30,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 31,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 32,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 33,
+    "eventID": "44",
+    "groupID": "25",
+    "total": 0,
+    "date": "2017-09-24T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 34,
+    "eventID": 66,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-09-27T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 35,
+    "eventID": "34",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-27T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 36,
+    "eventID": 66,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-09-27T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 37,
+    "eventID": "34",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-27T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 38,
+    "eventID": 66,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-09-27T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 39,
+    "eventID": "34",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-09-27T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 40,
+    "eventID": 50,
+    "groupID": 30,
+    "total": 0,
+    "date": "2017-10-02T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 41,
+    "eventID": 96,
+    "groupID": 59,
+    "total": 0,
+    "date": "2017-10-02T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 42,
+    "eventID": 50,
+    "groupID": 30,
+    "total": 0,
+    "date": "2017-10-02T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 43,
+    "eventID": 96,
+    "groupID": 59,
+    "total": 0,
+    "date": "2017-10-02T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 44,
+    "eventID": 57,
+    "groupID": 32,
+    "total": 0,
+    "date": "2017-10-04T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 45,
+    "eventID": 98,
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-10-04T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 46,
+    "eventID": 57,
+    "groupID": 32,
+    "total": 0,
+    "date": "2017-10-04T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 47,
+    "eventID": 98,
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-10-04T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 48,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 49,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 50,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 51,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 52,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 53,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 54,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 55,
+    "eventID": 60,
+    "groupID": 34,
+    "total": 0,
+    "date": "2017-10-07T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 56,
+    "eventID": 91,
+    "groupID": 57,
+    "total": 100,
+    "date": "2017-10-17T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 100,
+        "date": "2017-10-17T05:00:00.000Z",
+        "type": "Credit"
+      }
+    ]
+  },
+  {
+    "_id": 57,
+    "eventID": 52,
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-10-18T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 58,
+    "eventID": 73,
+    "groupID": 40,
+    "total": 60,
+    "date": "2017-10-19T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-10-19T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 59,
+    "eventID": "36",
+    "groupID": "21",
+    "total": 60,
+    "date": "2017-10-20T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-10-20T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 60,
+    "eventID": 87,
+    "groupID": 54,
+    "total": 200,
+    "date": "2017-10-20T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 200,
+        "date": "2017-10-20T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 61,
+    "eventID": 82,
+    "groupID": 50,
+    "total": 150,
+    "date": "2017-10-21T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 150,
+        "date": "2017-10-21T05:00:00.000Z",
+        "type": "Credit"
+      }
+    ]
+  },
+  {
+    "_id": 62,
+    "eventID": "47",
+    "groupID": "28",
+    "total": 60,
+    "date": "2017-10-23T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-10-23T05:00:00.000Z",
+        "type": "Credit"
+      }
+    ]
+  },
+  {
+    "_id": 63,
+    "eventID": 67,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 64,
+    "eventID": 92,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 65,
+    "eventID": 93,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 66,
+    "eventID": 125,
+    "groupID": 70,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 67,
+    "eventID": 67,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 68,
+    "eventID": 92,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 69,
+    "eventID": 93,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 70,
+    "eventID": 125,
+    "groupID": 70,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 71,
+    "eventID": 67,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 72,
+    "eventID": 92,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 73,
+    "eventID": 93,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 74,
+    "eventID": 125,
+    "groupID": 70,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 75,
+    "eventID": 67,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 76,
+    "eventID": 92,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 77,
+    "eventID": 93,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 78,
+    "eventID": 125,
+    "groupID": 70,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 79,
+    "eventID": 67,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 80,
+    "eventID": 92,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 81,
+    "eventID": 93,
+    "groupID": 29,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 82,
+    "eventID": 125,
+    "groupID": 70,
+    "total": 0,
+    "date": "2017-10-25T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-10-25T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 83,
+    "eventID": 85,
+    "groupID": 52,
+    "total": 40,
+    "date": "2017-10-26T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 40,
+        "date": "2017-10-26T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 84,
+    "eventID": 83,
+    "groupID": "14",
+    "total": 60,
+    "date": "2017-10-27T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-10-27T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 85,
+    "eventID": 89,
+    "groupID": 56,
+    "total": 60,
+    "date": "2017-10-27T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-10-27T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 86,
+    "eventID": 83,
+    "groupID": "14",
+    "total": 60,
+    "date": "2017-10-27T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": " ",
+        "date": "2017-10-27T05:00:00.000Z",
+        "type": "Cash"
+      },
+      {
+        "amount": 60,
+        "date": "2017-10-27T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 87,
+    "eventID": 89,
+    "groupID": 56,
+    "total": 60,
+    "date": "2017-10-27T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": " ",
+        "date": "2017-10-27T05:00:00.000Z",
+        "type": "Cash"
+      },
+      {
+        "amount": 60,
+        "date": "2017-10-27T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 88,
+    "eventID": 84,
+    "groupID": 51,
+    "total": 120,
+    "date": "2017-10-30T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 120,
+        "date": "2017-10-30T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 89,
+    "eventID": "46",
+    "groupID": "27",
+    "total": 40,
+    "date": "2017-10-31T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 40,
+        "date": "2017-10-31T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 90,
+    "eventID": "24",
+    "groupID": "16",
+    "total": 100,
+    "date": "2017-10-31T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 100,
+        "date": "2017-10-31T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 91,
+    "eventID": 78,
+    "groupID": 46,
+    "total": 40,
+    "date": "2017-11-01T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 40,
+        "date": "2017-11-01T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 92,
+    "eventID": "32",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-11-01T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 0,
+        "date": "2017-11-01T05:00:00.000Z",
+        "type": "Cash"
+      }
+    ]
+  },
+  {
+    "_id": 93,
+    "eventID": 102,
+    "groupID": 62,
+    "total": 60,
+    "date": "2017-11-02T05:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-11-02T05:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 94,
+    "eventID": 133,
+    "groupID": 76,
+    "total": 0,
+    "date": "2017-11-04T05:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 95,
+    "eventID": 130,
+    "groupID": "27",
+    "total": 40,
+    "date": "2017-11-06T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 40,
+        "date": "2017-11-06T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 96,
+    "eventID": "31",
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-11-08T06:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 97,
+    "eventID": 132,
+    "groupID": 75,
+    "total": 60,
+    "date": "2017-11-10T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-11-10T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 98,
+    "eventID": 123,
+    "groupID": 69,
+    "total": 60,
+    "date": "2017-11-15T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-11-15T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 99,
+    "eventID": 101,
+    "groupID": 61,
+    "total": 60,
+    "date": "2017-11-20T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": " ",
+        "date": "2017-11-20T06:00:00.000Z",
+        "type": "Cash"
+      },
+      {
+        "amount": 60,
+        "date": "2017-11-20T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 100,
+    "eventID": 88,
+    "groupID": 55,
+    "total": 150,
+    "date": "2017-11-20T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 150,
+        "date": "2017-11-20T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 101,
+    "eventID": 137,
+    "groupID": 79,
+    "total": 100,
+    "date": "2017-11-21T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 100,
+        "date": "2017-11-21T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 102,
+    "eventID": 124,
+    "groupID": 41,
+    "total": 60,
+    "date": "2017-11-28T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-11-28T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 103,
+    "eventID": 134,
+    "groupID": 77,
+    "total": 140,
+    "date": "2017-11-29T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 140,
+        "date": "2017-11-29T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 104,
+    "eventID": 68,
+    "groupID": 39,
+    "total": 0,
+    "date": "2017-11-29T06:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 105,
+    "eventID": "28",
+    "groupID": "18",
+    "total": 150,
+    "date": "2017-12-01T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 150,
+        "date": "2017-12-01T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 106,
+    "eventID": 122,
+    "groupID": 68,
+    "total": 60,
+    "date": "2017-12-04T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-12-04T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 107,
+    "eventID": 144,
+    "groupID": 83,
+    "total": 40,
+    "date": "2017-12-05T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 40,
+        "date": "2017-12-05T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 108,
+    "eventID": 56,
+    "groupID": 31,
+    "total": 120,
+    "date": "2017-12-07T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 120,
+        "date": "2017-12-07T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 109,
+    "eventID": 145,
+    "groupID": 86,
+    "total": 60,
+    "date": "2017-12-07T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-12-07T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 110,
+    "eventID": 140,
+    "groupID": 82,
+    "total": 60,
+    "date": "2017-12-08T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-12-08T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 111,
+    "eventID": 147,
+    "groupID": 87,
+    "total": 150,
+    "date": "2017-12-10T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 150,
+        "date": "2017-12-10T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 112,
+    "eventID": 148,
+    "groupID": 89,
+    "total": 200,
+    "date": "2017-12-11T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 200,
+        "date": "2017-12-11T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 113,
+    "eventID": 74,
+    "groupID": 42,
+    "total": 60,
+    "date": "2017-12-12T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-12-12T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 114,
+    "eventID": 55,
+    "groupID": "5",
+    "total": 0,
+    "date": "2017-12-13T06:00:00.000Z",
+    "payments": []
+  },
+  {
+    "_id": 115,
+    "eventID": 152,
+    "groupID": 92,
+    "total": 60,
+    "date": "2017-12-15T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 60,
+        "date": "2017-12-15T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  },
+  {
+    "_id": 116,
+    "eventID": 131,
+    "groupID": 74,
+    "total": 210,
+    "date": "2017-12-17T06:00:00.000Z",
+    "payments": [
+      {
+        "amount": 210,
+        "date": "2017-12-17T06:00:00.000Z",
+        "type": "Check"
+      }
+    ]
+  }
+]
