@@ -156,8 +156,7 @@ app.NewEventView = Backbone.View.extend({
 	},
 	create_event: function(json) {
 
-		var object = JSON.parse(json);
-		console.log(json);
+		var object = json;
 		if (object.response === true) {
 
 			toastr.success("Created event");

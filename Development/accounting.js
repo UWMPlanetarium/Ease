@@ -66,6 +66,7 @@ function crossRef() {
 	for (var i = 0; i < accounting.length; i++) {
 
 		var acc_date = new Date(accounting[i].date).toLocaleDateString();
+		var flag = false;
 
 		for (var event in events) {
 
@@ -75,6 +76,7 @@ function crossRef() {
 
 				if (parseInt(accounting[i].total) == parseInt(events[event].price)) {
 
+					flag = true;
 					++match;
 
 					var group = getGroup(events[event].groupID);
@@ -94,6 +96,12 @@ function crossRef() {
 
 				}
 
+			}
+
+			if (flag === false) { // An event wasn't found
+
+				
+				
 			}
 
 		}
