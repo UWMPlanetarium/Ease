@@ -1,0 +1,3922 @@
+[
+  {
+    "cash": "",
+    "check": 80,
+    "credit": "",
+    "date": "2017-01-08T06:00:00.000Z",
+    "group": "Heritage Christian",
+    "numOfPeople": 12,
+    "totalIncome": 80,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-11T06:00:00.000Z",
+    "group": "AB: Northern Lights",
+    "numOfPeople": 11,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-01-12T06:00:00.000Z",
+    "group": "Fernwood Montessori",
+    "numOfPeople": 46,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-01-13T06:00:00.000Z",
+    "group": "Fernwood Montessori",
+    "numOfPeople": 51,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 228,
+    "check": "",
+    "credit": "",
+    "date": "2017-01-13T06:00:00.000Z",
+    "group": "FNS: Life of a Star",
+    "numOfPeople": 58,
+    "totalIncome": 228,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 60,
+    "date": "2017-01-16T06:00:00.000Z",
+    "group": "Jewish Community Center",
+    "numOfPeople": 34,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 60,
+    "date": "2017-01-20T06:00:00.000Z",
+    "group": "Carter Christian Academy",
+    "numOfPeople": 24,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-01-20T06:00:00.000Z",
+    "group": "The Prairie School",
+    "numOfPeople": 48,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-20T06:00:00.000Z",
+    "group": "FNS: Life of a Star (1/2)",
+    "numOfPeople": 52,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 232,
+    "check": "",
+    "credit": 100,
+    "date": "2017-01-20T06:00:00.000Z",
+    "group": "FNS: Life of a Star (2/2)",
+    "numOfPeople": 31,
+    "totalIncome": 332,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-21T06:00:00.000Z",
+    "group": "10 Years of Stories and Stars",
+    "numOfPeople": 59,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-01-25T06:00:00.000Z",
+    "group": "Alcott School",
+    "numOfPeople": 56,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-25T06:00:00.000Z",
+    "group": "AB: Carribbean",
+    "numOfPeople": 6,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-25T06:00:00.000Z",
+    "group": "Astro 185",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-25T06:00:00.000Z",
+    "group": "Indoor Observing",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-01-26T06:00:00.000Z",
+    "group": "Hoover Elementary School",
+    "numOfPeople": 31,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 280,
+    "check": "",
+    "credit": 40,
+    "date": "2017-01-27T06:00:00.000Z",
+    "group": "FNS: Life of a Star",
+    "numOfPeople": 70,
+    "totalIncome": 320,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 80,
+    "credit": "",
+    "date": "2017-01-30T06:00:00.000Z",
+    "group": "Guadalupe Joes",
+    "numOfPeople": 22,
+    "totalIncome": 80,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-01-30T06:00:00.000Z",
+    "group": "Astro 185",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-01T06:00:00.000Z",
+    "group": "Astro 103: Dawn",
+    "numOfPeople": 33,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-01T06:00:00.000Z",
+    "group": "Astro 185",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-01T06:00:00.000Z",
+    "group": "African Celebration",
+    "numOfPeople": 60,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-01T06:00:00.000Z",
+    "group": "AstroBreak ",
+    "numOfPeople": 33,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-02T06:00:00.000Z",
+    "group": "Brookfield Academy",
+    "numOfPeople": 64,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-03T06:00:00.000Z",
+    "group": "FNS: Life of a Star (1/2)",
+    "numOfPeople": 76,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 258,
+    "check": "",
+    "credit": 84,
+    "date": "2017-02-03T06:00:00.000Z",
+    "group": "FNS: Life of a Star (2/2)",
+    "numOfPeople": 15,
+    "totalIncome": 342,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-03T06:00:00.000Z",
+    "group": "Astro 103: Dawn",
+    "numOfPeople": 47,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-06T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 3,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-02-07T06:00:00.000Z",
+    "group": "Tamarack Waldorf School",
+    "numOfPeople": 23,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-07T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 6,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-08T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-08T06:00:00.000Z",
+    "group": "AB: African skies",
+    "numOfPeople": 27,
+    "totalIncome": 0,
+    "type": "AstroBreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-08T06:00:00.000Z",
+    "group": "Astro 103: Patrick",
+    "numOfPeople": 82,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-08T06:00:00.000Z",
+    "group": "Astro 103: Patrick",
+    "numOfPeople": 76,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-02-08T06:00:00.000Z",
+    "group": "Laremont",
+    "numOfPeople": 10,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-09T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 4,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-09T06:00:00.000Z",
+    "group": "Ann Williams",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": 264,
+    "check": "",
+    "credit": 20,
+    "date": "2017-02-10T06:00:00.000Z",
+    "group": "FNS: Life of a Star",
+    "numOfPeople": 75,
+    "totalIncome": 284,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-10T06:00:00.000Z",
+    "group": "Washington Elementary",
+    "numOfPeople": 33,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-10T06:00:00.000Z",
+    "group": "Washington Elementary",
+    "numOfPeople": 33,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 190,
+    "credit": "",
+    "date": "2017-02-11T06:00:00.000Z",
+    "group": "Birthday Party",
+    "numOfPeople": 18,
+    "totalIncome": 190,
+    "type": "Private"
+  },
+  {
+    "cash": 205,
+    "check": "",
+    "credit": 10,
+    "date": "2017-02-13T06:00:00.000Z",
+    "group": "Cupid's Constellations",
+    "numOfPeople": 43,
+    "totalIncome": 215,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-15T06:00:00.000Z",
+    "group": "Shepard Hills",
+    "numOfPeople": 56,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-15T06:00:00.000Z",
+    "group": "Shepard Hills",
+    "numOfPeople": 23,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-15T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-15T06:00:00.000Z",
+    "group": "AstroBreak ",
+    "numOfPeople": 25,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 40,
+    "date": "2017-02-16T06:00:00.000Z",
+    "group": "Richardson School",
+    "numOfPeople": 20,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-16T06:00:00.000Z",
+    "group": "Discovery of GW",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-02-17T06:00:00.000Z",
+    "group": "Riley",
+    "numOfPeople": 42,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-17T06:00:00.000Z",
+    "group": "Calvary Lutheran",
+    "numOfPeople": 61,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-17T06:00:00.000Z",
+    "group": "FNS: Life of a Star (1/2)",
+    "numOfPeople": 75,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 313,
+    "check": "",
+    "credit": 32,
+    "date": "2017-02-17T06:00:00.000Z",
+    "group": "FNS: Life of a Star (2/2)",
+    "numOfPeople": 12,
+    "totalIncome": 345,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-20T06:00:00.000Z",
+    "group": "Grafton HS",
+    "numOfPeople": 47,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-21T06:00:00.000Z",
+    "group": "Richards",
+    "numOfPeople": 46,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-22T06:00:00.000Z",
+    "group": "Richards",
+    "numOfPeople": 45,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-22T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-22T06:00:00.000Z",
+    "group": "AB: African skies",
+    "numOfPeople": 28,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-02-23T06:00:00.000Z",
+    "group": "Girl Scout",
+    "numOfPeople": 12,
+    "totalIncome": 100,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 100,
+    "date": "2017-02-24T06:00:00.000Z",
+    "group": "St. Monica",
+    "numOfPeople": 45,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-02-24T06:00:00.000Z",
+    "group": "FNS: Life of a Star (1/2)",
+    "numOfPeople": 75,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 412,
+    "check": 144,
+    "credit": 72,
+    "date": "2017-02-24T06:00:00.000Z",
+    "group": "FNS: Life of a Star (2/2)",
+    "numOfPeople": 53,
+    "totalIncome": 628,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-02-27T06:00:00.000Z",
+    "group": "Shorewood Library",
+    "numOfPeople": 20,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-27T06:00:00.000Z",
+    "group": "St. Mary's Visitation",
+    "numOfPeople": 32,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-27T06:00:00.000Z",
+    "group": "La Escela Fratney",
+    "numOfPeople": 42,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-02-27T06:00:00.000Z",
+    "group": "La Escela Fratney",
+    "numOfPeople": 47,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-01T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 1,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-01T06:00:00.000Z",
+    "group": "Astro 185",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-01T06:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-03-02T06:00:00.000Z",
+    "group": "Horace Mann Elementary ",
+    "numOfPeople": 53,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-03-02T06:00:00.000Z",
+    "group": "Horace Mann Elementary ",
+    "numOfPeople": 40,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-03-03T06:00:00.000Z",
+    "group": "Horace Mann Elementary ",
+    "numOfPeople": 78,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-03T06:00:00.000Z",
+    "group": "St. francis",
+    "numOfPeople": 31,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-03-05T06:00:00.000Z",
+    "group": "Birthday Party",
+    "numOfPeople": 20,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-03-06T06:00:00.000Z",
+    "group": "Alison Donnelly",
+    "numOfPeople": 12,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-03-07T06:00:00.000Z",
+    "group": "Stars and Cinema",
+    "numOfPeople": 7,
+    "totalIncome": 150,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-03-08T06:00:00.000Z",
+    "group": "Lasata Crossings Assited Living",
+    "numOfPeople": 5,
+    "totalIncome": 40,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-08T06:00:00.000Z",
+    "group": "AstroBreak",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-08T06:00:00.000Z",
+    "group": "Telescopes",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-09T06:00:00.000Z",
+    "group": "Islam Under the Stars",
+    "numOfPeople": 77,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-09T06:00:00.000Z",
+    "group": "Islam Under the Stars",
+    "numOfPeople": 75,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-09T06:00:00.000Z",
+    "group": "Islam Under the Stars",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-11T06:00:00.000Z",
+    "group": "Campus Tour",
+    "numOfPeople": 5,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-14T05:00:00.000Z",
+    "group": "Bonnie Seidel",
+    "numOfPeople": 41,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-14T05:00:00.000Z",
+    "group": "River Trail",
+    "numOfPeople": 44,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-14T05:00:00.000Z",
+    "group": "Bonnie Seidel",
+    "numOfPeople": 43,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-03-15T05:00:00.000Z",
+    "group": "Cumberland",
+    "numOfPeople": 68,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-03-15T05:00:00.000Z",
+    "group": "cumberland",
+    "numOfPeople": 40,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-15T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": 100,
+    "check": "",
+    "credit": 10,
+    "date": "2017-03-15T05:00:00.000Z",
+    "group": "Lei with the Stars",
+    "numOfPeople": 12,
+    "totalIncome": 110,
+    "type": "Public"
+  },
+  {
+    "cash": 21,
+    "check": "",
+    "credit": 15,
+    "date": "2017-03-16T05:00:00.000Z",
+    "group": "Lei with the Stars",
+    "numOfPeople": 8,
+    "totalIncome": 36,
+    "type": "Public"
+  },
+  {
+    "cash": 185,
+    "check": "",
+    "credit": "",
+    "date": "2017-03-17T05:00:00.000Z",
+    "group": "Lei with the Stars",
+    "numOfPeople": 37,
+    "totalIncome": 185,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-18T05:00:00.000Z",
+    "group": "Part of tour campus",
+    "numOfPeople": 7,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 190,
+    "credit": "",
+    "date": "2017-03-18T05:00:00.000Z",
+    "group": "Birthday Party",
+    "numOfPeople": 25,
+    "totalIncome": 190,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-03-20T05:00:00.000Z",
+    "group": "Next Door Foundation",
+    "numOfPeople": 15,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-03-21T05:00:00.000Z",
+    "group": "Cedarburg High School",
+    "numOfPeople": 20,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 200,
+    "credit": "",
+    "date": "2017-03-21T05:00:00.000Z",
+    "group": "St Johns on the Lake",
+    "numOfPeople": 50,
+    "totalIncome": 200,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-21T05:00:00.000Z",
+    "group": "Stacy Muchlemann",
+    "numOfPeople": 61,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-03-23T05:00:00.000Z",
+    "group": "Nurturing Nook",
+    "numOfPeople": 21,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-03-23T05:00:00.000Z",
+    "group": "Carolton Elementary School",
+    "numOfPeople": 41,
+    "totalIncome": 140,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-03-23T05:00:00.000Z",
+    "group": "Carolton Elementary School",
+    "numOfPeople": 41,
+    "totalIncome": 140,
+    "type": "School"
+  },
+  {
+    "cash": 202,
+    "check": "",
+    "credit": 20,
+    "date": "2017-03-24T05:00:00.000Z",
+    "group": "Evening in the Land of the Rising Sun",
+    "numOfPeople": 61,
+    "totalIncome": 222,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 175,
+    "credit": "",
+    "date": "2017-03-26T05:00:00.000Z",
+    "group": "Birthday Party",
+    "numOfPeople": 41,
+    "totalIncome": 175,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-27T05:00:00.000Z",
+    "group": "Carri Palmer",
+    "numOfPeople": 39,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-03-27T05:00:00.000Z",
+    "group": "Ex Fabula",
+    "numOfPeople": 74,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-03-29T05:00:00.000Z",
+    "group": "Milwaukee Lutheran High School",
+    "numOfPeople": 32,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-29T05:00:00.000Z",
+    "group": "AstroBreak",
+    "numOfPeople": 38,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-29T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 11,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-30T05:00:00.000Z",
+    "group": "Port pre-school",
+    "numOfPeople": 48,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-03-30T05:00:00.000Z",
+    "group": "Port pre-school",
+    "numOfPeople": 45,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 235,
+    "check": "",
+    "credit": "",
+    "date": "2017-03-31T05:00:00.000Z",
+    "group": "Evening in the Land of the Rising Sun",
+    "numOfPeople": 60,
+    "totalIncome": 235,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-03-31T05:00:00.000Z",
+    "group": "Private program (raffle)",
+    "numOfPeople": 35,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-04-04T05:00:00.000Z",
+    "group": "Jeff Sroka",
+    "numOfPeople": 27,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 30,
+    "date": "2017-04-04T05:00:00.000Z",
+    "group": "DEEP",
+    "numOfPeople": 16,
+    "totalIncome": 30,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 30,
+    "date": "2017-04-04T05:00:00.000Z",
+    "group": "DEEP",
+    "numOfPeople": 16,
+    "totalIncome": 30,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 120,
+    "credit": "",
+    "date": "2017-04-04T05:00:00.000Z",
+    "group": "Kristina Lesner",
+    "numOfPeople": 47,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-05T05:00:00.000Z",
+    "group": "Jacie Reagan ",
+    "numOfPeople": 42,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-05T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 23,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-05T05:00:00.000Z",
+    "group": "Astronomy 13",
+    "numOfPeople": 13,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": 45,
+    "credit": "",
+    "date": "2017-04-05T05:00:00.000Z",
+    "group": "Jamie Shorts ",
+    "numOfPeople": 32,
+    "totalIncome": 45,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-05T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 2,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-07T05:00:00.000Z",
+    "group": "Sophia Talk",
+    "numOfPeople": 47,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-07T05:00:00.000Z",
+    "group": "Science Olympiad",
+    "numOfPeople": 60,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-07T05:00:00.000Z",
+    "group": "Science Olympiad",
+    "numOfPeople": 65,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 45,
+    "credit": "",
+    "date": "2017-04-06T05:00:00.000Z",
+    "group": "Jamie Shorts ",
+    "numOfPeople": 57,
+    "totalIncome": 45,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-04-07T05:00:00.000Z",
+    "group": "Olubanke Ogunkunle",
+    "numOfPeople": 34,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-07T05:00:00.000Z",
+    "group": "Jeffrey Gervais ",
+    "numOfPeople": 63,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 211,
+    "check": "",
+    "credit": "",
+    "date": "2017-04-07T05:00:00.000Z",
+    "group": "Evening in the Land of the Rising Sun",
+    "numOfPeople": 66,
+    "totalIncome": 211,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-08T05:00:00.000Z",
+    "group": "Campus Tours",
+    "numOfPeople": 5,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-10T05:00:00.000Z",
+    "group": "Amanda Barber ",
+    "numOfPeople": 46,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-12T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 22,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-12T05:00:00.000Z",
+    "group": "Karen Schreck",
+    "numOfPeople": 9,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": 221,
+    "check": "",
+    "credit": 39,
+    "date": "2017-04-14T05:00:00.000Z",
+    "group": "Evening in the Land of the Rising Sun",
+    "numOfPeople": 67,
+    "totalIncome": 260,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-17T05:00:00.000Z",
+    "group": "Dora Del Toro-Herra",
+    "numOfPeople": 36,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-18T05:00:00.000Z",
+    "group": "Dana Hubbard",
+    "numOfPeople": 21,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-04-18T05:00:00.000Z",
+    "group": "Hiba Abusam ",
+    "numOfPeople": 19,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-04-18T05:00:00.000Z",
+    "group": "Mary Jo Parrott",
+    "numOfPeople": 54,
+    "totalIncome": 140,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-19T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-19T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 2,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-19T05:00:00.000Z",
+    "group": "Anna Nagle",
+    "numOfPeople": 49,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-21T05:00:00.000Z",
+    "group": "Anna Nagle",
+    "numOfPeople": 60,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-21T05:00:00.000Z",
+    "group": "Dana Hubbard",
+    "numOfPeople": 42,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 164,
+    "check": 48,
+    "credit": 42,
+    "date": "2017-04-21T05:00:00.000Z",
+    "group": "Evening in the Land of the Rising Sun",
+    "numOfPeople": 65,
+    "totalIncome": 254,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-21T05:00:00.000Z",
+    "group": "Sharon Riester",
+    "numOfPeople": 63,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 113,
+    "check": "",
+    "credit": 24,
+    "date": "2017-04-23T05:00:00.000Z",
+    "group": "Music under the Stars",
+    "numOfPeople": 33,
+    "totalIncome": 137,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-04-24T05:00:00.000Z",
+    "group": "Olubanke Ogunkunle",
+    "numOfPeople": 47,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 120,
+    "credit": "",
+    "date": "2017-04-27T05:00:00.000Z",
+    "group": "Michael Key",
+    "numOfPeople": 40,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-04-26T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 12.5,
+    "check": "",
+    "credit": "",
+    "date": "2017-04-26T05:00:00.000Z",
+    "group": "Astrophotography",
+    "numOfPeople": 30,
+    "totalIncome": 12.5,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-04-26T05:00:00.000Z",
+    "group": "Jennifer Paasch",
+    "numOfPeople": 24,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 180,
+    "credit": "",
+    "date": "2017-04-28T05:00:00.000Z",
+    "group": "Katy Shea",
+    "numOfPeople": 70,
+    "totalIncome": 180,
+    "type": "School"
+  },
+  {
+    "cash": 278,
+    "check": "",
+    "credit": 8,
+    "date": "2017-04-28T05:00:00.000Z",
+    "group": "FNS: Japanese Show",
+    "numOfPeople": 75,
+    "totalIncome": 286,
+    "type": "Public"
+  },
+  {
+    "cash": 40,
+    "check": "",
+    "credit": "",
+    "date": "2017-04-28T05:00:00.000Z",
+    "group": "Annie Rouf",
+    "numOfPeople": 11,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-05-01T05:00:00.000Z",
+    "group": "Debbie Thomas",
+    "numOfPeople": 25,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 150,
+    "date": "2017-05-01T05:00:00.000Z",
+    "group": "Katy Stern",
+    "numOfPeople": 47,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-05-02T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 4,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": 80,
+    "credit": "",
+    "date": "2017-05-02T05:00:00.000Z",
+    "group": "Debbie Thomas",
+    "numOfPeople": 25,
+    "totalIncome": 80,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-05-03T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-05-03T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 4,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-05-04T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": 282,
+    "check": 16,
+    "credit": 50,
+    "date": "2017-05-05T05:00:00.000Z",
+    "group": "FNS: Japanese Show",
+    "numOfPeople": 77,
+    "totalIncome": 348,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 190,
+    "credit": "",
+    "date": "2017-05-07T05:00:00.000Z",
+    "group": "Birthday Party",
+    "numOfPeople": 16,
+    "totalIncome": 190,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-05-09T05:00:00.000Z",
+    "group": "Michelle Waite",
+    "numOfPeople": 78,
+    "totalIncome": 100,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-10T05:00:00.000Z",
+    "group": "Debbie Thomas",
+    "numOfPeople": 40,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2107-05-10T05:00:00.000Z",
+    "group": "AB: citizen science II",
+    "numOfPeople": 22,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2107-05-10T05:00:00.000Z",
+    "group": "Astronomy 185",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-05-10T05:00:00.000Z",
+    "group": "Astronomy Magazine",
+    "numOfPeople": 29,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-11T05:00:00.000Z",
+    "group": "Parkview",
+    "numOfPeople": 32,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-11T05:00:00.000Z",
+    "group": "Parkview",
+    "numOfPeople": 32,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 180,
+    "credit": "",
+    "date": "2017-05-12T05:00:00.000Z",
+    "group": "Debbie Konings",
+    "numOfPeople": 76,
+    "totalIncome": 180,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-05-15T05:00:00.000Z",
+    "group": "Dianna Susitti",
+    "numOfPeople": 6,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-05-16T05:00:00.000Z",
+    "group": "Mark Zager",
+    "numOfPeople": 53,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 80,
+    "credit": "",
+    "date": "2017-05-18T05:00:00.000Z",
+    "group": "Shannon Matheis",
+    "numOfPeople": 22,
+    "totalIncome": 80,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-19T05:00:00.000Z",
+    "group": "Beth Spear",
+    "numOfPeople": 10,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-05-21T05:00:00.000Z",
+    "group": "Amanda Ferguson",
+    "numOfPeople": 36,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-05-22T05:00:00.000Z",
+    "group": "Kristine Stone",
+    "numOfPeople": 52,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 60,
+    "date": "2017-05-23T05:00:00.000Z",
+    "group": "Kelly Gehrke",
+    "numOfPeople": 64,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-23T05:00:00.000Z",
+    "group": "Olubanke Ogunkunle",
+    "numOfPeople": 51,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 80,
+    "credit": "",
+    "date": "2017-05-23T05:00:00.000Z",
+    "group": "Christel Frey",
+    "numOfPeople": 18,
+    "totalIncome": 80,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-24T05:00:00.000Z",
+    "group": "Dana Hubbard",
+    "numOfPeople": 36,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-05-24T05:00:00.000Z",
+    "group": "Kate Godfroy",
+    "numOfPeople": 56,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 120,
+    "credit": "",
+    "date": "2017-05-30T05:00:00.000Z",
+    "group": "Scott Lazovik",
+    "numOfPeople": 43,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-05-30T05:00:00.000Z",
+    "group": "Lisa Ravet",
+    "numOfPeople": 51,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-05-30T05:00:00.000Z",
+    "group": "Lisa Ravet",
+    "numOfPeople": 53,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": 32.5,
+    "check": "",
+    "credit": "",
+    "date": "2017-05-30T05:00:00.000Z",
+    "group": "Donation",
+    "numOfPeople": 0,
+    "totalIncome": 32.5,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-05-31T05:00:00.000Z",
+    "group": "Juliena Hernitz",
+    "numOfPeople": 35,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-31T05:00:00.000Z",
+    "group": "Mrs. O",
+    "numOfPeople": 44,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-05-31T05:00:00.000Z",
+    "group": "Mrs. O",
+    "numOfPeople": 43,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-01T05:00:00.000Z",
+    "group": "Osher",
+    "numOfPeople": 49,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 140,
+    "date": "2017-06-02T05:00:00.000Z",
+    "group": "Su Adkins",
+    "numOfPeople": 60,
+    "totalIncome": 140,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-06-07T05:00:00.000Z",
+    "group": "Ruth Jennaro ",
+    "numOfPeople": 27,
+    "totalIncome": 140,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-07T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 3,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 30,
+    "credit": "",
+    "date": "2017-06-08T05:00:00.000Z",
+    "group": "Georgeta Raicu",
+    "numOfPeople": 9,
+    "totalIncome": 30,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-08T05:00:00.000Z",
+    "group": "Osher",
+    "numOfPeople": 34,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": 115,
+    "check": "",
+    "credit": "",
+    "date": "2017-06-09T05:00:00.000Z",
+    "group": "Splendor of the Solar System",
+    "numOfPeople": 29,
+    "totalIncome": 115,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-09T05:00:00.000Z",
+    "group": "Donated show",
+    "numOfPeople": 6,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-06-13T05:00:00.000Z",
+    "group": "Sherry Hansen",
+    "numOfPeople": 40,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": 45,
+    "check": "",
+    "credit": 30,
+    "date": "2017-06-16T05:00:00.000Z",
+    "group": "Splendor of the Solar System",
+    "numOfPeople": 15,
+    "totalIncome": 75,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-19T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-19T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-19T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-20T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-20T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-20T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-21T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-21T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-21T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-22T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-22T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-22T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-23T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-23T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-23T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": 90,
+    "check": "",
+    "credit": 10,
+    "date": "2017-06-23T05:00:00.000Z",
+    "group": "Splendor of the Solar System",
+    "numOfPeople": 15,
+    "totalIncome": 100,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-26T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-26T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-26T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-27T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-27T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-27T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-28T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-28T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-28T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-29T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-29T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 13,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-29T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-30T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-06-30T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 1500,
+    "credit": "",
+    "date": "2017-06-30T05:00:00.000Z",
+    "group": "C4K",
+    "numOfPeople": 13,
+    "totalIncome": 1500,
+    "type": "Private"
+  },
+  {
+    "cash": 185,
+    "check": "",
+    "credit": 15,
+    "date": "2017-06-30T05:00:00.000Z",
+    "group": "Splendor of the Solar System",
+    "numOfPeople": 21,
+    "totalIncome": 200,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 170,
+    "credit": "",
+    "date": "2017-07-05T05:00:00.000Z",
+    "group": "Bryana Banach",
+    "numOfPeople": 9,
+    "totalIncome": 170,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 170,
+    "credit": "",
+    "date": "2017-07-06T05:00:00.000Z",
+    "group": "Bryana Banach",
+    "numOfPeople": 27,
+    "totalIncome": 170,
+    "type": "School"
+  },
+  {
+    "cash": 195,
+    "check": "",
+    "credit": "",
+    "date": "2017-07-07T05:00:00.000Z",
+    "group": "Splendor of the Solar System",
+    "numOfPeople": 39,
+    "totalIncome": 195,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 100,
+    "date": "2017-07-11T05:00:00.000Z",
+    "group": "Michelle Young",
+    "numOfPeople": 16,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 200,
+    "credit": "",
+    "date": "2017-07-11T05:00:00.000Z",
+    "group": "Katherine Steinbach",
+    "numOfPeople": 30,
+    "totalIncome": 200,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-07-12T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 32,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 240,
+    "credit": "",
+    "date": "2017-07-12T05:00:00.000Z",
+    "group": "Cayla Ostrowski",
+    "numOfPeople": 61,
+    "totalIncome": 240,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 190,
+    "credit": "",
+    "date": "2017-07-13T05:00:00.000Z",
+    "group": "Amy Vervelde",
+    "numOfPeople": 35,
+    "totalIncome": 190,
+    "type": "School"
+  },
+  {
+    "cash": 140,
+    "check": "",
+    "credit": 20,
+    "date": "2017-07-14T05:00:00.000Z",
+    "group": "Splendor of the Solar System",
+    "numOfPeople": 32,
+    "totalIncome": 160,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-07-17T05:00:00.000Z",
+    "group": "Paul Dixon",
+    "numOfPeople": 47,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 300,
+    "credit": "",
+    "date": "2017-07-18T05:00:00.000Z",
+    "group": "Heather Ryan",
+    "numOfPeople": 67,
+    "totalIncome": 300,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 300,
+    "credit": "",
+    "date": "2017-07-19T05:00:00.000Z",
+    "group": "St. Francis",
+    "numOfPeople": 60,
+    "totalIncome": 300,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 120,
+    "date": "2017-07-20T05:00:00.000Z",
+    "group": "Causa",
+    "numOfPeople": 40,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 120,
+    "credit": "",
+    "date": "2017-07-20T05:00:00.000Z",
+    "group": "Causa",
+    "numOfPeople": 58,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": 295,
+    "check": "",
+    "credit": 175,
+    "date": "2017-07-21T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 75,
+    "totalIncome": 470,
+    "type": "Public"
+  },
+  {
+    "cash": " ",
+    "check": "",
+    "credit": " ",
+    "date": "2017-07-21T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-07-24T05:00:00.000Z",
+    "group": "Micheal Something",
+    "numOfPeople": 19,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 1000,
+    "credit": "",
+    "date": "2017-07-20T05:00:00.000Z",
+    "group": "TCF Bank",
+    "numOfPeople": 0,
+    "totalIncome": 1000,
+    "type": "Donation"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-07-26T05:00:00.000Z",
+    "group": "Astronomy from the outback (Kaplan)",
+    "numOfPeople": 8,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 240,
+    "check": "",
+    "credit": 245,
+    "date": "2017-07-28T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 71,
+    "totalIncome": 485,
+    "type": "Public"
+  },
+  {
+    "cash": " ",
+    "check": "",
+    "credit": " ",
+    "date": "2017-07-28T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 19,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-08-10T05:00:00.000Z",
+    "group": "Erin Thurmer",
+    "numOfPeople": 33,
+    "totalIncome": 140,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-08-08T05:00:00.000Z",
+    "group": "Taylor",
+    "numOfPeople": 38,
+    "totalIncome": 140,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-08-08T05:00:00.000Z",
+    "group": "Shorewood Library",
+    "numOfPeople": 63,
+    "totalIncome": 150,
+    "type": "Public"
+  },
+  {
+    "cash": 189,
+    "check": "",
+    "credit": 451,
+    "date": "2017-08-04T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 71,
+    "totalIncome": 640,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-08-04T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 52,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 90,
+    "check": "",
+    "credit": 386,
+    "date": "2017-08-11T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 75,
+    "totalIncome": 476,
+    "type": "Public"
+  },
+  {
+    "cash": 200,
+    "check": "",
+    "credit": 500,
+    "date": "2017-08-17T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 140,
+    "totalIncome": 700,
+    "type": "Public"
+  },
+  {
+    "cash": 110,
+    "check": "",
+    "credit": 590,
+    "date": "2017-08-18T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 140,
+    "totalIncome": 700,
+    "type": "Public"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": 411,
+    "date": "2017-08-21T05:00:00.000Z",
+    "group": "Suns Disappearing Act",
+    "numOfPeople": 70,
+    "totalIncome": 411,
+    "type": "Public"
+  },
+  {
+    "cash": 1875.75,
+    "check": "",
+    "credit": "",
+    "date": "2017-08-21T05:00:00.000Z",
+    "group": "Solar Eclipse Event",
+    "numOfPeople": 2775,
+    "totalIncome": 1875.75,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 180,
+    "credit": "",
+    "date": "2017-08-15T05:00:00.000Z",
+    "group": "Cudhay Library",
+    "numOfPeople": 128,
+    "totalIncome": 180,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 30,
+    "credit": "",
+    "date": "2017-08-04T05:00:00.000Z",
+    "group": "Membership",
+    "numOfPeople": 0,
+    "totalIncome": 30,
+    "type": "Public"
+  },
+  {
+    "cash": 94,
+    "check": "",
+    "credit": 8,
+    "date": "2017-08-30T05:00:00.000Z",
+    "group": "Stars and smores (1)",
+    "numOfPeople": 31,
+    "totalIncome": 102,
+    "type": "Public"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-08-30T05:00:00.000Z",
+    "group": "Stars and smores (2)",
+    "numOfPeople": 13,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-08-30T05:00:00.000Z",
+    "group": "Stars and smores (3)",
+    "numOfPeople": 10,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-08-23T05:00:00.000Z",
+    "group": "Gravity in the eyes of Prof Einstein",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-09-06T05:00:00.000Z",
+    "group": "Fast radio bursts I",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 79,
+    "check": "",
+    "credit": 95,
+    "date": "2017-09-08T05:00:00.000Z",
+    "group": "Moons and Myths",
+    "numOfPeople": 35,
+    "totalIncome": 174,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 190,
+    "credit": "",
+    "date": "2017-09-09T05:00:00.000Z",
+    "group": "Birthday Party (Becky Moss)",
+    "numOfPeople": 31,
+    "totalIncome": 190,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-11T05:00:00.000Z",
+    "group": "Astronomy 103 (Sarah) V.",
+    "numOfPeople": 66,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-13T05:00:00.000Z",
+    "group": "Fast radio bursts II",
+    "numOfPeople": 13,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-13T05:00:00.000Z",
+    "group": "Astronomy 103 (Sarah)",
+    "numOfPeople": 69,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": 350,
+    "credit": "",
+    "date": "2017-09-14T05:00:00.000Z",
+    "group": "Next Act: silent sky president's circle",
+    "numOfPeople": 60,
+    "totalIncome": 350,
+    "type": "Private"
+  },
+  {
+    "cash": 108,
+    "check": "",
+    "credit": 110,
+    "date": "2017-09-15T05:00:00.000Z",
+    "group": "Moons and Myths",
+    "numOfPeople": 44,
+    "totalIncome": 218,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-15T05:00:00.000Z",
+    "group": "Stargazing",
+    "numOfPeople": 18,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-20T05:00:00.000Z",
+    "group": "Astronomy 103 (Dawn)",
+    "numOfPeople": 68,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-20T05:00:00.000Z",
+    "group": "Early fall constellations",
+    "numOfPeople": 15,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-09-21T05:00:00.000Z",
+    "group": "Next Act: publicity recording",
+    "numOfPeople": 0,
+    "totalIncome": 100,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-22T05:00:00.000Z",
+    "group": "Astronomy 103 (Dawn)",
+    "numOfPeople": 65,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 320,
+    "date": "2017-09-22T05:00:00.000Z",
+    "group": "Moons and Myths",
+    "numOfPeople": 69,
+    "totalIncome": 320,
+    "type": "Public"
+  },
+  {
+    "cash": 85,
+    "check": "",
+    "credit": 70,
+    "date": "2017-09-22T05:00:00.000Z",
+    "group": "Moons and Myths",
+    "numOfPeople": 31,
+    "totalIncome": 155,
+    "type": "Public"
+  },
+  {
+    "cash": 35,
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (10 am)",
+    "numOfPeople": 25,
+    "totalIncome": 35,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (11 am)",
+    "numOfPeople": 22,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (12 am)",
+    "numOfPeople": 32,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (1 pm",
+    "numOfPeople": 73,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (2 pm)",
+    "numOfPeople": 72,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (3 pm)",
+    "numOfPeople": 70,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-23T05:00:00.000Z",
+    "group": "Doors Open (4pm)",
+    "numOfPeople": 60,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (10 am)",
+    "numOfPeople": 18,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (11 am)",
+    "numOfPeople": 40,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (12 pm)",
+    "numOfPeople": 31,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (1 pm)",
+    "numOfPeople": 75,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (2 pm)",
+    "numOfPeople": 70,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (3 pm)",
+    "numOfPeople": 75,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-24T05:00:00.000Z",
+    "group": "Doors Open (4 pm)",
+    "numOfPeople": 75,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-27T05:00:00.000Z",
+    "group": "Taino Program",
+    "numOfPeople": 71,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-27T05:00:00.000Z",
+    "group": "Taino Program",
+    "numOfPeople": 33,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-27T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 11,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 198,
+    "check": 0,
+    "credit": 85,
+    "date": "2017-09-29T05:00:00.000Z",
+    "group": "Moons and Myths",
+    "numOfPeople": 61,
+    "totalIncome": 283,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-09-29T05:00:00.000Z",
+    "group": "Stargazing",
+    "numOfPeople": 34,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-02T05:00:00.000Z",
+    "group": "Astro Club",
+    "numOfPeople": 17,
+    "totalIncome": 0,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-02T05:00:00.000Z",
+    "group": "Stargazing",
+    "numOfPeople": 20,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-04T05:00:00.000Z",
+    "group": "Sputnik",
+    "numOfPeople": 12,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-04T05:00:00.000Z",
+    "group": "Astrobreak",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 78,
+    "check": 0,
+    "credit": 280,
+    "date": "2017-10-06T05:00:00.000Z",
+    "group": "Moons and Myths",
+    "numOfPeople": 77,
+    "totalIncome": 358,
+    "type": "Public"
+  },
+  {
+    "cash": 4,
+    "check": "",
+    "credit": 800,
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (11:45)",
+    "numOfPeople": 43,
+    "totalIncome": 804,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (12:30)",
+    "numOfPeople": 34,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (1:15)",
+    "numOfPeople": 51,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (2)",
+    "numOfPeople": 59,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (2:45)",
+    "numOfPeople": 57,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (3:30)",
+    "numOfPeople": 54,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (4:15)",
+    "numOfPeople": 37,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Family Day (5)",
+    "numOfPeople": 56,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-07T05:00:00.000Z",
+    "group": "Scouting Event at Discovery",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": 15,
+    "check": "",
+    "credit": 85,
+    "date": "2017-10-13T05:00:00.000Z",
+    "group": "Cosmic Highlights",
+    "numOfPeople": 20,
+    "totalIncome": 100,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 50,
+    "date": "2017-10-13T05:00:00.000Z",
+    "group": "Membership (Mary Nelson-Raney)",
+    "numOfPeople": 0,
+    "totalIncome": 50,
+    "type": "Membership"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 100,
+    "date": "2017-10-17T05:00:00.000Z",
+    "group": "Chemistry (Interdept)",
+    "numOfPeople": 31,
+    "totalIncome": 100,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-18T05:00:00.000Z",
+    "group": "The making of sun's disappearing act",
+    "numOfPeople": 7,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-10-19T05:00:00.000Z",
+    "group": "Grantosa",
+    "numOfPeople": 58,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-10-20T05:00:00.000Z",
+    "group": "Divine Destiny",
+    "numOfPeople": 49,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 70,
+    "check": "",
+    "credit": 100,
+    "date": "2017-10-20T05:00:00.000Z",
+    "group": "Cosmic Highlights",
+    "numOfPeople": 34,
+    "totalIncome": 170,
+    "type": "Public"
+  },
+  {
+    "cash": 15,
+    "check": "",
+    "credit": "",
+    "date": "2017-10-20T05:00:00.000Z",
+    "group": "Membership (Bob Aloisi)",
+    "numOfPeople": 0,
+    "totalIncome": 15,
+    "type": "Membership"
+  },
+  {
+    "cash": "",
+    "check": 200,
+    "credit": "",
+    "date": "2017-10-20T05:00:00.000Z",
+    "group": "MKE Astronomical Society",
+    "numOfPeople": 35,
+    "totalIncome": 200,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-10-20T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 11,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 150,
+    "date": "2017-10-21T05:00:00.000Z",
+    "group": "Birthday party",
+    "numOfPeople": 15,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 60,
+    "date": "2017-10-23T05:00:00.000Z",
+    "group": "Vieau",
+    "numOfPeople": 33,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-10-25T05:00:00.000Z",
+    "group": "AB: Japanese",
+    "numOfPeople": 11,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-10-25T05:00:00.000Z",
+    "group": "Egypt--jocelyn",
+    "numOfPeople": 26,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-10-25T05:00:00.000Z",
+    "group": "Egypt--jocelyn",
+    "numOfPeople": 16,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-10-25T05:00:00.000Z",
+    "group": "Aragorn's class",
+    "numOfPeople": 22,
+    "totalIncome": 0,
+    "type": "Class"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-10-25T05:00:00.000Z",
+    "group": "Club",
+    "numOfPeople": 3,
+    "totalIncome": 0,
+    "type": "UWM"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-10-26T05:00:00.000Z",
+    "group": "J. E. Jones",
+    "numOfPeople": 46,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-10-27T05:00:00.000Z",
+    "group": "Saint Mary's Visitation",
+    "numOfPeople": 32,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": " ",
+    "check": 60,
+    "credit": "",
+    "date": "2017-10-27T05:00:00.000Z",
+    "group": "MIAD",
+    "numOfPeople": 14,
+    "totalIncome": 60,
+    "type": "Class"
+  },
+  {
+    "cash": 50,
+    "check": "",
+    "credit": 35,
+    "date": "2017-10-27T05:00:00.000Z",
+    "group": "Cosmic Highlights",
+    "numOfPeople": 17,
+    "totalIncome": 85,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 120,
+    "credit": "",
+    "date": "2017-10-30T05:00:00.000Z",
+    "group": "Cedarburg",
+    "numOfPeople": 52,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-10-31T05:00:00.000Z",
+    "group": "Roger Street Academy",
+    "numOfPeople": 26,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-10-31T05:00:00.000Z",
+    "group": "JCC-special needs",
+    "numOfPeople": 24,
+    "totalIncome": 100,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-11-01T05:00:00.000Z",
+    "group": "Westosha",
+    "numOfPeople": 14,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-11-01T05:00:00.000Z",
+    "group": "AB: Frontiers I",
+    "numOfPeople": 12,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-11-02T05:00:00.000Z",
+    "group": "St Francis Borgia ",
+    "numOfPeople": 38,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 108,
+    "check": "",
+    "credit": 95,
+    "date": "2017-11-03T05:00:00.000Z",
+    "group": "FNS: Colors of the Cosmos",
+    "numOfPeople": 42,
+    "totalIncome": 203,
+    "type": "Public"
+  },
+  {
+    "cash": 0,
+    "check": "",
+    "credit": "",
+    "date": "2017-11-03T05:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-11-04T05:00:00.000Z",
+    "group": "Kavli dome cast (Exoplanets!)",
+    "numOfPeople": 22,
+    "totalIncome": 0,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 25,
+    "date": "2017-11-04T05:00:00.000Z",
+    "group": "Member: Anne Lehmer",
+    "numOfPeople": 0,
+    "totalIncome": 25,
+    "type": "Membership"
+  },
+  {
+    "cash": "",
+    "check": 50,
+    "credit": "",
+    "date": "2017-11-04T05:00:00.000Z",
+    "group": "Member: Steven & Kitty Klein",
+    "numOfPeople": 0,
+    "totalIncome": 50,
+    "type": "Membership"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 50,
+    "date": "2017-11-04T05:00:00.000Z",
+    "group": "Members: Mary-Ellen Nelson-Raney",
+    "numOfPeople": 0,
+    "totalIncome": 50,
+    "type": "Membership"
+  },
+  {
+    "cash": 25,
+    "check": "",
+    "credit": "",
+    "date": "2017-11-04T05:00:00.000Z",
+    "group": "Members: Jojin Van Winkle",
+    "numOfPeople": 0,
+    "totalIncome": 25,
+    "type": "Membership"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 25,
+    "date": "2017-11-04T05:00:00.000Z",
+    "group": "Members: Billy Atkinson",
+    "numOfPeople": 0,
+    "totalIncome": 25,
+    "type": "Membership"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 150,
+    "date": "2017-11-05T05:00:00.000Z",
+    "group": "WI Science Festival 1:30",
+    "numOfPeople": 32,
+    "totalIncome": 150,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": 150,
+    "date": "2017-11-05T05:00:00.000Z",
+    "group": "WI Science Festival 2:30",
+    "numOfPeople": 22,
+    "totalIncome": 150,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-11-06T06:00:00.000Z",
+    "group": "Roger Street Academy",
+    "numOfPeople": 27,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-11-08T06:00:00.000Z",
+    "group": "AB: Frontieers II",
+    "numOfPeople": 14,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-11-10T06:00:00.000Z",
+    "group": "Highland ",
+    "numOfPeople": 57,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 202,
+    "check": "",
+    "credit": 155,
+    "date": "2017-11-10T06:00:00.000Z",
+    "group": "FNS: Colors of the Cosmos",
+    "numOfPeople": 65,
+    "totalIncome": 357,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-11-15T06:00:00.000Z",
+    "group": "Rufus King",
+    "numOfPeople": 28,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 102,
+    "check": "",
+    "credit": 194,
+    "date": "2017-11-17T06:00:00.000Z",
+    "group": "FNS: Colors of the Cosmos",
+    "numOfPeople": 54,
+    "totalIncome": 296,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-11-17T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 7,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": 80,
+    "check": "",
+    "credit": 245,
+    "date": "2017-11-19T06:00:00.000Z",
+    "group": "Music by the light of the stars",
+    "numOfPeople": 70,
+    "totalIncome": 325,
+    "type": "Public"
+  },
+  {
+    "cash": " ",
+    "check": 60,
+    "credit": "",
+    "date": "2017-11-20T06:00:00.000Z",
+    "group": "Cooper",
+    "numOfPeople": 34,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-11-20T06:00:00.000Z",
+    "group": "Derek Ambrose",
+    "numOfPeople": 34,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 100,
+    "credit": "",
+    "date": "2017-11-21T06:00:00.000Z",
+    "group": "Tamarack Waldorf",
+    "numOfPeople": 28,
+    "totalIncome": 100,
+    "type": "School"
+  },
+  {
+    "cash": 120,
+    "check": "",
+    "credit": 124,
+    "date": "2017-11-24T06:00:00.000Z",
+    "group": "FNS: Colors of the Cosmos",
+    "numOfPeople": 48,
+    "totalIncome": 244,
+    "type": "Public"
+  },
+  {
+    "cash": 57,
+    "check": "",
+    "credit": 215,
+    "date": "2017-11-26T06:00:00.000Z",
+    "group": "Colors of the Cosmos",
+    "numOfPeople": 54,
+    "totalIncome": 272,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-11-27T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 9,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-11-28T06:00:00.000Z",
+    "group": "Golda Meir",
+    "numOfPeople": 34,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 140,
+    "credit": "",
+    "date": "2017-11-29T06:00:00.000Z",
+    "group": "Victory Christian Academy",
+    "numOfPeople": 37,
+    "totalIncome": 140,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-11-29T06:00:00.000Z",
+    "group": "AB: Breakthrough I",
+    "numOfPeople": 6,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": 105,
+    "check": "",
+    "credit": 110,
+    "date": "2017-11-29T06:00:00.000Z",
+    "group": "Celestial Realm: the ancient Egyptian sky",
+    "numOfPeople": 43,
+    "totalIncome": 215,
+    "type": "Public"
+  },
+  {
+    "cash": 180,
+    "check": "",
+    "credit": 209,
+    "date": "2017-12-01T06:00:00.000Z",
+    "group": "FNS: Colors of the Cosmos",
+    "numOfPeople": 76,
+    "totalIncome": 389,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-12-01T06:00:00.000Z",
+    "group": "Plymouth",
+    "numOfPeople": 28,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-12-01T06:00:00.000Z",
+    "group": "Observing",
+    "numOfPeople": 18,
+    "totalIncome": 0,
+    "type": "Observing"
+  },
+  {
+    "cash": 55,
+    "check": "",
+    "credit": 195,
+    "date": "2017-12-03T06:00:00.000Z",
+    "group": "Colors of the Cosmos",
+    "numOfPeople": 50,
+    "totalIncome": 250,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-12-04T06:00:00.000Z",
+    "group": "Thomas Jefferson",
+    "numOfPeople": 25,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 40,
+    "credit": "",
+    "date": "2017-12-05T06:00:00.000Z",
+    "group": "St Joseph Catholic",
+    "numOfPeople": 14,
+    "totalIncome": 40,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-12-06T06:00:00.000Z",
+    "group": "AB: Breakthrough II",
+    "numOfPeople": 11,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": 120,
+    "credit": "",
+    "date": "2017-12-07T06:00:00.000Z",
+    "group": "Menomonee Falls",
+    "numOfPeople": 58,
+    "totalIncome": 120,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-12-07T06:00:00.000Z",
+    "group": "Lake Bluf",
+    "numOfPeople": 24,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-12-08T06:00:00.000Z",
+    "group": "Hope Caritas",
+    "numOfPeople": 52,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 68,
+    "check": "",
+    "credit": 295,
+    "date": "2017-12-08T06:00:00.000Z",
+    "group": "Colors of the Cosmos",
+    "numOfPeople": 72,
+    "totalIncome": 363,
+    "type": "Public"
+  },
+  {
+    "cash": 70,
+    "check": "",
+    "credit": 10,
+    "date": "2017-12-08T06:00:00.000Z",
+    "group": "Colors of the Cosmos",
+    "numOfPeople": 16,
+    "totalIncome": 80,
+    "type": "Public"
+  },
+  {
+    "cash": 30,
+    "check": "",
+    "credit": 55,
+    "date": "2017-12-10T06:00:00.000Z",
+    "group": "Holiday sing-along",
+    "numOfPeople": 18,
+    "totalIncome": 85,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 150,
+    "credit": "",
+    "date": "2017-12-10T06:00:00.000Z",
+    "group": "Birthday party (Melissa Leipzig)",
+    "numOfPeople": 20,
+    "totalIncome": 150,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 200,
+    "credit": "",
+    "date": "2017-12-11T06:00:00.000Z",
+    "group": "Birthday party (Beth Vnuk)",
+    "numOfPeople": 3,
+    "totalIncome": 200,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-12-12T06:00:00.000Z",
+    "group": "Fernwood Montessori (Jessica Foster)",
+    "numOfPeople": 62,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-12-13T06:00:00.000Z",
+    "group": "Winter skies",
+    "numOfPeople": 3,
+    "totalIncome": 0,
+    "type": "Astrobreak"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-12-14T06:00:00.000Z",
+    "group": "Golda Meir (Erin Bailey)",
+    "numOfPeople": 65,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "2017-12-14T06:00:00.000Z",
+    "group": "Golda Meir",
+    "numOfPeople": 29,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": "",
+    "check": 60,
+    "credit": "",
+    "date": "2017-12-15T06:00:00.000Z",
+    "group": "Fernwood Montessori (Mary Ellen Quesada)",
+    "numOfPeople": 33,
+    "totalIncome": 60,
+    "type": "School"
+  },
+  {
+    "cash": 58,
+    "check": "",
+    "credit": 320,
+    "date": "2017-12-15T06:00:00.000Z",
+    "group": "Colors of the Cosmos",
+    "numOfPeople": 76,
+    "totalIncome": 378,
+    "type": "Public"
+  },
+  {
+    "cash": "",
+    "check": 210,
+    "credit": "",
+    "date": "2017-12-17T06:00:00.000Z",
+    "group": "birthday party (Marika McGhee)",
+    "numOfPeople": 20,
+    "totalIncome": 210,
+    "type": "Private"
+  },
+  {
+    "cash": "",
+    "check": "",
+    "credit": "",
+    "date": "",
+    "group": "",
+    "numOfPeople": "",
+    "totalIncome": "",
+    "type": ""
+  }
+]
