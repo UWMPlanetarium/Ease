@@ -204,10 +204,9 @@ app.EventList = Backbone.Firebase.Collection.extend({
 				// Is the show complete?
 				if (this.models[i].attributes.finished === true) {
 
-					if (typeof(this.models[i].attributes.numOfPeople) === "number") {
-						attendance += this.models[i].attributes.numOfPeople;
-					} else {
-						// OOPS
+					var num = parseInt(this.models[i].attributes.numOfPeople);
+					if (num > 0) {
+						attendance += num;
 					}
 
 				}
