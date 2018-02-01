@@ -97,23 +97,23 @@ function crossRef() {
 
 			}
 
-			if (flag === false) { // An event wasn't found
-
-				var obj = {
-					_id: id,
-					eventID: null,
-					groupID: null,
-					total: accounting[i].total,
-					date: accounting[i].date,
-					payments: accounting[i].payments
-				}
-				
-				array.push(obj);
-				++id;
-				
-			}
-
 		}
+		
+		if (flag === false) { // An event wasn't found
+
+			var obj = {
+				_id: id,
+				eventID: null,
+				groupID: null,
+				total: accounting[i].total,
+				date: accounting[i].date,
+				payments: accounting[i].payments
+			}
+			
+			array.push(obj);
+			++id;
+			
+		}		
 
 		bar1.increment();
 
