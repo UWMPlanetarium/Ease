@@ -148,14 +148,3 @@ function getGroup(id) {
 }
 
 main();
-
-
-/*
-var db = firebase.database();
-var ref = db.ref("/events");
-ref.once("value", function(snapshot) {
-
-	crossRef(snapshot);
-
-});
-*/
