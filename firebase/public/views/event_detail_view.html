@@ -1,5 +1,8 @@
 <script type='text/template' id='event-detail-view'>
 
+  <div class='payment_modal'>
+  </div>
+
     <div class="modal fade" tabindex="-1" role="dialog" data-backdrop='false'>
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -116,6 +119,8 @@
           		</div>
           	</div>
           	<p><button class='btn btn-info edit-event' role='button'><em class='fa fa-pencil'>&nbsp;</em> Edit</button> <button class='btn btn-danger delete-event' role='button'><em class='fa fa-trash'>&nbsp;</em> Delete</button> <button class='btn btn-primary event-invoice' role='button'>Create Invoice</button> <button class='btn btn-warning event-payment'>Add Payment</button> <%if (event.finished === false) { %><button class='btn btn-success event-presented'>Show Presented</button><% } %></p>
+            <div class='payments_land'>
+            </div>
           	<div class='aux-events-land'>
           	</div>
           </div>
