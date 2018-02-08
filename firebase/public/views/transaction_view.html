@@ -1,0 +1,58 @@
+<script type='text/template' id='transaction-view'>
+
+	<div class="modal fade" tabindex="-1" role="dialog" data-backdrop='false'>
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Transaction</h4>
+				</div>
+				<div class="modal-body">
+					<h3>Group</h3>
+					<div class='row'>
+						<div class='col-md-4'>
+							Contact name: <b><%- group.groupName %></b>
+						</div>
+						<div class='col-md-4'>
+							Group Name: <b><%- group.groupGroup %></b>
+						</div>
+					</div>
+					<hr />
+					<h3>Event</h3>
+					<div class='row'>
+						<div class='col-md-4'>
+							Date: <b><%- event.calEvent.date.string %></b>
+						</div>
+						<div class='col-md-4'>
+							Price: <b><%- event.price %></b>
+						</div>
+					</div>
+					<hr />
+					<h3>Payments</h3>
+					<div id='payments_land'>
+						<div class='row' style='margin-bottom: 10px'>
+							<div class='col-md-3'>
+								Date Paid: <input type='date' id='payment_date'>
+							</div>
+							<div class='col-md-3'>
+								Amount Paid: <input type='number' id='payment_amount'>
+							</div>
+							<div class='col-md-3'>
+								Payment Type: <select id='payment_type'>
+									<option value='Cash'>Cash</option>
+									<option value='Check'>Check</option>
+									<option value='Credit'>Credit</option>
+									<option value='Interdepartment'>Interdepartment</option>
+								</select>
+							</div>
+							<div class='col-md-3'>
+								<button class='btn btn-primary' id='savePayment'>Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+</script>

@@ -348,8 +348,9 @@ app.EventDetailView = Backbone.View.extend({
 	add_payment: function() {
 
 		// Create a new add_payment modal screen with the event / group details
-		var view = new app.AddPaymentView({model: {event: this.model.event, group: this.model.group}});
-		this.$el.find('.payments_land').append(view.render().el);
+		var view = new app.TransactionView({model: {event: this.model.event, group: this.model.group}});
+		$('#modals').append(view.render().el);
+		this.remove();
 
 	}
 
