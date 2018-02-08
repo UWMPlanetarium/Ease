@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/SSamaz/Ease_2.0#readme",
   "dependencies": {
+    "cli-progress": "^1.7.0",
     "express": "^4.16.2",
+    "firebase-admin": "^5.8.2",
     "firebase-functions": "^0.8.0"
   }
 }

@@ -34,7 +34,6 @@ function build() {
 	getFiles('firebase/public/views/', function(files) {
 		
 		// Push to output object
-		console.log(files);
 		output.views = files;
 	
 	});
@@ -68,8 +67,6 @@ function build() {
 		fs.writeFile('firebase/public/js/config.json', json, function(err) {
 		
 			if (err) return console.log(err);
-
-			console.log(json);
 			
 			return console.log('Build successful');
 		

@@ -111,7 +111,8 @@ app.EventDetailView = Backbone.View.extend({
 		'click .delete-event': 'delete_event',
 		'click .view-all-events': 'view_all_events',
 		'click .hide-all-events': 'hide_all_events',
-		'click .event-presented': 'show_presented'
+		'click .event-presented': 'show_presented',
+		'click .event-payment': 'add_payment'
 	},
 	change_status: function(e) {
 
@@ -342,6 +343,13 @@ app.EventDetailView = Backbone.View.extend({
 
 		toastr.info('Please double check the Number of People field.');
 		this.edit_event();
+
+	},
+	add_payment: function() {
+
+		// Create a new add_payment modal screen with the event / group details
+		var view = new app.AddPaymentView();
+		this.$el.find('.payments_land').append(view.render().el);
 
 	}
 
