@@ -25,7 +25,6 @@ app.AppView = Backbone.View.extend({
 		app.groupList = new app.GroupList();
 		app.eventList = new app.EventList();
 		app.transactionList = new app.TransactionList();
-		app.paymentList = new app.PaymentList();
 		app.projectList = new app.ProjectList();
 		app.taskList = new app.TaskList();
 		app.userList = new app.UserList();

@@ -160,13 +160,11 @@ app.TransactionModel = app.MoneyModel.extend({
 	
 	defaults: {
 	  id: "", // int
-	  amount: "", // int
-	  datePosted: "", // moment raw
-	  notes: "", // string
-	  paid: "", // bool
-	  datePaid: "", //moment raw
-	  eventID: "", // int if from event, "" if not
-	  groupID: "" // int if from group, "" if not
+	  total: "", // int
+	  date: "", // moment raw
+	  eventID: null, // int if from event, "" if not
+	  groupID: null, // int if from group, "" if not
+	  payments: []
 	}
 	
 });
