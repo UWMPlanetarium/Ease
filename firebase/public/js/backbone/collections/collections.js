@@ -236,9 +236,9 @@ app.TransactionList = Backbone.Firebase.Collection.extend({
 	getNextID: function() {
 	  var id = 0;
 	  for (var i = 0; i < this.models.length; i++) {
-		if (parseInt(this.models[i].attributes.id) > id) {
-		  id = this.models[i].attributes.id;
-		}
+			if (parseInt(this.models[i].attributes._id) > id) {
+				id = this.models[i].attributes._id;
+			}
 	  }
 	  ++id;
 	  return id;

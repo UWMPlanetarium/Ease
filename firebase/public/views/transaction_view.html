@@ -24,12 +24,13 @@
 							Date: <b><%- event.calEvent.date.string %></b>
 						</div>
 						<div class='col-md-4'>
-							Price: <b><%- event.price %></b>
+							Price: <b>$<%- event.price %></b>
 						</div>
 					</div>
 					<hr />
 					<h3>Payments</h3>
-					<div id='payments_land'>
+					<div id='payments_land'></div>
+					<div>
 						<div class='row' style='margin-bottom: 10px'>
 							<div class='col-md-3'>
 								Date Paid: <input type='date' id='payment_date'>
@@ -50,6 +51,9 @@
 							</div>
 						</div>
 					</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default remove-view" data-dismiss="modal">Close</button>
+          </div>
 				</div>
 			</div>
 		</div>	
