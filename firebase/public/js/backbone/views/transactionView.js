@@ -1,10 +1,26 @@
-// Transaction
+	// Transaction
 
 app.TransactionView = Backbone.View.extend({
 
 	template: _.template($('#transaction-view').html()),
 	initialize: function() {
 	
+	},
+	render: function() {
+		this.$el.html(this.template({event:this.model.event.attributes, group:this.model.group.attributes}));
+		var proxy = this;
+		setTimeout(function() {
+			proxy.load();
+		});
+		return this; // chained commands
+	},
+	events: {
+		'click #savePayment': 'savePayment',
+		'click .delete-payment': 'deletePayment',
+		'click .remove-modal': 'removeModal'
+	},
+	load: function() {
+
 		// Check if transaction exists, otherwise create one
 		var transactions = app.transactionList.where({eventID: this.model.event.attributes._id});
 		if (transactions.length === 0) {
@@ -20,38 +36,28 @@ app.TransactionView = Backbone.View.extend({
 			this.model.transaction = app.transactionList.where({_id: id})[0];
 		} else { // Exists
 			this.model.transaction = transactions[0];
+			// Display payments
+			this.displayPayments();
 		}
-		this.model.transaction.on('change', this.render, this);
-	
-	},
-	render: function() {
-		this.$el.html(this.template({event:this.model.event.attributes, group:this.model.group.attributes}));
-		this.load();
-		return this; // chained commands
-	},
-	events: {
-		'click #savePayment': 'savePayment',
-		'click .delete-payment': 'deletePayment'
-	},
-	load: function() {
+		this.model.transaction.on('change', this.render, this);		
 	
 		// Set date probable price
 		this.$el.find('#payment_date').val(this.model.event.attributes.calEvent.date.iso);
 		this.$el.find('#payment_amount').val(this.model.event.attributes.price);
 	
-		// Display payments
-		this.displayPayments();
-	
 		setTimeout(function() {
 			$('#modals .modal').modal('show');
-		});
+		}, 50);
 	
 	},
 	displayPayments: function() {
 	
+		console.log(this.model.transaction);
+
 		this.$el.find('#payments_land').html(' ');
 		if (this.model.transaction.attributes.payments !== null) {
 			for (var payment in this.model.transaction.attributes.payments) {
+				console.log(payment);
 				var html = `<div class='row' style='margin-bottom: 10px'>
 					<div class='col-md-3'>
 						Date: <b>` + this.model.transaction.attributes.payments[payment].date + `</b>
@@ -86,7 +92,7 @@ app.TransactionView = Backbone.View.extend({
 		}
 		payments.push(payment);
 		this.model.transaction.set({
-			dateEdited: new Date(),
+			dateEdited: new Date().toISOString(),
 			payments: payments
 		});
 		toastr.success("Payment added!");
@@ -98,11 +104,14 @@ app.TransactionView = Backbone.View.extend({
 		var payments = this.model.transaction.attributes.payments;
 		payments.splice(index, 1);
 		this.model.transaction.set({
-			dateEdited: new Date(),
+			dateEdited: new Date().toISOString(),
 			payments: payments
 		});
 		toastr.success("Payment deleted");
 	
+	},
+	removeModal: function() {
+		this.remove();
 	}
 
 });

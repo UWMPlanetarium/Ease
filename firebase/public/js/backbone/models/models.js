@@ -29,7 +29,7 @@ app.Iframe = Backbone.Firebase.Model.extend({
 					$("#iframe").attr("src", "#");
 					reject(Error("No response from server."));
 				}
-			}, 8000);
+			}, 15000);
 
 		});
 

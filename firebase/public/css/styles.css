@@ -5,6 +5,8 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body { padding-right: 0 !important }
+
 #iframe {
   display: none;
 }

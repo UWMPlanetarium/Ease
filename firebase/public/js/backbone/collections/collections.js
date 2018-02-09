@@ -242,6 +242,144 @@ app.TransactionList = Backbone.Firebase.Collection.extend({
 	  }
 	  ++id;
 	  return id;
+	},
+	getIncomeByMonth: function() {
+
+		var array = new Array(12).fill(0);
+		var currentYear = new Date().getFullYear();
+		for (var i = 0; i < this.models.length; i++) {
+
+			var year = parseInt(this.models[i].attributes.date.substring(0, 4));
+			if (year === currentYear) { // yay!
+				var total = 0;
+				for (var payment in this.models[i].attributes.payments) {
+					total += parseInt(this.models[i].attributes.payments[payment].amount);
+				}
+				var month = new Date(this.models[i].attributes.date).getMonth();
+				array[month] += total;
+			}
+
+		}
+		return array;
+
+	},
+	getTotalIncomeByMonth: function() {
+
+		var array = new Array(12).fill(0);
+		var currentYear = new Date().getFullYear();
+		for (var i = 0; i < this.models.length; i++) {
+
+			var year = parseInt(this.models[i].attributes.date.substring(0, 4));
+			if (year === currentYear) { // yay!
+				var total = 0;
+				for (var payment in this.models[i].attributes.payments) {
+					total += parseInt(this.models[i].attributes.payments[payment].amount);
+				}
+				var month = new Date(this.models[i].attributes.date).getMonth();
+				for (month; month >= 0; month--) {
+					array[month] += total;
+				}
+			}
+
+		}
+		return array;
+
+	},
+	getTotalsByType: function() {
+
+		var obj = {
+			Cash: 0,
+			Check: 0,
+			Credit: 0,
+			Interdepartment: 0
+		};
+		var currentYear = new Date().getFullYear();
+		for (var i = 0; i < this.models.length; i++) {
+
+			var year = parseInt(this.models[i].attributes.date.substring(0, 4));
+			if (year === currentYear) { // yay!
+				var total = 0;
+				for (var payment in this.models[i].attributes.payments) {
+					obj[this.models[i].attributes.payments[payment].type] += parseInt(this.models[i].attributes.payments[payment].amount);
+				}
+			}
+
+		}
+		var array = [obj.Cash, obj.Check, obj.Credit, obj.Interdepartment];
+		return array;	
+
+	},
+	getIncomebyGroup: function() {
+
+		var currentYear = new Date().getFullYear();
+		var obj = {};
+		for (var i = 0; i < this.models.length; i++) {
+
+			var year = parseInt(this.models[i].attributes.date.substring(0, 4));
+			if (year === currentYear) { // yay!
+				
+				if (this.models[i].attributes.groupID !== undefined) {
+
+					var group = app.groupList.where({_id: this.models[i].attributes.groupID})[0];
+					var type = group.attributes.groupType;
+					var total = 0;
+					for (var payment in this.models[i].attributes.payments) {
+						total += parseInt(this.models[i].attributes.payments[payment].amount);
+					}
+					if (obj[type] !== undefined) {
+						obj[type] += total;
+					} else {
+						obj[type] = total;
+					}
+
+				}
+
+			}
+
+		}
+
+		var types = [];
+		var totals = [];
+		for (var type in obj) {
+			var index = types.indexOf(type);
+			if (index !== -1) {
+				totals[index] += obj[type];
+			} else {
+				types.push(type);
+				totals.push(obj[type]);
+			}
+		}
+
+		return {types: types, totals: totals};
+
+	},
+	createDeposit: function(start, end) {
+
+		// Need a list of transactions that occured during this period
+		var array = [];
+		var m_start = moment(start);
+		var m_end = moment(end);
+		for (var i = 0; i < this.models.length; i++) {
+
+			var date = moment(this.models[i].attributes.date);
+			if (m_start.isBefore(date) && m_end.isAfter(date)) {
+
+				array.push(this.models[i].attributes);
+
+			}
+
+		}
+
+		// Push to google apps server
+		var json = JSON.stringify(array);
+		app.iframe.request("createDeposit", json).then(function(res) {
+			toastr.success("Created!");
+			console.log(res);
+			window.open(res, "_blank");
+		}, function(err) {
+			if (err) return console.log(err);
+		});
+
 	}
 	
 });

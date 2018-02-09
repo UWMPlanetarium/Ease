@@ -20,11 +20,16 @@ app.AccountingDashboard = Backbone.View.extend({
 		this.load();
 		return this;
 	},
+	events: {
+		"click .create-deposit": "createDeposit",
+		'click .reload_graphs': 'load'
+	},
 	load: function() {
 
 		setTimeout(function() {
 
 			// Income by month
+			var incomeByMonth = app.transactionList.getIncomeByMonth();
 			var ctx = document.getElementById('chart_month').getContext('2d');
 			var chart = new Chart(ctx, {
 				  // The type of chart we want to create
@@ -37,7 +42,7 @@ app.AccountingDashboard = Backbone.View.extend({
 				          label: "Monthly Income",
 				          backgroundColor: 'rgb(255, 97, 34)',
 				          borderColor: 'rgb(255, 163, 126)',
-				          data: [1482, 3189, 3128, 2568, 1911, 2450, 4370, 5544, 1825, 399]
+				          data: incomeByMonth
 				      }]
 				  },
 
@@ -65,6 +70,7 @@ app.AccountingDashboard = Backbone.View.extend({
 			});
 
 			// Total income
+			var totalIncomeByMonth = app.transactionList.getTotalIncomeByMonth();
 			var ctx = document.getElementById('chart_total').getContext('2d');
 			var chart = new Chart(ctx, {
 				  // The type of chart we want to create
@@ -77,7 +83,7 @@ app.AccountingDashboard = Backbone.View.extend({
 				          label: "Yearly Income",
 				          backgroundColor: 'rgb(255, 97, 34)',
 				          borderColor: 'rgb(255, 163, 126)',
-				          data: [1482, 4671, 7799, 10367, 12278, 14728, 19098, 24642, 26467, 26866],
+				          data: totalIncomeByMonth,
 				      }]
 				  },
 
@@ -105,6 +111,7 @@ app.AccountingDashboard = Backbone.View.extend({
 			});
 
 			// Transaction type
+			var transactionType = app.transactionList.getTotalsByType();
 			var ctx = document.getElementById('chart_transaction_type').getContext('2d');
 			var chart = new Chart(ctx, {
 				  // The type of chart we want to create
@@ -112,7 +119,7 @@ app.AccountingDashboard = Backbone.View.extend({
 
 				  // The data for our dataset
 				  data: {
-				      labels: ["Cash", "Checks", "Credit Cards"],
+				      labels: ["Cash", "Checks", "Credit Cards", "Interdepartment"],
 				      datasets: [{
 					      backgroundColor: [
 					      	'rgb(242, 164, 14)',
@@ -120,7 +127,7 @@ app.AccountingDashboard = Backbone.View.extend({
 					      	'rgb(0, 127, 161)',
 					      	'rgb(0, 161, 103)'
 					      ],
-				      	data: [7817, 13853, 5197]
+				      	data: transactionType
 				      }]
 				  },
 
@@ -151,6 +158,8 @@ app.AccountingDashboard = Backbone.View.extend({
 			});			
 
 			// Group type
+			var incomeGroup = app.transactionList.getIncomebyGroup();
+			console.log(incomeGroup);
 			var ctx = document.getElementById('chart_group_type').getContext('2d');
 			var chart = new Chart(ctx, {
 				  // The type of chart we want to create
@@ -158,7 +167,7 @@ app.AccountingDashboard = Backbone.View.extend({
 
 				  // The data for our dataset
 				  data: {
-				      labels: ["Astrobreak", "Class", "Observing", "Private", "Public", "School", "UWM"],
+				      labels: incomeGroup.types,
 				      datasets: [{
 				          label: "Income by group type",
 					      backgroundColor: [
@@ -170,7 +179,7 @@ app.AccountingDashboard = Backbone.View.extend({
 					      	'rgb(1, 181, 175)',
 					      	'rgb(43, 113, 160)'
 					      ],
-				      	data: [0, 0, -310, 5639, 13021, 7520, 0]
+				      	data: incomeGroup.totals
 				      }]
 				  },
 
@@ -202,8 +211,11 @@ app.AccountingDashboard = Backbone.View.extend({
 		}, 20);
 
 	},
-	events: {
-		'click .reload_graphs': 'load'
+	createDeposit: function() {
+
+		var view = new app.CreateDepositView();
+		$('#modals').html(view.render().el);
+
 	}
 
 });

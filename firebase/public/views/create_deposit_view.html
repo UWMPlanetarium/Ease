@@ -1,0 +1,36 @@
+<script type='text/template' id='create-deposit-view'>
+
+	<div class="modal" tabindex="-1" role="dialog" data-backdrop='false'>
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close remove-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Create Deposit</h4>
+				</div>
+				<div class="modal-body">
+					<div class='row'>
+						<div class='col-md-12'>
+							To create a deposit you must select a date range of transactions.
+						</div>
+					</div>
+					<hr />
+					<div class='row'>
+						<div class='col-md-4'>
+							Period start: <input type='date' id='deposit_start' />
+						</div>
+						<div class='col-md-4'>
+							Period end: <input type='date' id='deposit_end' />
+						</div>
+						<div class='col-md-4'>
+							<button class='btn btn-primary create-deposit'>Create</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default remove-modal" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>	
+	</div>	
+
+</script>
