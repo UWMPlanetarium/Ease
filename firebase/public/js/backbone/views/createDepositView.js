@@ -26,7 +26,7 @@ app.CreateDepositView = Backbone.View.extend({
 
 		app.transactionList.createDeposit(start, end);
 
-		toastr.success("Creating Deposit, please be patient");
+		toastr.success("Creating Deposit, please wait!");
 
 	}
 });
