@@ -17,6 +17,7 @@ app.Iframe = Backbone.Firebase.Model.extend({
 				response: false
 			});
 			$("#iframe").attr("src", "https://script.google.com/macros/s/AKfycbykE61pc7soyWhtW76U9HmvTJ218LPW_flmxCGM7mJi5LYXhr01/exec");
+			// $("#iframe").attr("src", "https://script.google.com/macros/s/AKfycbyfTK9Mr9ll4QwBcqpX1A80N50tB0NwXQxhUkQ946Dn530pil6O/exec");
 
 			// Set a stopwatch for 8 seconds, if the response attribute doesn't change, reject the promise
 			proxy.listenToOnce(proxy, "change", function() {
@@ -110,7 +111,8 @@ app.Event = Backbone.Model.extend({
 
 	  var object = {
 
-	    calID: 'nbqhislsj9vvnp8h6tb52dsq6c@group.calendar.google.com',
+			calID: 'nbqhislsj9vvnp8h6tb52dsq6c@group.calendar.google.com',
+			// calID: 't3bmshdk6d6ap3grtolvqj9ppk@group.calendar.google.com',
 	    date: {
 	      raw: moment(date).format(),
 	      iso: moment(date).format("YYYY-MM-DD"),
@@ -196,4 +198,12 @@ app.TaskModel = Backbone.Model.extend({
 // User Model
 app.UserModel = Backbone.Model.extend({
 
+  defaults: {
+    id: "", // int
+    authorization: false,
+    email: "",
+    password: "",
+    username: ""
+  }
+  
 });	

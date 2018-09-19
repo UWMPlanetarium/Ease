@@ -57,6 +57,7 @@ app.GroupList = Backbone.Firebase.Collection.extend({
 	
 	model: app.Group,
 	url: 'https://ease-f60ed.firebaseio.com/groups/',
+	// url: 'https://development-c2673.firebaseio.com/groups/',
 	autoSync: true,
 	initialize: function() {
 	  this.sort();
@@ -86,6 +87,7 @@ app.EventList = Backbone.Firebase.Collection.extend({
 	
 	model: app.Event,
 	url: 'https://ease-f60ed.firebaseio.com/events/',
+	// url: 'https://development-c2673.firebaseio.com/events/',
 	autoSync: true,
 	initialize: function() {
 	  this.sort();
@@ -226,6 +228,7 @@ app.TransactionList = Backbone.Firebase.Collection.extend({
 	
 	model: app.TransactionModel,
 	url: 'https://ease-f60ed.firebaseio.com/transactions/',
+	// url: 'https://development-c2673.firebaseio.com/transactions/',
 	autoSync: true,
 	initialize: function() {
 	  this.sort();
@@ -389,6 +392,7 @@ app.PaymentList = Backbone.Firebase.Collection.extend({
 	
 	model: app.PaymentModel,
 	url: 'https://ease-f60ed.firebaseio.com/payments/',
+	// url: 'https://development-c2673.firebaseio.com/payments',
 	autoSync: true,
 	initialize: function() {
 	  this.sort();
@@ -404,6 +408,7 @@ app.ProjectList = Backbone.Firebase.Collection.extend({
 
 	model: app.ProjectModel,
 	url: 'https://ease-f60ed.firebaseio.com/projects/',
+	// url: 'https://development-c2673.firebaseio.com/projects/',
 	autoSync: true
 
 });
@@ -413,6 +418,7 @@ app.TaskList = Backbone.Firebase.Collection.extend({
 
 	model: app.TaskModel,
 	url: 'https://ease-f60ed.firebaseio.com/tasks/',
+	// url: 'https://development-c2673.firebaseio.com/tasks/',
 	autoSync: true
 
 });
@@ -421,6 +427,22 @@ app.UserList = Backbone.Firebase.Collection.extend({
 
 	model: app.UserModel,
 	url: 'https://ease-f60ed.firebaseio.com/users/',
-	autoSync: true
+	// url: 'https://development-c2673.firebaseio.com/users/',
+  autoSync: true,
+  
+  getNextId: function() {
+
+	  var id = 0;
+	  for (var i = 0; i < this.models.length; i++) {
+
+		if (parseInt(this.models[i].attributes._id) > id) {
+		  id = this.models[i].attributes._id;
+		}
+
+	  }
+	  ++id;
+	  return id;
+
+	}
 
 });

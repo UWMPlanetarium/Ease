@@ -14,4 +14,4 @@ app.get('*', function(req, res) {
 });
 
 server.listen(3000);
-console.log("Server started at 127.0.0.1:3000")
+console.log("Server started at 127.0.0.1:3000");

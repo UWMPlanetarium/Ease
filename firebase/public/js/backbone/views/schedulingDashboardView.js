@@ -135,11 +135,11 @@ app.SchedulingDashboardView = Backbone.View.extend({
 
 	},
 	addEventListItem: function(event, element) {
-
-		var group = app.groupList.where({_id: event.attributes.groupID});
-		var view = new app.EventListView({model: {event: event, group: group[0]}});
-		this.$el.find(element).append(view.render().el);
-
+		if (event !== undefined) {
+			var group = app.groupList.where({_id: event.attributes.groupID});
+			var view = new app.EventListView({model: {event: event, group: group[0]}});
+			this.$el.find(element).append(view.render().el);
+		}
 	}
 
 });
