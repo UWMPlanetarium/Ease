@@ -6,7 +6,8 @@ app.UserView = Backbone.View.extend({
 		return this;
 	},
 	events: {
-		'click .change-password': 'change_password'
+		'click .change-password': 'change_password',
+		'click .add-user': 'add_user'
 	},
 	change_password: function() {
 
@@ -27,6 +28,10 @@ app.UserView = Backbone.View.extend({
 
 		}
 
+	},
+	add_user: function() {
+    var view = new app.NewUserView();
+    $('#modals').html(view.render().el); 
 	}
 
 });
