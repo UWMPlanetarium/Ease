@@ -28,9 +28,14 @@ app.GroupListView = Backbone.View.extend({
 	view_events: function() {
 
 		var event = app.eventList.where({groupID: this.model.attributes._id})[0];
-		var view = new app.EventDetailView({model:{event:event, group:this.model}});
-		$('#modals').html(view.render().el);
-		view.view_all_events();
+    if (event !== null && event !== undefined) {
+      var view = new app.EventDetailView({model:{event:event, group:this.model}});
+		  $('#modals').html(view.render().el);
+		  view.view_all_events();
+    } else {
+      var view = new app.EventDetailView({model:{group:this.model}});
+      $('#modals').html(view.render().el);
+    }
 
 	}
 

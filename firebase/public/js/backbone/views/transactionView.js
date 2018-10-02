@@ -17,7 +17,10 @@ app.TransactionView = Backbone.View.extend({
 	events: {
 		'click #savePayment': 'savePayment',
 		'click .delete-payment': 'deletePayment',
-		'click .remove-modal': 'removeModal'
+    'click .remove-modal': 'removeModal',
+    'input #payment_date': 'enablePaymentSave',
+    'input #payment_amount': 'enablePaymentSave',
+    'input #payment_type': 'enablePaymentSave',
 	},
 	load: function() {
 
@@ -109,7 +112,15 @@ app.TransactionView = Backbone.View.extend({
 		});
 		toastr.success("Payment deleted");
 	
-	},
+  },
+  enablePaymentSave: function() {
+    var datePaid = this.$el.find('#payment_date').val();
+    var amountPaid = this.$el.find('#payment_amount').val();
+    var paymentType = this.$el.find('#payment_type').val();
+    if (datePaid == '' || datePaid == null || amountPaid == '' || amountPaid == null || paymentType == '' || paymentType == null) {
+      
+    }
+  },
 	removeModal: function() {
 		this.remove();
 	}

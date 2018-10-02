@@ -8,7 +8,7 @@ main();
 var Helper = { // General Helper object
 
 	// Constants
-
+  
 	// Functions
 
 	parseCalendarData: function(input) {
@@ -117,12 +117,13 @@ var Helper = { // General Helper object
 	},
 	collectionContains: function(collection, value, fields) {
 
-		var output = [];
+    var output = [];
 		for (var i = 0; i < collection.length; i++) {
 
 			for (var j = 0; j < fields.length; j++) {
-
-				var attribute = collection[i].attributes[fields[j]].toLowerCase();
+        // var attribute = collection[i].attributes[fields[j]].toLowerCase();
+        var objectAttribute = 'attributes' + '.' + fields[j];
+        var attribute = _.get(collection[i], objectAttribute).toLowerCase();
 				if (attribute.indexOf(value.toLowerCase()) !== -1) { // is contained
 					output.push(collection[i]);
 					j = fields.length;

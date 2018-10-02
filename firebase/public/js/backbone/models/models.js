@@ -2,7 +2,8 @@
 
 // Iframe model
 app.Iframe = Backbone.Firebase.Model.extend({
-	urlRoot: "https://development-c2673.firebaseio.com/functions/",
+  urlRoot: "https://development-c2673.firebaseio.com/functions/",
+	// urlRoot: "https://development-c2673.firebaseio.com/testFunctions/",
 	autoSync: true,
 	request: function(fnct, data) { // String, Json
 
@@ -17,7 +18,7 @@ app.Iframe = Backbone.Firebase.Model.extend({
 				response: false
 			});
 			$("#iframe").attr("src", "https://script.google.com/macros/s/AKfycbykE61pc7soyWhtW76U9HmvTJ218LPW_flmxCGM7mJi5LYXhr01/exec");
-			// $("#iframe").attr("src", "https://script.google.com/macros/s/AKfycbyfTK9Mr9ll4QwBcqpX1A80N50tB0NwXQxhUkQ946Dn530pil6O/exec");
+			// $("#iframe").attr("src", "https://script.google.com/macros/s/AKfycbyfTK9Mr9ll4QwBcqpX1A80N50tB0NwXQxhUkQ946Dn530pil6O/exec"); // Testing script
 
 			// Set a stopwatch for 8 seconds, if the response attribute doesn't change, reject the promise
 			proxy.listenToOnce(proxy, "change", function() {
@@ -112,7 +113,7 @@ app.Event = Backbone.Model.extend({
 	  var object = {
 
 			calID: 'nbqhislsj9vvnp8h6tb52dsq6c@group.calendar.google.com',
-			// calID: 't3bmshdk6d6ap3grtolvqj9ppk@group.calendar.google.com',
+			// calID: 't3bmshdk6d6ap3grtolvqj9ppk@group.calendar.google.com', // Testing calendar
 	    date: {
 	      raw: moment(date).format(),
 	      iso: moment(date).format("YYYY-MM-DD"),
@@ -126,7 +127,7 @@ app.Event = Backbone.Model.extend({
 	      raw: endTime,
 	      string: parseTime(endTime)
 	    },
-	    calStart: moment(date + ' ' + startTime).format(),
+	    calStart: moment(date + ' ' + startTime).format(), // TODO: Occasionally sets calStart to 'Invalid date' for unknown reason
 	    calEnd: moment(date + ' ' + endTime).format(),
 	    string: moment(date).format("ddd, MMM Do") + ' @ ' + parseTime(startTime) + ' - ' + parseTime(endTime)
 	  };

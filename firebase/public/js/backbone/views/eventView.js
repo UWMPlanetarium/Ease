@@ -40,8 +40,17 @@ app.EventView = Backbone.View.extend({
 
 	},
 	events: {
-		'click .create-event-click': 'create_event'
-	},
+    'click .create-event-click': 'create_event',
+    'keyup .search-event-val': 'searchEvents'
+  },
+  searchEvents: function() {
+    var value = this.$el.find('.search-event-val').val();
+    var events = Helper.collectionContains(app.eventList.models, value, ['show', 'activity', 'presenter', 'calEvent.string']);
+    this.$el.find('.events-landing').html('');
+    for (var i = 0; i < events.length; ++i) {
+      this.renderEvent(events[i]);
+    }
+  },
 	addEventListItem: function(event, element) {
 
 		var group = app.groupList.where({_id: event.attributes.groupID});
@@ -54,6 +63,17 @@ app.EventView = Backbone.View.extend({
 		var view = new app.NewEventView();
 		$('#modals').html(view.render().el);
 
-	},
+  },
+  renderEvent: function(event) {
+    var groups = app.groupList.where({_id: event.attributes.groupID});
+    var obj = {
+      event: {
+        attributes: event.attributes
+      },
+      group: groups[0],
+    }
+    var view = new app.EventListView({model: obj});
+    this.$el.find('.events-landing').append(view.render().el);
+  }
 
 });
