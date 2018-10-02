@@ -9,8 +9,8 @@ app.NewEventView = Backbone.View.extend({
 	load: function() {
 
 		setTimeout(function() {
-			$('#modals .modal').modal('show');
-		}, 10);
+      $('#modals .modal').modal('show');
+    }, 10);
 
 		this.select_group();
 
@@ -21,8 +21,21 @@ app.NewEventView = Backbone.View.extend({
 		'click .select-group-click': 'select_group_click',
 		'change .calendar-status-change': 'change_scheduling_calendar',
 		'click .select-date-click': 'select_date_click',
-		'click .confirm-event': 'confirm_event'
-	},
+    'click .confirm-event': 'confirm_event',
+    'input .date': 'selectDateDisableToggle',
+    'input .startTime': 'selectDateDisableToggle',
+    'input .endTime': 'selectDateDisableToggle',
+  },
+  selectDateDisableToggle: function() {
+    var date = this.$el.find('input.date').val();
+    var startTime = this.$el.find('input.startTime').val();
+    var endTime = this.$el.find('input.endTime').val();
+    if (startTime > endTime || date == '' || date == null || startTime == '' || startTime == null || endTime == '' || endTime == null) {
+      this.$el.find('.select-date-click').attr('disabled', true);
+    } else {
+      this.$el.find('.select-date-click').removeAttr('disabled');
+    }
+  },
 	new_group: function() {
 
 		this.$el.find('.select-group').css('display', 'none');
@@ -100,16 +113,39 @@ app.NewEventView = Backbone.View.extend({
 
 	},
 	select_date_click: function() {
+    
+    // Get the date / time data
+    this.date = this.$el.find('input.date').val();
+    this.startTime = this.$el.find('input.startTime').val();
+    this.endTime = this.$el.find('input.endTime').val();
 
-		// Get the date / time data
-		this.date = this.$el.find('input.date').val();
-		this.startTime = this.$el.find('input.startTime').val();
-		this.endTime = this.$el.find('input.endTime').val();
+    // Calculate difference in time
+    var a = moment(this.endTime, 'HH:mm');
+    var b = moment(this.startTime, 'HH:mm');
+    var hourDiff = a.diff(b, 'hours', true);
+    var dayDiff = moment(this.date).isBefore(moment(), "day");
 
-		// Get show details
-		this.show_details();
+    // Need user confirmation if day is in the past or event duration >= 3 hours
+    if (dayDiff && hourDiff >=3) {
+      if (confirm("Warning: Selected date is in the past. Are you sure you want to do this?")) {
+        if (confirm("Warning: Selected event duration is longer than 3 hours. Please confirm.")) {
+          this.show_details();
+        }
+      }
+    } else if (dayDiff) {
+      if (confirm("Warning: Selected date is in the past. Are you sure you want to do this?")) {
+        this.show_details();
+      }
+    } else if (hourDiff >= 3) {
+      if (confirm("Warning: Selected event duration is longer than 3 hours. Please confirm.")) {
+        this.show_details();
+      }
+    } else {
+      // Get show details
+		  this.show_details();
+    }
 
-	},
+  },
 	show_details: function() {
 
 		this.$el.find('.select-date').css('display', 'none');
@@ -137,7 +173,11 @@ app.NewEventView = Backbone.View.extend({
 			created_by: User.attributes._id
 		};
 
-		event.calEvent = app.eventList.models[0].createCalendarEvent(this.date, this.startTime, this.endTime);
+    event.calEvent = app.eventList.models[0].createCalendarEvent(this.date, this.startTime, this.endTime);
+    
+    if (event.calEvent.calStart == 'Invalid date' || event.calEvent.calEnd == 'Invalid date') {
+      toastr.error("Error occured creating calendar event. Please check the event on Google Calendar");
+    }
 
 		// Alert user
 		toastr.info("Creating event");
@@ -173,6 +213,6 @@ app.NewEventView = Backbone.View.extend({
 
 		}
 
-	}
+  },
 
 });
