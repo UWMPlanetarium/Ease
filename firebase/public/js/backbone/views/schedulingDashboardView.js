@@ -33,8 +33,8 @@ app.SchedulingDashboardView = Backbone.View.extend({
 		// Calendar
 		if (this.$el.find('#scheduling-dashboard-calendar').children().length > 0) { // Calendar already exists
 
-			var events = Helper.getAllEvents();
-			this.$el.find('#scheduling-dashboard-calendar').fullCalendar('removeEvents'); // Remove events
+      var events = Helper.getAllEvents();
+      this.$el.find('#scheduling-dashboard-calendar').fullCalendar('removeEvents'); // Remove events
 			this.$el.find('#scheduling-dashboard-calendar').fullCalendar('addEventSource', events);
 
 
@@ -60,44 +60,47 @@ app.SchedulingDashboardView = Backbone.View.extend({
 		setTimeout(function() {
 
 			var data = app.eventList.getAttendanceByMonth();
-			var ctx = document.getElementById('attendance-graph').getContext('2d');
-			var chart = new Chart(ctx, {
-				  // The type of chart we want to create
-				  type: 'line',
+      var graph = document.getElementById('attendance-graph');
+      if (graph !== null) {
+        var ctx = graph.getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
 
-				  // The data for our dataset
-				  data: {
-				      labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-				      datasets: [{
-				          label: "Monthly attendance",
-				          backgroundColor: 'rgb(255, 97, 34)',
-				          borderColor: 'rgb(255, 163, 126)',
-				          data: data
-				      }]
-				  },
+            // The data for our dataset
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                datasets: [{
+                    label: "Monthly attendance",
+                    backgroundColor: 'rgb(255, 97, 34)',
+                    borderColor: 'rgb(255, 163, 126)',
+                    data: data
+                }]
+            },
 
-				  // Configuration options go here
-				  options: {
-					plugins: {
-						datalabels: {
-							backgroundColor: function(context) {
-								return context.dataset.backgroundColor;
-							},
-							borderRadius: 4,
-							color: 'white',
-							font: {
-								weight: 'bold'
-							},
-							formatter: Math.round
-						}
-					},
-					scales: {
-						yAxes: [{
-							stacked: true
-						}]
-					}			    	
-				  }
-			});	
+            // Configuration options go here
+            options: {
+            plugins: {
+              datalabels: {
+                backgroundColor: function(context) {
+                  return context.dataset.backgroundColor;
+                },
+                borderRadius: 4,
+                color: 'white',
+                font: {
+                  weight: 'bold'
+                },
+                formatter: Math.round
+              }
+            },
+            scales: {
+              yAxes: [{
+                stacked: true
+              }]
+            }			    	
+            }
+        });	
+      }
 
 		}, 20);	
 

@@ -1,0 +1,57 @@
+<script type='text/template' id='new-event-form'>
+
+  <div class="select-date">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Select a Date</h3>
+      </div>
+      <hr />
+    </div>
+      <div class='row'>
+        <div class='col-md-4'>
+          Event Date: <input type='date' class='date' />
+        </div>
+        <div class='col-md-4'>
+          Start Time: <input type='time' class='startTime' value='<%- event.calEvent.startTime.raw %>'/>
+        </div>
+        <div class='col-md-4'>
+          End Time: <input type='time' class='endTime' value='<%- event.calEvent.endTime.raw %>'/>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-12">
+          <button class='btn btn-primary select-date-click' disabled>Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='show-details' style="display:none">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Show Details</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class='col-md-4'>
+        <p>Show: <input type='text' class='showData' value='<%- event.show %>'></p>
+      </div>
+      <div class='col-md-4'>
+        <p>Activity: <input type='text' class='activity' value='<%- event.activity %>'></p>
+      </div>
+      <div class='col-md-4'>
+        <p>Presenter: <input type='text' class='presenter' value='<%- event.presenter %>'></p>
+      </div>
+      <div class='col-md-4'>
+        <p>Price: <input type='number' class='price' value='<%- event.price %>'></p>
+      </div>
+      <div class='col-md-4'>
+        <p>Number of People: <input type='number' class='numOfPeople' value='<%- event.numOfPeople %>'></p>
+      </div>
+    </div>
+    <br />
+    <button class='btn btn-success confirm-event'><em class='fa fa-floppy-o'>&nbsp;</em> Save Event</button>
+  </div>
+
+</script>

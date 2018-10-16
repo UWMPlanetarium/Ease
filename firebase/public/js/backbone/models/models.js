@@ -58,6 +58,7 @@ app.Group = Backbone.Model.extend({
 app.Event = Backbone.Model.extend({
 	
 	defaults: {
+    _id: "",
 	  groupID: "",
 	  show: "",
 	  activity: "",
