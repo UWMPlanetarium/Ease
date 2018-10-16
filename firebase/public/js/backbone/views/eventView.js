@@ -46,6 +46,15 @@ app.EventView = Backbone.View.extend({
   searchEvents: function() {
     var value = this.$el.find('.search-event-val').val();
     var events = Helper.collectionContains(app.eventList.models, value, ['show', 'activity', 'presenter', 'calEvent.string']);
+    var groups = Helper.collectionContains(app.groupList.models, value, ['groupName', 'groupGroup']);
+
+    for (var i = 0; i < app.eventList.models.length; ++i) {
+      for (var j = 0; j < groups.length; ++j) {
+        if (app.eventList.models[i].attributes.groupID == groups[j].attributes._id) {
+          events.push(app.eventList.models[i]);
+        }
+      }
+    }
     this.$el.find('.events-landing').html('');
     for (var i = 0; i < events.length; ++i) {
       this.renderEvent(events[i]);

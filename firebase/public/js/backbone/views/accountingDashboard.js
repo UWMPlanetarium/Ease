@@ -159,7 +159,6 @@ app.AccountingDashboard = Backbone.View.extend({
 
 			// Group type
 			var incomeGroup = app.transactionList.getIncomebyGroup();
-			console.log(incomeGroup);
 			var ctx = document.getElementById('chart_group_type').getContext('2d');
 			var chart = new Chart(ctx, {
 				  // The type of chart we want to create

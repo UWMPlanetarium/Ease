@@ -5,7 +5,8 @@
 	Template -> #event-detail-view
 	Methods:
 		initialize | Process
-			1. Add listener for all changes to the event and group model, route to render function
+      1. Add listener for all changes to the event and group model, route to render function. Note: Only group is necessary to pass in. 
+         Passing in an event forces the auxilary view to only display that event. If this.model.group == null, ALL events for the group are displayed.
 		load | Process
 			1. Check if the event.invoiceSent isn't true or undefined. Yes, create checkbox for user
 			2. Check if the event.invoiceSent is true. Yes, update status with Invoice Sent! text
@@ -67,31 +68,35 @@ app.EventDetailView = Backbone.View.extend({
 	template: _.template($('#event-detail-view').html()),
 	initialize: function() {
 		this.listenTo(this.model.event, "change", this.render);
-		this.listenTo(this.model.group, "change", this.render);
+    this.listenTo(this.model.group, "change", this.render);
+    this.listenTo(Backbone, 'appendEvent', function (newEvent) {
+      this.append_event(newEvent);
+    }, this);
+    this.listenTo(Backbone, 'create_new_event', function () {
+      this.create_new_event();
+    }, this);
 	},
 	render: function() {
-		this.$el.html(this.template({event:this.model.event.attributes,group:this.model.group.attributes}));
+		this.$el.html(this.template({group:this.model.group.attributes}));
 		this.load();
 		return this; // chained commands
 	},
 	load: function() {
+    this.newEventView = new app.NewEventForm({model: {event: null, group: this.model.group}});
+    this.listenTo(this.newEventView, 'appendEvent', this.append_event);
+    this.listenTo(this.newEventView, 'create_new_event', this.create_new_event);
+    this.$el.find('.new-event-form-landing').append(this.newEventView.render().el);
 
-		// Create invoice status checkboxes
-		if (this.model.event.attributes.invoiceSent !== true || this.model.event.attributes.invoiceSent === undefined) {
-			this.$el.find('.invoice_status').append("Invoice Sent: <input type='checkbox' class='invoice-sent' />&nbsp;&nbsp;&nbsp;");
-		} else if (this.model.event.attributes.invoiceSent === true) {
-			this.$el.find('.invoice_status').append("Invoice Sent! &nbsp;&nbsp;&nbsp;");
-		}
-		if (this.model.event.attributes.invoiceFiled !== true || this.model.event.attributes.invoiceFiled === undefined) {
-			this.$el.find('.invoice_status').append("Invoice Filed: <input type='checkbox' class='invoice-filed' />");
-		} else if (this.model.event.attributes.invoiceFiled === true) {
-			this.$el.find('.invoice_status').append("Invoice Filed!");
-		}
-
-		// Check invoice creation status
-		if (this.model.event.attributes.invoice_url !== undefined) {
-			this.$el.find('.event-invoice').addClass('event-view-invoice').removeClass('event-invoice').html("View Invoice").parent().append(" <button class='btn btn-warning generate-new-invoice' role='button'>Generate new Invoice</button>");
-		}
+    if (this.model.event !== null && this.model.event !== undefined) {
+      this.view_primary_event(); // This loads the intended event at the top of the list of events. Typically happens when event is selected on scheduling dashboard or event views
+    } else {
+      var events = app.eventList.where({groupID: this.model.group.attributes._id});
+      if (events.length !== 0) {
+        this.model.event = events[0];
+        this.view_primary_event();
+      }
+      // this.view_all_events();
+    }
 
 		setTimeout(function() {
 			$('#modals .modal').modal('show');
@@ -99,80 +104,16 @@ app.EventDetailView = Backbone.View.extend({
 
 	},
 	events: {
-		'click .event-view': 'event_view',
-		'change input:checkbox': 'change_status',
-		'click .event-invoice': 'create_invoice',
-		'click .event-view-invoice': 'view_invoice',
-		'click .generate-new-invoice': 'create_invoice',
 		'click .edit-group': 'edit_group',
-		'click .save-group': 'save_group',
-		'click .edit-event': 'edit_event',
-		'click .save-event': 'save_event',
-		'click .delete-event': 'delete_event',
-		'click .view-all-events': 'view_all_events',
-		'click .hide-all-events': 'hide_all_events',
-		'click .event-presented': 'show_presented',
-		'click .event-payment': 'add_payment'
-	},
-	change_status: function(e) {
-
-		var element = $(e.currentTarget).attr('class');
-
-		if (element === 'invoice-sent') {
-			this.model.event.set({
-				invoiceSent: true
-			});
-		} else if (element === 'invoice-filed') {
-			this.model.event.set({
-				invoiceFiled: true
-			});
-		}
-
-	},
-	create_invoice: function() {
-
-		// Alert user
-		toastr.info("Creating invoice...");
-
-		// Create the invoice_object
-		var group = this.model.group.attributes;
-		var event = this.model.event.attributes;
-		var invoice_object = {
-			id: event._id,
-			name: group.groupName,
-			calEvent: event.calEvent.string,
-			group: group.groupGroup,
-			workPhone: group.workPhone,
-			cellPhone: group.cellPhone,
-			activity: event.activity,
-			show: event.show,
-			price: event.price,
-			numOfPeople: event.numOfPeople,
-			email: group.email,
-			grade: group.grade
-		};
-
-		// Create json to send to server
-		var json = JSON.stringify(invoice_object);
-
-		var proxy = this;
-
-		// Make the request
-		app.iframe.request("createInvoice", json).then(function(response) {
-			toastr.success("Created!");
-			window.open(response.url, "_blank");
-			proxy.model.event.set({
-				invoice_url: response.url
-			});
-		}, function(error) {
-			toastr.error(error);
-		});
-
-	},
-	view_invoice: function() {
-
-		window.open(this.model.event.attributes.invoice_url, '_blank');
-
+    'click .save-group': 'save_group',
+    'click .view-all-events': 'view_all_events',
+    'click .hide-all-events': 'hide_all_events',
+    'click .create-new-event': 'create_new_event',
+    'input .date': 'selectDateDisableToggle',
+    'input .startTime': 'selectDateDisableToggle',
+    'input .endTime': 'selectDateDisableToggle',
+    'click .select-date-click': 'select_date_click',
+    'click .confirm-event': 'confirm_event',
 	},
 	edit_group: function() {
 
@@ -213,145 +154,67 @@ app.EventDetailView = Backbone.View.extend({
 		// Change save button to edit
 		this.$el.find('.save-group').removeClass('save-group').removeClass('btn-success').addClass('btn-info').addClass('edit-group').html("<em class='fa fa-pencil'>&nbsp;</em> Edit");
 
-	},
-	edit_event: function() {
+  },
+  view_primary_event: function() {
+    var events = app.eventList.where({groupID: this.model.group.attributes._id});
+    var mainEvent = events[0];
+    for (var i = 0; i < events.length; ++i) {
+      if (events[i].attributes._id == this.model.event.attributes._id) {
+        mainEvent = events[i];
+        break;
+      }
+    }
 
-		// Set edit row visible
-		this.$el.find('div.static.event').css('display', 'none');
-		this.$el.find('div.edit.event').css('display', 'block');
-
-		// Change edit button to save
-		this.$el.find('.edit-event').removeClass('edit-event').removeClass('btn-info').addClass('btn-success').addClass('save-event').html("<em class='fa fa-floppy-o'>&nbsp;</em> Save");
-
-	},
-	save_event: function() {
-
-		// Get variables
-		var date = this.$el.find('input.date').val();
-		var startTime = this.$el.find('input.startTime').val();
-		var endTime = this.$el.find('input.endTime').val();
-		var show = this.$el.find('input.show').val();
-		var activity = this.$el.find('input.activity').val();
-		var presenter = this.$el.find('input.presenter').val();
-		var price = this.$el.find('input.price').val();
-		var numOfPeople = this.$el.find('input.numOfPeople').val();
-
-		// Get cal event
-		var calEvent = this.model.event.createCalendarEvent(date, startTime, endTime, {keepEventId: true});
-
-		// Create object to change google event
-		var object = {
-			new_start: moment(date + ' ' + startTime).format(),
-			new_end: moment(date + ' ' + endTime).format(),
-			start: this.model.event.attributes.calEvent.calStart,
-			end: this.model.event.attributes.calEvent.calEnd,
-			eventID: this.model.event.attributes.calEvent.eventID,
-			last_edited_by: User.attributes._id
-		};
-		
-		var json = JSON.stringify(object);
-		
-		// Make request
-		app.iframe.request("editEvent", json).then(function(response) {
-			console.log(response);
-			toastr.success("Event updated!");
-		}, function(error) {
-			toastr.error(error);
-		});
-
-		// Set to model
-		this.model.event.set({
-			calEvent: calEvent,
-			show: show,
-			activity: activity,
-			presenter: presenter,
-			price: price,
-			numOfPeople: numOfPeople
-		});
-
-		// Set static row visible
-		this.$el.find('div.static.event').css('display', 'block');
-		this.$el.find('div.edit.event').css('display', 'none');	
-	
-		// Change save button to edit
-		this.$el.find('.save-event').removeClass('save-event').removeClass('btn-success').addClass('btn-info').addClass('edit-event').html("<em class='fa fa-pencil'>&nbsp;</em> Edit");			
-
-	},
-	delete_event: function() {
-
-		var confirm = window.confirm("Really delete this event?");
-
-		if (confirm === true) {
-
-			// Create object
-			var obj = {
-				start: this.model.event.attributes.calEvent.calStart,
-				end: this.model.event.attributes.calEvent.calEnd,
-				eventID: this.model.event.attributes.calEvent.eventID
-			};
-			var json = JSON.stringify(obj);
-			
-			// Make request
-			app.iframe.request("removeEvent", json).then(function(response) {
-				toastr.success("Event deleted from google calendar");
-			}, function(error) {
-				toastr.error(error);
-			});
-			
-			app.eventList.remove(this.model.event);
-			toastr.success("Event deleted");
-			$('#modals .modal').modal('hide');
-
-		} else {
-
-			toastr.info("Event not deleted... Phew!");
-
-		}
-
-	},
+    var view = new app.EventAuxView({model: {event: mainEvent, group: this.model.group}});
+    this.$el.find('.aux-events-landing').append(view.render().el);
+  },
+  append_event: function(event) {
+    var view = new app.EventAuxView({model: {event: event, group: this.model.group}});
+    this.model.event = event;
+    this.hide_all_events();
+  },
 	view_all_events: function() {
 
 		// Change button text
 		this.$el.find('.view-all-events').removeClass('view-all-events').addClass('hide-all-events').html("<em class='fa fa-minus'>&nbsp;</em> Hide all events");
 
+    // TODO: Sort events chronologically with upcoming towards top
 		// Get all events from this group
-		var events = app.eventList.where({groupID: this.model.group.attributes._id});
-		for (var i = 0; i < events.length; i++) {
-
-			if (events[i].attributes._id === this.model.event.attributes._id) {
-				// Do nothing
-			} else {
-				var view = new app.EventAuxView({model: events[i]});
-				this.$el.find('.aux-events-land').append(view.render().el);
-			}
-
-		}
-
+    var events = app.eventList.where({groupID: this.model.group.attributes._id});
+    this.$el.find('.aux-events-landing').html(' ');
+    if (this.model.event !== undefined) {
+      var view = new app.EventAuxView({model: {event: this.model.event, group: this.model.group}});
+      this.$el.find('.aux-events-landing').append(view.render().el);
+    }
+    if (events.length !== 0) { // Only add events to auxilary view if there are events associated with group
+      for (var i = 0; i < events.length; i++) {
+        if (this.model.event !== undefined && events[i].attributes._id == this.model.event.attributes._id) continue; // Skips displaying this.model.event if displayed earlier
+        var view = new app.EventAuxView({model: {event: events[i], group: this.model.group}});
+        this.$el.find('.aux-events-landing').append(view.render().el);
+      }
+    }
 	},
 	hide_all_events: function() {
 
 		// Change button text
 		this.$el.find('.hide-all-events').removeClass('hide-all-events').addClass('view-all-events').html("<em class='fa fa-calendar'>&nbsp;</em> View all events");
-		this.$el.find('.aux-events-land').html(' ');
-
-	},
-	show_presented: function() {
-
-		this.model.event.set({
-			finished: true
-		});
-
-		toastr.info('Please double check the Number of People field.');
-		this.edit_event();
-
-	},
-	add_payment: function() {
-
-		// Create a new add_payment modal screen with the event / group details
-		var view = new app.TransactionView({model: {event: this.model.event, group: this.model.group}});
-		$('#modals').append(view.render().el);
-		this.remove();
-
-	}
-
+		this.$el.find('.aux-events-landing').html(' ');
+    var events = app.eventList.where({groupID: this.model.group.attributes._id});
+    if (this.model.event !== null && this.model.event !== undefined) { // If a specific event was selected earlier, only display that event
+      var view = new app.EventAuxView({model: {event: this.model.event, group: this.model.group}});
+      this.$el.find('.aux-events-landing').append(view.render().el);
+    } else if (events.length !== 0) { // Only add events to auxilary view if there are events associated with group
+      var view = new app.EventAuxView({model: {event: events[0], group: this.model.group}});
+      this.$el.find('.aux-events-landing').append(view.render().el);
+    }
+  },
+  create_new_event: function() {
+    if (this.$el.find('.new-event-form-landing').css('display') == 'none') {
+      this.$el.find('.new-event-form-landing').css('display', 'block');
+      this.$el.find('.plus-minus').removeClass('fa-plus').addClass('fa-minus');
+    } else {
+      this.$el.find('.new-event-form-landing').css('display', 'none');
+      this.$el.find('.plus-minus').removeClass('fa-minus').addClass('fa-plus');
+    }
+  }
 });
