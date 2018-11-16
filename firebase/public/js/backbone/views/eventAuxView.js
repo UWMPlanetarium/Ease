@@ -63,13 +63,17 @@ app.EventAuxView = Backbone.View.extend({
     'click .event-view': 'event_view',
 		'change input:checkbox': 'change_status',
 		'click .event-invoice': 'create_invoice',
-		'click .event-view-invoice': 'view_invoice',
+    'click .event-view-invoice': 'view_invoice',
+    'click .generate-new-invoice': 'create_invoice',
     'click .edit-event': 'edit_event',
 		'click .save-event': 'save_event',
 		'click .delete-event': 'delete_event',
 		'click .event-presented': 'show_presented',
     'click .event-payment': 'add_payment',
     'click .duplicate-event': 'duplicate_event',
+    'input .date': 'saveEditsDisableToggle',
+    'input .startTime': 'saveEditsDisableToggle',
+    'input .endTime': 'saveEditsDisableToggle',
   },
 	edit_event: function() {
 
@@ -79,8 +83,20 @@ app.EventAuxView = Backbone.View.extend({
 
     // Change edit button to save
     this.$el.find('.edit-event').removeClass('edit-event').removeClass('btn-info').addClass('btn-success').addClass('save-event').html("<em class='fa fa-floppy-o'>&nbsp;</em> Save");
-
-	},
+    this.$el.find('.save-event').attr('disabled', true);
+    this.saveEditsDisableToggle();
+  },
+  // Requires data & time be accurate before saving edits
+  saveEditsDisableToggle: function() {
+    var date = this.$el.find('input.date').val();
+    var startTime = this.$el.find('input.startTime').val();
+    var endTime = this.$el.find('input.endTime').val();
+    if (startTime > endTime || date == '' || date == null || startTime == '' || startTime == null || endTime == '' || endTime == null) {
+      this.$el.find('.save-event').attr('disabled', true);
+    } else {
+      this.$el.find('.save-event').removeAttr('disabled');
+    }
+  },
 	save_event: function() {
 
 		// Get variables
