@@ -7,7 +7,7 @@ app.Iframe = Backbone.Firebase.Model.extend({
 	autoSync: true,
 	request: function(fnct, data) { // String, Json
 
-		var proxy = this;
+    var proxy = this;
 
 		return new Promise(function(resolve, reject) {
 
@@ -49,7 +49,6 @@ app.Group = Backbone.Model.extend({
 	  cellPhone: "",
 	  workPhone: "",
 	  email: "",
-	  grade: ""
 	}
 	
 });
@@ -92,7 +91,9 @@ app.Event = Backbone.Model.extend({
 	  notes: "",
 	  presenter: "",
 	  status: "",
-	  numOfPeople: 0
+    numOfPeople: 0,
+    grade: "",
+    age: ""
 	},
 	createCalendarEvent: function(date, startTime, endTime, opts) {
 

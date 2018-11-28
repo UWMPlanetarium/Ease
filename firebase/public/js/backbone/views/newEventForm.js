@@ -26,19 +26,6 @@ app.NewEventForm = Backbone.View.extend({
     'click .confirm-event': 'confirm_event',
   },
 
-  create_new_event: function() {
-    // if(this.$el.find('.select-date').css('display') == 'none' && this.$el.find('.show-details').css('display') == 'block') {
-    //   this.$el.find('.show-details').css('display', 'none');
-    //   this.$el.find('.date').val("");
-    //   this.selectDateDisableToggle();
-    // } else if (this.$el.find('.select-date').css('display') == 'block'){
-    //   this.$el.find('.select-date').css('display', 'none');
-    //   this.$el.find('.date').val("");
-    //   this.selectDateDisableToggle();
-    // } else {
-    //   this.$el.find('.select-date').css('display', 'block');
-    // }
-  },
   selectDateDisableToggle: function() {
     var date = this.$el.find('input.date').val();
     var startTime = this.$el.find('input.startTime').val();
@@ -96,6 +83,8 @@ app.NewEventForm = Backbone.View.extend({
 		var presenter = this.$el.find('input.presenter').val();
 		var price = this.$el.find('input.price').val();
     var numOfPeople = this.$el.find('input.numOfPeople').val();
+    var grade = this.$el.find('input.grade').val();
+    var age = this.$el.find('input.age').val();
     
     var date = this.$el.find('input.date').val();
     var startTime = this.$el.find('input.startTime').val();
@@ -110,7 +99,9 @@ app.NewEventForm = Backbone.View.extend({
 			presenter: presenter,
 			price: price,
 			numOfPeople: numOfPeople,
-			created_by: User.attributes._id
+      created_by: User.attributes._id,
+      grade: grade,
+      age: age
 		};
 
     event.calEvent = app.eventList.models[0].createCalendarEvent(date, startTime, endTime);
@@ -171,5 +162,7 @@ app.NewEventForm = Backbone.View.extend({
     this.$el.find('.presenter').val("");
     this.$el.find('.price').val("");
     this.$el.find('.numOfPeople').val("");
+    this.$el.find('.grade').val("");
+    this.$el.find('.age').val("");
   },
 });

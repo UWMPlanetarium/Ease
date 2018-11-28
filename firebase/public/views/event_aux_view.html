@@ -23,34 +23,54 @@
       <div class='col-md-4'>
         <p>Price: <b>$<%- event.price %></b></p>
       </div>
-          <div class='col-md-4'>
-            <p>Number of People: <b><%- event.numOfPeople %></b></p>
-          </div>
+      <div class='col-md-4'>
+        <p>Number of People: <b><%- event.numOfPeople %></b></p>
+      </div>
+      <div class='col-md-4'>
+        <p>Grade: <b><%- event.grade %></b></p>
+      </div>
+      <div class='col-md-4'>
+        <p>Age: <b><%- event.age %></b></p>
+      </div>
     </div>
-    <div class='row event edit'>
-      <div class='col-md-4'>
-        <p>Date: <input type='date' class='date' value='<%- event.calEvent.date.iso %>'></p>
+    <div class='event edit'>
+      <div class='row'>
+        <div class='col-md-4'>
+          <p>Date: <input type='date' class='date' value='<%- event.calEvent.date.iso %>'></p>
+        </div>
+        <div class='col-md-4'>
+          <p>Start Time: <input type='time' class='startTime' value='<%- event.calEvent.startTime.raw %>'></p>
+        </div>
+        <div class='col-md-4'>
+          <p>End Time: <input type='time' class='endTime' value='<%- event.calEvent.endTime.raw %>'></p>
+        </div>
       </div>
-      <div class='col-md-4'>
-        <p>Start Time: <input type='time' class='startTime' value='<%- event.calEvent.startTime.raw %>'></p>
+      <div class='row'>
+        <div class='col-md-4'>
+          <p>Show: <input type='text' class='showName' value='<%- event.show %>'></p>
+        </div>
+        <div class='col-md-4'>
+          <p>Activity: <input type='text' class='activity' value='<%- event.activity %>'></p>
+        </div>
+        <div class='col-md-4'>
+          <p>Presenter: <input type='text' class='presenter' value='<%- event.presenter %>'></p>
+        </div>
       </div>
-      <div class='col-md-4'>
-        <p>End Time: <input type='time' class='endTime' value='<%- event.calEvent.endTime.raw %>'></p>
+      <div class='row'>
+        <div class='col-md-4'>
+          <p>Price: <input type='number' class='price' value='<%- event.price %>'></p>
+        </div>
+        <div class='col-md-4'>
+          <p>Number of People: <input type='number' class='numOfPeople' value='<%- event.numOfPeople %>'></p>
+        </div>
+        <div class='col-md-4'>
+          <p>Grade: <input type='text' class='grade' value='<%- event.grade %>'></p>
+        </div>
       </div>
-      <div class='col-md-4'>
-        <p>Show: <input type='text' class='show' value='<%- event.show %>'></p>
-      </div>
-      <div class='col-md-4'>
-        <p>Activity: <input type='text' class='activity' value='<%- event.activity %>'></p>
-      </div>
-      <div class='col-md-4'>
-        <p>Presenter: <input type='text' class='presenter' value='<%- event.presenter %>'></p>
-      </div>
-      <div class='col-md-4'>
-        <p>Price: <input type='number' class='price' value='<%- event.price %>'></p>
-      </div>
-      <div class='col-md-4'>
-        <p>Number of People: <input type='number' class='numOfPeople' value='<%- event.numOfPeople %>'></p>
+      <div class='row'>
+        <div class='col-md-4'>
+          <p>Age: <input type='text' class='age' value='<%- event.age %>'></p>
+        </div>
       </div>
     </div>
     <div class='row'>
