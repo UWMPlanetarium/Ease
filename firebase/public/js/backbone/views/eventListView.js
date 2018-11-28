@@ -98,7 +98,8 @@ app.EventListView = Backbone.View.extend({
 			price: event.price,
 			numOfPeople: event.numOfPeople, // add to model
 			email: group.email,
-			grade: group.grade
+      grade: event.grade,
+      age: event.age
 		};
 
 		// Create json to send to server

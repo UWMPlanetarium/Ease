@@ -103,11 +103,13 @@ app.EventAuxView = Backbone.View.extend({
 		var date = this.$el.find('input.date').val();
 		var startTime = this.$el.find('input.startTime').val();
 		var endTime = this.$el.find('input.endTime').val();
-		var show = this.$el.find('input.show').val();
+		var show = this.$el.find('input.showName').val();
 		var activity = this.$el.find('input.activity').val();
 		var presenter = this.$el.find('input.presenter').val();
 		var price = this.$el.find('input.price').val();
-		var numOfPeople = this.$el.find('input.numOfPeople').val();
+    var numOfPeople = this.$el.find('input.numOfPeople').val();
+    var grade = this.$el.find('input.grade').val();
+    var age = this.$el.find('input.age').val();
 
 		// Get cal event
 		var calEvent = this.model.event.createCalendarEvent(date, startTime, endTime, {keepEventId: true});
@@ -135,7 +137,9 @@ app.EventAuxView = Backbone.View.extend({
 			activity: activity,
 			presenter: presenter,
 			price: price,
-			numOfPeople: numOfPeople
+      numOfPeople: numOfPeople,
+      grade: grade,
+      age: age
 		});
 
 		// Set static row visible
@@ -210,7 +214,8 @@ app.EventAuxView = Backbone.View.extend({
 			price: event.price,
 			numOfPeople: event.numOfPeople,
 			email: group.email,
-			grade: group.grade
+      grade: event.grade,
+      age: event.age
 		};
 
 		// Create json to send to server

@@ -48,19 +48,15 @@ app.NewEventView = Backbone.View.extend({
 		var groupName = this.$el.find('input.groupName').val();
 		var groupGroup = this.$el.find('input.groupGroup').val();
 		var groupType = this.$el.find('input.groupType').val();
-		var grade = this.$el.find('input.grade').val();
 		var email = this.$el.find('input.email').val();
 		var cellPhone = this.$el.find('input.cellPhone').val();
 		var workPhone = this.$el.find('input.workPhone').val();
-
-		console.log(User);
 
 		var group = {
 			_id: app.groupList.getNextID(),
 			groupName: groupName,
 			groupGroup: groupGroup,
 			groupType: groupType,
-			grade: grade,
 			email: email,
 			cellPhone: cellPhone,
 			workPhone: workPhone,
@@ -159,7 +155,9 @@ app.NewEventView = Backbone.View.extend({
 		this.activity = this.$el.find('input.activity').val();
 		this.presenter = this.$el.find('input.presenter').val();
 		this.price = this.$el.find('input.price').val();
-		this.numOfPeople = this.$el.find('input.numOfPeople').val();
+    this.numOfPeople = this.$el.find('input.numOfPeople').val();
+    this.grade = this.$el.find('input.grade').val();
+    this.age = this.$el.find('input.age').val();
 
 		// Create model
 		var event = {
@@ -170,7 +168,9 @@ app.NewEventView = Backbone.View.extend({
 			presenter: this.presenter,
 			price: this.price,
 			numOfPeople: this.numOfPeople,
-			created_by: User.attributes._id
+      created_by: User.attributes._id,
+      grade: this.grade,
+      age: this.age
 		};
 
     event.calEvent = app.eventList.models[0].createCalendarEvent(this.date, this.startTime, this.endTime);

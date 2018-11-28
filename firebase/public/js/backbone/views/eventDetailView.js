@@ -131,7 +131,6 @@ app.EventDetailView = Backbone.View.extend({
 		var groupName = this.$el.find('input.groupName').val();
 		var groupGroup = this.$el.find('input.groupGroup').val();
 		var groupType = this.$el.find('input.groupType').val();
-		var grade = this.$el.find('input.grade').val();
 		var email = this.$el.find('input.email').val();
 		var cellPhone = this.$el.find('input.cellPhone').val();
 		var workPhone = this.$el.find('input.workPhone').val();
@@ -141,7 +140,6 @@ app.EventDetailView = Backbone.View.extend({
 			groupName: groupName,
 			groupGroup: groupGroup,
 			groupType: groupType,
-			grade: grade,
 			email: email,
 			cellPhone: cellPhone,
 			workPhone: workPhone
